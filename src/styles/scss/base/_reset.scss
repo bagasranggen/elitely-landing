@@ -11,11 +11,12 @@
 //    font-size: 62.5%;
 //}
 //
-//body {
-//    @extend %base-typography;
-//    box-sizing: border-box;
-//    background-color: $sso-light;
-//}
+body {
+    @extend %base-typography;
+    //box-sizing: border-box;
+    //background-color: $sso-light;
+}
+
 //
 //html,
 //body {

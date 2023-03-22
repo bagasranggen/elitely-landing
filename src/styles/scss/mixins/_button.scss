@@ -1,0 +1,49 @@
+@mixin theme-border-radius() {
+    border-radius: 16px 32px 32px 0px;
+}
+
+@mixin btn-block() {
+    @include theme-border-radius();
+    @extend %ff-playfair;
+
+    padding: 0.25rem 1rem 0.25rem .75rem;
+}
+
+@mixin btn-block-color($bg, $color) {
+    background-color: $bg;
+    border-color: $bg;
+    color: $color;
+}
+
+@mixin btn-block-color-hover($bg, $color) {
+    @include media-breakpoint-up(lg) {
+        @include hover() {
+            background-color: $bg;
+            border-color: $color;
+            color: $color;
+        }
+    }
+}
+
+@mixin btn-outline() {
+    @include theme-border-radius();
+    @extend %ff-playfair;
+
+    padding: 0.25rem 1rem 0.25rem .75rem;
+}
+
+@mixin btn-outline-color($bg, $color) {
+    background-color: $bg;
+    border-color: $color;
+    color: $color;
+}
+
+@mixin btn-outline-color-hover($bg, $color) {
+    @include media-breakpoint-up(lg) {
+        @include hover() {
+            background-color: $bg;
+            border-color: $bg;
+            color: $color;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.btn {
+
+    &--block {
+        @include btn-block();
+
+        &.btn {
+            &--light {
+                @include btn-block-color($white, $e-primary);
+                //@include btn-block-color-hover(darken($white, 8), $e-primary);
+                @include btn-block-color-hover($e-primary, $white);
+            }
+        }
+    }
+
+    &--outline {
+        @include btn-outline();
+
+        &.btn {
+            &--primary {
+                @include btn-outline-color(transparent, $white);
+                @include btn-outline-color-hover($white, $e-primary);
+            }
+        }
+    }
+
+}

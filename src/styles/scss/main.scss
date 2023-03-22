@@ -20,6 +20,7 @@
 @import "mixins/prefix";
 @import "mixins/typography";
 @import "mixins/animation";
+@import "mixins/button";
 
 @import "utils/grid";
 @import "utils/sticky";
@@ -31,4 +32,6 @@
 @import "layout/navigation";
 @import "layout/layout";
 @import "layout/footer";
+
+@import "components/button";
 

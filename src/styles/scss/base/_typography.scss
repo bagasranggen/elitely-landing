@@ -1,5 +1,15 @@
+%ff-inter {
+    font-family: "Inter";
+}
+
+%ff-playfair {
+    font-family: "Playfair Display";
+    font-style: italic;
+    //fonwe
+}
+
 %base-typography {
-    //@extend %ff-franklin;
+    @extend %ff-inter;
     //font-size: 1.8rem;
     //color: $sso-dark;
 }

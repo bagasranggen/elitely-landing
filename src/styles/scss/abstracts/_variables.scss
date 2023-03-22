@@ -1,4 +1,18 @@
 // Color
+$e-primary: #B2294B;
+$e-l-primary: #F7EAED;
+$e-secondary: #E4BC28;
+$e-l-secondary: #FCF8E9;
+$e-tertiary: #32C08D;
+$e-l-tertiary: #EAF9F4;
+
 
 // Reset
 //$font-size-base: 1.6rem;
+
+
+// Navbar
+$navbar-padding-y: 15px;
+//$nav-link-padding-x: 0;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: transparentize($e-l-primary, .25);
