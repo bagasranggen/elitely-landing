@@ -82,19 +82,24 @@ body {
 //}
 //
 ///*Link colour setting for site-wide*/
-//a {
-//    text-decoration: none;
-//    //color: $ad-secondary;
-//}
-//
-//a:hover {
-//    text-decoration: none;
-//    //color: $ad-link-hover;
-//    @include media-breakpoint-up(lg) {
-//        @include make-transition(color);
-//    }
-//}
-//
-//a:focus {
-//    outline: 0 !important;
-//}
+a {
+    text-decoration: none;
+    //color: $ad-secondary;
+
+    @include media-breakpoint-up(lg) {
+        @include make-transition(color);
+    }
+}
+
+a:hover {
+    text-decoration: none;
+    //color: $ad-link-hover;
+
+    @include media-breakpoint-up(lg) {
+        color: darken($e-l-primary, 15);
+    }
+}
+
+a:focus {
+    outline: 0 !important;
+}

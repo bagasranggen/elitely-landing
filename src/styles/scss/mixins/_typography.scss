@@ -10,3 +10,20 @@
     text-rendering: auto;
     line-height: 1;
 }
+
+@mixin make-font-sizes($breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        @each $size, $line-height in $font-sets {
+            %fs#{$infix}-#{$size} {
+                font-size: #{$size}px;
+                line-height: $line-height;
+            }
+
+            %fs-#{$size} {
+                font-size: #{$size}px;
+                line-height: $line-height;
+            }
+        }
+    }
+}

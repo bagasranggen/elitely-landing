@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import {MAIN_NAVIGATION} from "@/data/mock/global";
 
-import logo from '../../../../src/assets/images/logo.svg'
+import logo from '@/assets/images/logo.svg'
 
 import {Col, Container, Nav, Navbar} from "react-bootstrap";
 import Button from "@/components/common/button/Button";

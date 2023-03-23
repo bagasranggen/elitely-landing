@@ -1,3 +1,5 @@
+@include make-font-sizes();
+
 %ff-inter {
     font-family: "Inter";
 }
@@ -5,7 +7,6 @@
 %ff-playfair {
     font-family: "Playfair Display";
     font-style: italic;
-    //fonwe
 }
 
 %base-typography {

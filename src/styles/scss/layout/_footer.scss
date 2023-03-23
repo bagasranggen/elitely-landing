@@ -1,0 +1,46 @@
+footer {
+    background-color: $e-primary;
+    color: $white;
+    padding-top: 50px;
+
+    p {
+        @extend %fs-14, %mt-3, %mb-4;
+    }
+
+    h2 {
+        @extend %fs-24, %ff-playfair;
+    }
+
+    ul {
+        li {
+            @extend %fs-14;
+
+            a {
+                color: $white;
+            }
+
+            &:first-child {
+                @extend %mt-3;
+            }
+
+            &:not(:last-child) {
+                @extend %mb-3;
+            }
+        }
+    }
+
+    .footer {
+        &__copyright {
+            @extend %text-center;
+            
+            margin-top: 30px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: solid 1px $white;
+
+            small {
+                @extend %fs-14;
+            }
+        }
+    }
+}

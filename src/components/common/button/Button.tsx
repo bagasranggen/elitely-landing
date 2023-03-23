@@ -23,6 +23,7 @@ export type ButtonProps = {
     option?: {
         variant: 'block' | 'outline' | 'unstyled';
         color: 'primary' | 'secondary' | 'tertiary' | 'light';
+        fullWidth?: boolean;
     };
     event?: {
         onClick?: (e: any) => void;
@@ -34,7 +35,7 @@ const Button = ({button, className, event, link, option}: ButtonProps): React.Re
 
     const btnStyle = option?.variant ? ` btn--${option.variant}` : ''
     const btnColor = option?.color ? ` btn--${option.color}` : '';
-    const btnClass = `${option?.variant !== 'unstyled' ? 'btn' : ''}${btnStyle}${btnColor}${className ? ` ${className}` : ''}`;
+    const btnClass = `${option?.variant !== 'unstyled' ? 'btn' : ''}${btnStyle}${btnColor}${option?.fullWidth ? ' w-100' : ''}${className ? ` ${className}` : ''}`;
 
     const buttonWrapperProps = link ? {
         ...btnClass ? {className: btnClass} : {},
