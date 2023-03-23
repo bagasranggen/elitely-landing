@@ -2,11 +2,18 @@
     border-radius: 16px 32px 32px 0px;
 }
 
+@mixin theme-border-spacing() {
+    padding: 0.625rem 1rem 0.625rem .75rem;
+
+    @include media-breakpoint-up(lg) {
+        padding: 0.25rem 1rem 0.25rem .75rem;
+    }
+}
+
 @mixin btn-block() {
     @include theme-border-radius();
+    @include theme-border-spacing();
     @extend %ff-playfair;
-
-    padding: 0.25rem 1rem 0.25rem .75rem;
 }
 
 @mixin btn-block-color($bg, $color) {
@@ -27,9 +34,8 @@
 
 @mixin btn-outline() {
     @include theme-border-radius();
+    @include theme-border-spacing();
     @extend %ff-playfair;
-
-    padding: 0.25rem 1rem 0.25rem .75rem;
 }
 
 @mixin btn-outline-color($bg, $color) {

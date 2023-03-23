@@ -1,0 +1,15 @@
+.form {
+    &--outline {
+        &.form {
+            &--light {
+                input {
+                    @include input-outline-color(transparent, $white)
+                }
+            }
+        }
+
+        input {
+            @include input-outline();
+        }
+    }
+}

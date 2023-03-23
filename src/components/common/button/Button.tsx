@@ -1,5 +1,7 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Link from "next/link";
+
+import type {MainColorProps, MainVariantProps} from "@/@type/common";
 
 type AnchorProps = {
     link: {
@@ -21,8 +23,8 @@ type ButtonActionProps = {
 export type ButtonProps = {
     className?: string;
     option?: {
-        variant: 'block' | 'outline' | 'unstyled';
-        color: 'primary' | 'secondary' | 'tertiary' | 'light';
+        variant: MainVariantProps;
+        color: MainColorProps;
         fullWidth?: boolean;
     };
     event?: {
