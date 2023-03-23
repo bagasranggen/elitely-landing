@@ -14,7 +14,7 @@
 @mixin make-font-sizes($breakpoints: $grid-breakpoints) {
     @each $breakpoint in map-keys($breakpoints) {
         $infix: breakpoint-infix($breakpoint, $breakpoints);
-        @each $size, $line-height in $font-sets {
+        @each $size, $line-height in $font-sizes-set {
             %fs#{$infix}-#{$size} {
                 font-size: #{$size}px;
                 line-height: $line-height;
@@ -26,4 +26,21 @@
             }
         }
     }
+}
+
+@mixin make-font-color() {
+    //@each $breakpoint in map-keys($breakpoints) {
+    //    $infix: breakpoint-infix($breakpoint, $breakpoints);
+    @each $key, $color in $font-color-set {
+        .fc--#{$key} {
+            color: $color;
+        }
+    }
+
+    //%fs-#{$size} {
+    //    font-size: #{$size}px;
+    //    line-height: $line-height;
+    //}
+    //}
+    //}
 }

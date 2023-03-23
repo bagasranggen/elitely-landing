@@ -11,7 +11,8 @@ $e-l-tertiary: #EAF9F4;
 //$font-size-base: 1.6rem;
 
 // Font Sizes
-$font-sets: (12, 18px), (14, 21px), (18, 27px), (22, 33px), (24, 36px);
+$font-sizes-set: (12, 18px), (14, 21px), (18, 27px), (22, 33px), (24, 36px), (32, 38px), (40, 48px);
+$font-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
 
 // Navbar
 $navbar-padding-y: 15px;
