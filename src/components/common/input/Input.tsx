@@ -15,7 +15,7 @@ export type InputProps = {
     };
     input: {
         id: string;
-        type?: 'text' | 'email' | 'number';
+        type?: 'text' | 'email' | 'number' | 'tel';
         label?: string;
         placeholder?: string;
     }

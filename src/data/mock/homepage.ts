@@ -3,6 +3,23 @@ import hUser from '../../assets/images/highlight-user.svg'
 import hMan from '../../assets/images/highlight-man.svg'
 import hWoman from '../../assets/images/highlight-woman.svg'
 
+export const CAROUSEL = [
+    {
+        variant: 'connection',
+        color: 'primary',
+        title: 'The fastest way to',
+        titleBlock: 'Unlock Connections',
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>'
+    },
+    {
+        variant: 'skip',
+        color: 'primary',
+        title: 'Dating on Steroids',
+        titleBlock: 'Skip the swipe',
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>'
+    },
+]
+
 export const CARDS = [
     {
         color: 'primary',

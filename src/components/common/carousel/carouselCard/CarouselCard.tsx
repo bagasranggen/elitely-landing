@@ -6,7 +6,7 @@ import type {MainColorProps} from "@/@type/common";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions, Pagination} from "swiper";
 
-import LogoHeart from "@/components/common/logo/logoHear/LogoHeart";
+import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";
 
 import 'swiper/css';
 import "swiper/css/pagination";

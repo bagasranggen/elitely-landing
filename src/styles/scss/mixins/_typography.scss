@@ -15,14 +15,16 @@
     @each $breakpoint in map-keys($breakpoints) {
         $infix: breakpoint-infix($breakpoint, $breakpoints);
         @each $size, $line-height in $font-sizes-set {
-            %fs#{$infix}-#{$size} {
+            %fs-#{$size} {
                 font-size: #{$size}px;
                 line-height: $line-height;
             }
 
-            %fs-#{$size} {
-                font-size: #{$size}px;
-                line-height: $line-height;
+            %fs#{$infix}-#{$size} {
+                @include media-breakpoint-up($breakpoint) {
+                    font-size: #{$size}px !important;
+                    line-height: $line-height !important;
+                }
             }
         }
     }

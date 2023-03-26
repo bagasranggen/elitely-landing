@@ -4,7 +4,7 @@ import type {MainColorProps} from "@/@type/common";
 import {MAIN_COLOR} from "@/data/global";
 
 import {Card, Col, Row} from "react-bootstrap";
-import LogoHeart from "@/components/common/logo/logoHear/LogoHeart";
+import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";
 
 type CardBlockItemProps = {
     color: Pick<MainColorProps, 'primary' | 'secondary' | 'tertiary'>

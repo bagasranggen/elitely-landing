@@ -18,12 +18,25 @@
     @include theme-border-radius();
     @include theme-border-spacing();
     @extend %ff-playfair;
+
+    svg {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 @mixin btn-block-color($bg, $color) {
     background-color: $bg;
     border-color: $bg;
     color: $color;
+
+    svg path {
+        fill: $color;
+
+        @include media-breakpoint-up(lg) {
+            @include make-transition(fill);
+        }
+    }
 }
 
 @mixin btn-block-color-hover($bg, $color, $border-color:$color) {
@@ -32,6 +45,10 @@
             background-color: $bg;
             border-color: $border-color;
             color: $color;
+
+            svg path {
+                fill: $color;
+            }
         }
     }
 }

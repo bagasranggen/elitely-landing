@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-import {ALTERNATE, CARDS, HIGHLIGHT} from "@/data/mock/homepage";
+import {ALTERNATE, CARDS, CAROUSEL, HIGHLIGHT} from "@/data/mock/homepage";
 
 import {Col, Container, Row} from "react-bootstrap";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
@@ -9,11 +9,14 @@ import CarouselCard from "@/components/common/carousel/carouselCard/CarouselCard
 import CardsAlternate from "@/components/common/cards/cardsAlternate/CardsAlternate";
 import Input from "@/components/common/input/Input";
 import Button, {ButtonContainer} from "@/components/common/button/Button";
+import CarouselBanner from "@/components/common/carousel/carouselBanner/CarouselBanner";
 
 export type IndexProps = {};
 
 const Index = ({}: IndexProps): React.ReactElement => {
     return <>
+        <CarouselBanner items={CAROUSEL} />
+
         <Container
             as='section'
             className='section-cards'>
@@ -65,15 +68,15 @@ const Index = ({}: IndexProps): React.ReactElement => {
                             <Input
                                 className='mb-3'
                                 option={{variant: 'regular'}}
-                                input={{type: 'text', id: 'name', placeholder: 'Name'}} />
+                                input={{type: 'email', id: 'name', placeholder: 'Email'}} />
                             <Input
                                 className='mb-3'
                                 option={{variant: 'regular'}}
-                                input={{type: 'text', id: 'name', placeholder: 'Name'}} />
+                                input={{type: 'tel', id: 'name', placeholder: 'Mobile Number'}} />
                             <Input
                                 className='mb-3'
                                 option={{variant: 'regular', isMultiline: true}}
-                                input={{type: 'text', id: 'name', placeholder: 'Name'}} />
+                                input={{type: 'text', id: 'name', placeholder: 'Message'}} />
                             <ButtonContainer className="text-center">
                                 <Button
                                     option={{variant: 'block', color: 'primary', size: 'lg'}}
