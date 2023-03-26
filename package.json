@@ -3,20 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 80",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.15",
+    "@fontsource/playfair-display": "^4.5.13",
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "bootstrap": "^5.2.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "html-react-parser": "^3.0.14",
     "next": "13.2.4",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
+    "react-use": "^17.4.0",
+    "sass": "^1.59.3",
+    "swiper": "^9.1.1",
     "typescript": "5.0.2"
   }
 }

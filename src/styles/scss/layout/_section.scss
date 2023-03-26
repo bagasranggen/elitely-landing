@@ -1,0 +1,50 @@
+.section {
+    &-alternate {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 130px;
+            margin-bottom: 130px;
+        }
+    }
+
+    &-cards {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &-highlight {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: $e-primary;
+        color: $white;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 82px;
+            padding-bottom: 82px;
+        }
+
+        h2 {
+            @extend %ff-playfair, %fs-24, %mt-3, %mb-2;
+        }
+
+        p {
+            @extend %fs-18;
+        }
+    }
+
+    &-contact {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: $e-l-primary;
+        background-image: url("/images/bg-heart.png");
+        background-repeat: repeat;
+        background-position: center;
+    }
+}

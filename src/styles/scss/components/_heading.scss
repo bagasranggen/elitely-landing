@@ -1,0 +1,5 @@
+.heading {
+    &--large {
+        @extend %ff-playfair, %fs-32, %fs-md-40;
+    }
+}

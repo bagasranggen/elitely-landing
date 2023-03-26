@@ -1,0 +1,39 @@
+@mixin input-outline() {
+    @include theme-border-radius();
+    @include theme-border-spacing();
+    @extend %ff-playfair;
+}
+
+@mixin input-outline-color($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    border-color: $color;
+
+    &::-webkit-input-placeholder {
+        color: transparentize($color, .5);
+    }
+
+    &:-ms-input-placeholder {
+        color: transparentize($color, .5);
+    }
+
+    &::placeholder {
+        color: transparentize($color, .5);
+    }
+}
+
+@mixin input-regular() {
+    padding: 18px 24px;
+
+    &::-webkit-input-placeholder {
+        color: transparentize($black, .75);
+    }
+
+    &:-ms-input-placeholder {
+        color: transparentize($black, .75);
+    }
+
+    &::placeholder {
+        color: transparentize($black, .75);
+    }
+}

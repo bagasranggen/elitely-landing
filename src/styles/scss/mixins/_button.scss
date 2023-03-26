@@ -1,0 +1,76 @@
+@mixin theme-border-radius() {
+    border-radius: 16px 32px 32px 0px;
+}
+
+@mixin theme-border-spacing($size:md) {
+    padding: 0.625rem 1rem 0.625rem .75rem;
+
+    @include media-breakpoint-up(lg) {
+        @if ($size == lg) {
+            padding: 0.5rem 1.75rem 0.5rem 1.25rem;
+        } @else {
+            padding: 0.25rem 1rem 0.25rem .75rem;
+        }
+    }
+}
+
+@mixin btn-block() {
+    @include theme-border-radius();
+    @include theme-border-spacing();
+    @extend %ff-playfair;
+
+    svg {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@mixin btn-block-color($bg, $color) {
+    background-color: $bg;
+    border-color: $bg;
+    color: $color;
+
+    svg path {
+        fill: $color;
+
+        @include media-breakpoint-up(lg) {
+            @include make-transition(fill);
+        }
+    }
+}
+
+@mixin btn-block-color-hover($bg, $color, $border-color:$color) {
+    @include media-breakpoint-up(lg) {
+        @include hover() {
+            background-color: $bg;
+            border-color: $border-color;
+            color: $color;
+
+            svg path {
+                fill: $color;
+            }
+        }
+    }
+}
+
+@mixin btn-outline() {
+    @include theme-border-radius();
+    @include theme-border-spacing();
+    @extend %ff-playfair;
+}
+
+@mixin btn-outline-color($bg, $color) {
+    background-color: $bg;
+    border-color: $color;
+    color: $color;
+}
+
+@mixin btn-outline-color-hover($bg, $color) {
+    @include media-breakpoint-up(lg) {
+        @include hover() {
+            background-color: $bg;
+            border-color: $bg;
+            color: $color;
+        }
+    }
+}

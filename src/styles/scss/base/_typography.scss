@@ -1,0 +1,17 @@
+@include make-font-sizes();
+@include make-font-color();
+
+%ff-inter {
+    font-family: "Inter";
+}
+
+%ff-playfair {
+    font-family: "Playfair Display";
+    font-style: italic;
+}
+
+%base-typography {
+    @extend %ff-inter;
+    //font-size: 1.8rem;
+    //color: $sso-dark;
+}

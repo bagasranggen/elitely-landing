@@ -1,0 +1,52 @@
+footer {
+    @extend %text-center, %text-md-start;
+    background-color: $e-primary;
+    color: $white;
+    padding-top: 50px;
+
+    p {
+        @extend %fs-12, %fs-md-14, %mt-3, %mb-4;
+    }
+
+    h2 {
+        @extend %fs-22, %fs-md-24, %ff-playfair;
+    }
+
+    ul {
+        li {
+            @extend %fs-18, %fs-lg-14;
+
+            a {
+                color: $white;
+            }
+
+            &:first-child {
+                @extend %mt-3;
+            }
+
+            &:not(:last-child) {
+                @extend %mb-2, %mb-lg-3;
+            }
+        }
+    }
+
+    .form--lg input,
+    .btn.btn--block {
+        @extend %fs-16;
+    }
+
+    .footer {
+        &__copyright {
+            @extend %text-center;
+
+            margin-top: 30px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-top: solid 1px transparentize($white, .75);
+
+            small {
+                @extend %fs-14;
+            }
+        }
+    }
+}
