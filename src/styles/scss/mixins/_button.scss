@@ -2,11 +2,15 @@
     border-radius: 16px 32px 32px 0px;
 }
 
-@mixin theme-border-spacing() {
+@mixin theme-border-spacing($size:md) {
     padding: 0.625rem 1rem 0.625rem .75rem;
 
     @include media-breakpoint-up(lg) {
-        padding: 0.25rem 1rem 0.25rem .75rem;
+        @if ($size == lg) {
+            padding: 0.5rem 1.75rem 0.5rem 1.25rem;
+        } @else {
+            padding: 0.25rem 1rem 0.25rem .75rem;
+        }
     }
 }
 
@@ -22,11 +26,11 @@
     color: $color;
 }
 
-@mixin btn-block-color-hover($bg, $color) {
+@mixin btn-block-color-hover($bg, $color, $border-color:$color) {
     @include media-breakpoint-up(lg) {
         @include hover() {
             background-color: $bg;
-            border-color: $color;
+            border-color: $border-color;
             color: $color;
         }
     }

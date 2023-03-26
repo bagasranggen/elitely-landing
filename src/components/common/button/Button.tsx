@@ -1,7 +1,18 @@
 import React from 'react';
 import Link from "next/link";
 
-import type {MainColorProps, MainVariantProps} from "@/@type/common";
+import type {MainColorProps, MainSizeProps, MainVariantProps} from "@/@type/common";
+
+type ButtonContainerProps = {
+    className?: string;
+    children: React.ReactNode;
+}
+
+export const ButtonContainer = ({className, children}: ButtonContainerProps): React.ReactElement => (
+    <div className={className}>
+        {children}
+    </div>
+)
 
 type AnchorProps = {
     link: {
@@ -23,8 +34,9 @@ type ButtonActionProps = {
 export type ButtonProps = {
     className?: string;
     option?: {
-        variant: MainVariantProps;
+        variant: Pick<MainVariantProps, 'block' | 'outline' | 'unstyled'>;
         color: MainColorProps;
+        size?: Pick<MainSizeProps, 'md' | 'lg'>;
         fullWidth?: boolean;
     };
     event?: {
@@ -37,7 +49,8 @@ const Button = ({button, className, event, link, option}: ButtonProps): React.Re
 
     const btnStyle = option?.variant ? ` btn--${option.variant}` : ''
     const btnColor = option?.color ? ` btn--${option.color}` : '';
-    const btnClass = `${option?.variant !== 'unstyled' ? 'btn' : ''}${btnStyle}${btnColor}${option?.fullWidth ? ' w-100' : ''}${className ? ` ${className}` : ''}`;
+    const btnSize = (option?.size && option?.size !== 'md') ? ` btn--${option.size}` : '';
+    const btnClass = `${option?.variant !== 'unstyled' ? 'btn' : ''}${btnStyle}${btnColor}${btnSize}${option?.fullWidth ? ' w-100' : ''}${className ? ` ${className}` : ''}`;
 
     const buttonWrapperProps = link ? {
         ...btnClass ? {className: btnClass} : {},
