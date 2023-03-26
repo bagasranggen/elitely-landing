@@ -33,7 +33,7 @@ const CarouselBanner = ({className, items}: CarouselBannerProps): React.ReactEle
                     <Row className=''>
                         <Col className={`offset-lg-4 carousel__title${item.color ? ` carousel__title--${item.color}` : ''}`}>
                             <h2>{item.title}<br />
-                                <LogoHeartLine color={MAIN_COLOR[item.color]} /><span>{item.titleBlock}</span>
+                                <LogoHeartLine color={MAIN_COLOR[item.color as keyof Object]} /><span>{item.titleBlock}</span>
                             </h2>
                         </Col>
                         <Col

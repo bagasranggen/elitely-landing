@@ -6,9 +6,9 @@ import {MainSizeProps} from "@/@type/common";
 export type InputProps = {
     className?: string;
     option?: {
-        variant?: Pick<MainVariantProps, 'outline' | 'regular'>;
+        variant?: MainVariantProps;
         color?: MainColorProps;
-        size?: Pick<MainSizeProps, 'md' | 'lg'>;
+        size?: MainSizeProps;
         align?: 'start' | 'center' | 'end';
         isMultiline?: boolean | number;
         // fullWidth?: boolean;

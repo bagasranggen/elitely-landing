@@ -37,7 +37,8 @@ const SwiperOptions: SwiperOptions = {
 }
 
 type CarouselCardItemProps = {
-    color: Pick<MainColorProps, 'primary' | 'secondary' | 'tertiary'>
+    // color: MainColorProps;
+    color: any;
     title: string;
     description: string;
 }

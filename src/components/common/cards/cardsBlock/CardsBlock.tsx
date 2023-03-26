@@ -7,7 +7,7 @@ import {Card, Col, Row} from "react-bootstrap";
 import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";
 
 type CardBlockItemProps = {
-    color: Pick<MainColorProps, 'primary' | 'secondary' | 'tertiary'>
+    color: MainColorProps
     title: string;
     description: string;
 }

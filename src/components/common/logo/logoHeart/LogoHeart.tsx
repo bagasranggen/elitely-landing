@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type LogoHeartProps = {
-    color: string;
+    color: any;
 };
 
 const LogoHeart = ({color}: LogoHeartProps): React.ReactElement => (

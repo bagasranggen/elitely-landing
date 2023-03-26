@@ -34,9 +34,9 @@ type ButtonActionProps = {
 export type ButtonProps = {
     className?: string;
     option?: {
-        variant: Pick<MainVariantProps, 'block' | 'outline' | 'unstyled'>;
+        variant: MainVariantProps;
         color: MainColorProps;
-        size?: Pick<MainSizeProps, 'md' | 'lg'>;
+        size?: MainSizeProps;
         hasArrow?: boolean;
         fullWidth?: boolean;
     };
@@ -64,7 +64,7 @@ const Button = ({button, className, event, link, option}: ButtonProps): React.Re
             fill="#B2294B" />
     </svg>
 
-    const buttonWrapperProps = link ? {
+    const buttonWrapperProps: any = link ? {
         ...btnClass ? {className: btnClass} : {},
         href: link.href,
         ...link.openNewTab ? {target: '_blank'} : {},

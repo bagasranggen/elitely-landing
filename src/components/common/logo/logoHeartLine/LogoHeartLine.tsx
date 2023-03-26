@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type LogoHeartLineProps = {
-    color?: string
+    color: any;
 };
 
 const LogoHeartLine = ({color}: LogoHeartLineProps): React.ReactElement => (
