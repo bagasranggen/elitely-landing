@@ -1,3 +1,4 @@
-export type MainVariantProps = 'block' | 'outline' | 'unstyled';
+export type MainVariantProps = 'block' | 'outline' | 'regular' | 'unstyled';
 export type MainColorProps = 'primary' | 'secondary' | 'tertiary' | 'light';
+export type MainSizeProps = 'sm' | 'md' | 'lg';
 export type HeadingLevelProps = 'h1' | 'h2' | 'h3' | 'h4'

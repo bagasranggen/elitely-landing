@@ -4,10 +4,29 @@
         @include btn-block();
 
         &.btn {
+            &--primary {
+                @include btn-block-color($e-primary, $white);
+                @include btn-block-color-hover(lighten($e-primary, 10), $white, lighten($e-primary, 10));
+            }
+
+            &--secondary {
+                @include btn-block-color($e-secondary, $white);
+                @include btn-block-color-hover(lighten($e-secondary, 10), $white, lighten($e-secondary, 10));
+            }
+
+            &--tertiary {
+                @include btn-block-color($e-tertiary, $white);
+                @include btn-block-color-hover(lighten($e-tertiary, 10), $white, lighten($e-tertiary, 10));
+            }
+
             &--light {
                 @include btn-block-color($white, $e-primary);
-                //@include btn-block-color-hover(darken($white, 8), $e-primary);
                 @include btn-block-color-hover($e-primary, $white);
+            }
+
+            &--lg {
+                @extend %fs-18, %fs-md-24;
+                @include theme-border-spacing(lg);
             }
         }
     }

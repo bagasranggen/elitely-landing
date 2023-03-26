@@ -51,10 +51,10 @@ const Footer = ({}: FooterProps): React.ReactElement => (
                     <form action="">
                         <Input
                             className='mt-3 mb-3'
-                            option={{variant: 'outline', color: 'light', align: 'center'}}
+                            option={{variant: 'outline', color: 'light', size: 'lg', align: 'center'}}
                             input={{id: 'subscribe', placeholder: 'Your email'}} />
                         <Button
-                            option={{variant: 'block', color: 'light', fullWidth: true}}
+                            option={{variant: 'block', color: 'light', size: 'lg', fullWidth: true}}
                             button={{type: 'submit', label: 'Subscribe'}} />
                     </form>
                 </Col>

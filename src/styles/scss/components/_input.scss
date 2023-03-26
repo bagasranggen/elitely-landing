@@ -6,10 +6,24 @@
                     @include input-outline-color(transparent, $white)
                 }
             }
+
+            &--lg {
+                input {
+                    @include theme-border-spacing(lg);
+                }
+            }
         }
 
         input {
             @include input-outline();
+        }
+    }
+
+    &--regular {
+
+        input,
+        textarea {
+            @include input-regular();
         }
     }
 }

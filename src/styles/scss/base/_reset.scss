@@ -60,13 +60,14 @@ body {
 //}
 //
 ///*Setting of paragraph*/
-//p {
-//    margin: 0 0 2.5rem;
-//
-//    &:last-child {
-//        margin-bottom: 0;
-//    }
-//}
+p {
+    //margin: 0 0 2.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 //
 ///*Reset ol, ul and dl margin-bottom*/
 //ol,

@@ -30,6 +30,11 @@ footer {
         }
     }
 
+    .form--lg input,
+    .btn.btn--block {
+        @extend %fs-16;
+    }
+
     .footer {
         &__copyright {
             @extend %text-center;
