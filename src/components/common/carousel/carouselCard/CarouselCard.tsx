@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {MAIN_COLOR} from "@/data/global";
-import type {MainColorProps} from "@/@type/common";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions, Pagination} from "swiper";
@@ -14,7 +13,6 @@ import "swiper/css/pagination";
 const SwiperOptions: SwiperOptions = {
     modules: [Pagination],
     pagination: {
-        // enabled: true,
         clickable: true,
     },
     spaceBetween: 20,
