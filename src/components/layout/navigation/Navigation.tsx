@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react';
 import Image from "next/image";
+import {useRouter} from "next/router";
 
 import {MAIN_NAVIGATION} from "@/data/mock/global";
 
@@ -7,7 +8,6 @@ import logo from '@/assets/images/logo.svg'
 
 import {Col, Container, Nav, Navbar} from "react-bootstrap";
 import Button from "@/components/common/button/Button";
-import {useRouter} from "next/router";
 
 export type NavigationProps = {};
 

@@ -2,13 +2,13 @@ import React from 'react';
 
 import {Card} from "react-bootstrap";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination} from "swiper";
+import {Pagination, SwiperOptions} from "swiper";
 
 
 import 'swiper/css';
 import "swiper/css/pagination";
 import {ImageProps, MainColorProps} from "@/@type/common";
-import ListDashed, {ListDashedItem, ListDashedProps} from "@/components/common/list/listDashed/ListDashed";
+import ListDashed, {ListDashedProps} from "@/components/common/list/listDashed/ListDashed";
 
 const SwiperOptions: SwiperOptions = {
     modules: [Pagination],

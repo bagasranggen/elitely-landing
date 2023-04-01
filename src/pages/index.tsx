@@ -5,11 +5,11 @@ import {ALTERNATE, CARDS, CAROUSEL, HIGHLIGHT} from "@/data/mock/homepage";
 
 import {Col, Container, Row} from "react-bootstrap";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
+import Button, {ButtonContainer} from "@/components/common/button/Button";
 import CarouselCard from "@/components/common/carousel/carouselCard/CarouselCard";
 import CardsAlternate from "@/components/common/cards/cardsAlternate/CardsAlternate";
-import Input from "@/components/common/input/Input";
-import Button, {ButtonContainer} from "@/components/common/button/Button";
 import CarouselBanner from "@/components/common/carousel/carouselBanner/CarouselBanner";
+import Input from "@/components/common/input/Input";
 
 export type IndexProps = {};
 

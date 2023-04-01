@@ -1,7 +1,5 @@
 import React from 'react';
 
-import star from '../../../../assets/images/star.svg';
-
 import {Col, Row} from "react-bootstrap";
 import Card, {CardListProps, CardProps} from "@/components/common/cards/card/Card";
 import Picture from "@/components/common/picture/Picture";
