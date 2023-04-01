@@ -12,13 +12,14 @@
 }
 
 @mixin make-font-sizes($breakpoints: $grid-breakpoints) {
-    @each $breakpoint in map-keys($breakpoints) {
-        $infix: breakpoint-infix($breakpoint, $breakpoints);
-        @each $size, $line-height in $font-sizes-set {
-            %fs-#{$size} {
-                font-size: #{$size}px;
-                line-height: $line-height;
-            }
+    @each $size, $line-height in $font-sizes-set {
+        @each $breakpoint in map-keys($breakpoints) {
+            $infix: breakpoint-infix($breakpoint, $breakpoints);
+            //.fs-#{$size},
+            //%fs-#{$size} {
+            //    font-size: #{$size}px;
+            //    line-height: $line-height;
+            //}
 
             %fs#{$infix}-#{$size} {
                 @include media-breakpoint-up($breakpoint) {

@@ -1,12 +1,9 @@
 import React from 'react';
+import {ImageProps} from "@/@type/common";
 
 export type PictureItemProps = {
-    src: string;
-    width: number;
-    height: number;
-    alt: string;
     media?: number;
-}
+} & ImageProps;
 
 export type PictureProps = {
     images: Array<PictureItemProps>;
