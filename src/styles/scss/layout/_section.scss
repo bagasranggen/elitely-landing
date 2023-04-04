@@ -19,6 +19,32 @@
         }
     }
 
+    &-cards-list {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &-charts,
+    &-cards-image {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &-charts {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        background-color: $e-l-primary;
+    }
+
     &-highlight {
         padding-top: 50px;
         padding-bottom: 50px;

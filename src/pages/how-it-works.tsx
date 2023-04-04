@@ -16,15 +16,18 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
     <>
         <CarouselBanner items={CAROUSEL} />
 
-        <Container as='section'>
+        <Container
+            as='section'
+            className='section-cards-list'>
             <CarouselCardList items={CARDS} />
         </Container>
 
-        <section>
-            <HeadingOffset
-                className='mb-5 text-center'
-                option={{size: 'lg'}}>How payment processing works on Elitely</HeadingOffset>
+        <section className='section-charts'>
             <Container>
+                <HeadingOffset
+                    className='mb-5 text-center'
+                    option={{size: 'lg'}}>How payment processing works on Elitely</HeadingOffset>
+
                 <Row className='justify-content-center'>
                     <Col md={11}>
                         <BarChart data={CHARTS} />
@@ -33,7 +36,9 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             </Container>
         </section>
 
-        <Container as='section'>
+        <Container
+            as='section'
+            className='section-cards-image'>
             <HeadingOffset className='mb-5 text-center'>How it works</HeadingOffset>
             <CarouselCardImage items={HOW_IT_WORKS} />
         </Container>
