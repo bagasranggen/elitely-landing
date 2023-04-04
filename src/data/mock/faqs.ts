@@ -1,8 +1,16 @@
 import {AccordionProps} from "@/components/common/accordion/Accordion";
+import {PictureItemProps} from "@/components/common/picture/Picture";
+import {HeadingOffsetProps} from "@/components/common/heading/headingOffset/HeadingOffset";
 
-export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ title: string } & AccordionProps)> = {
+export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ title: HeadingOffsetProps['children'], image?: PictureItemProps[] } & AccordionProps)> = {
     GENERAL: {
         title: 'General',
+        image: [{
+            src: '/images/heading-line-general.svg',
+            width: 143,
+            height: 7,
+            alt: 'general line'
+        }],
         color: 'tertiary',
         items: [
             {
@@ -18,6 +26,12 @@ export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ titl
     LURKERS: {
         title: 'For Lurkers',
         color: 'primary',
+        image: [{
+            src: '/images/heading-line-lurkers.svg',
+            width: 215,
+            height: 7,
+            alt: 'general line'
+        }],
         items: [
             {
                 title: 'How is my privacy protected?',
@@ -32,6 +46,12 @@ export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ titl
     INFLUENCER: {
         title: 'For Personalities/Influencers',
         color: 'secondary',
+        image: [{
+            src: '/images/heading-line-influencers.svg',
+            width: 520,
+            height: 7,
+            alt: 'general line'
+        }],
         items: [
             {
                 title: 'How is my privacy protected?',

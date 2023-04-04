@@ -13,8 +13,8 @@ const Faqs = ({}: FaqsProps): React.ReactElement => (
                 key={key}
                 className='section-faqs'>
                 <HeadingOffset
-                    option={{variant: "regular"}}
-                    className='mb-4 text-center text-lg-start'>{FAQS[key].title}</HeadingOffset>
+                    option={{variant: "regular", hasLine: FAQS[key]?.image}}
+                    className='mb-4 text-center text-md-start'>{FAQS[key].title}</HeadingOffset>
                 <Accordion
                     color={FAQS[key].color}
                     items={FAQS[key].items} />

@@ -1,4 +1,21 @@
 .heading {
+    &-wrapper {
+        @extend %position-relative;
+
+        img,
+        svg {
+            @extend %position-absolute;
+            bottom: 0;
+        }
+
+        h2.text-center ~ picture img {
+            @include media-breakpoint-down(md) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
     &--large {
         @extend %ff-playfair, %fs-32, %fs-md-40;
     }
