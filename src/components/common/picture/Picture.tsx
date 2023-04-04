@@ -20,7 +20,7 @@ const Picture = ({images}: PictureProps): React.ReactElement => (
                 width: image.width,
                 height: image.height,
                 alt: image.alt,
-                class: 'img-fluid'
+                className: 'img-fluid'
             } : {
                 srcset: image.src,
                 width: image.width,
