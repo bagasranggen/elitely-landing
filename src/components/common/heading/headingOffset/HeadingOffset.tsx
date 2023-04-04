@@ -1,22 +1,37 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+
+import {HeadingLevelProps, MainSizeProps} from "@/@type/common";
+
 import {Col, Row} from "react-bootstrap";
-import {HeadingLevelProps} from "@/@type/common";
+import Picture, {PictureItemProps} from "@/components/common/picture/Picture";
 
 export type HeadingOffsetProps = {
     className?: string;
     option?: {
         variant?: 'offset' | 'regular';
         level?: HeadingLevelProps;
+        size?: MainSizeProps;
+        hasLine?: PictureItemProps[];
     };
     children: React.ReactNode;
 };
 
 const HeadingOffset = ({className, option, children}: HeadingOffsetProps): React.ReactElement => {
-    const Heading = option?.level ?? 'h2'
+    const Heading = option?.level ?? 'h2';
+    const HeadingWrapper = option?.hasLine ? 'div' : Fragment;
+
+    if (option?.variant === 'regular') {
+        return (
+            <HeadingWrapper {...option?.hasLine && {className: 'heading-wrapper'}}>
+                <Heading className={`heading--large${className ? ` ${className}` : ''}`}>{children}</Heading>
+                {option?.hasLine && <Picture images={option.hasLine} />}
+            </HeadingWrapper>
+        )
+    }
 
     return (
         <Row className={`justify-content-center${className ? ` ${className}` : ''}`}>
-            <Col lg={6}>
+            <Col lg={option?.size === 'lg' ? 8 : 6}>
                 <Heading className='heading--large'>{children}</Heading>
             </Col>
         </Row>

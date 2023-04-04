@@ -19,6 +19,32 @@
         }
     }
 
+    &-cards-list {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &-charts,
+    &-cards-image {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &-charts {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        background-color: $e-l-primary;
+    }
+
     &-highlight {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -39,6 +65,26 @@
         }
     }
 
+    &-faqs {
+        margin-top: 50px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 40px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 60px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 100px;
+        }
+    }
+
     &-contact {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -46,5 +92,22 @@
         background-image: url("/images/bg-heart.png");
         background-repeat: repeat;
         background-position: center;
+    }
+}
+
+.chart {
+    &-wrapper {
+        @extend %position-relative;
+        overflow-x: auto;
+
+        canva {
+            @extend %mx-auto;
+        }
+    }
+
+    &-area-wrapper {
+        @include media-breakpoint-down(md) {
+            width: 800px;
+        }
     }
 }

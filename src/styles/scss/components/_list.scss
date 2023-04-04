@@ -1,0 +1,113 @@
+.list {
+    &-bullet {
+        li {
+            @extend %d-flex, %align-items-baseline, %fs-18, %justify-content-center, %justify-content-md-start;
+            font-weight: 600;
+
+            &:before {
+                @extend %d-block, %me-2;
+
+                content: '';
+                min-width: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: $e-tertiary;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-check {
+        li {
+            @extend %d-flex, %fs-18, %position-relative;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+            }
+
+            &:before {
+                display: block;
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+                background-color: $white;
+                border-radius: 100%;
+                margin-top: -4px;
+                margin-right: 10px;
+            }
+
+            &:after {
+                @extend %position-absolute;
+
+                left: 10px;
+                top: 6px;
+                width: 14px;
+                height: 10px;
+                background-image: url("/images/check.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &-dashed {
+        li {
+            @extend %d-flex, %position-relative, %fs-18;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                &:after {
+
+                    @extend %position-absolute;
+
+                    content: '';
+                    top: 15px;
+                    left: 4.5px;
+                    width: 10%;
+                    height: calc(100% + 20px);
+                    //background-color: red;
+                    border-left-style: dashed;
+                    border-left-width: 1px;
+                    //border-left-color: red;
+                }
+            }
+
+            &:before {
+                @extend %d-block;
+
+                content: '';
+                min-width: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                margin-top: 6px;
+                margin-right: 10px;
+                background-color: red;
+            }
+
+            &:after {
+                //@extend %position-absolute;
+                //
+                //content: '';
+                //top: 10px;
+                //left: 4.5px;
+                //width: 10%;
+                //height: calc(100% + 20px);
+                ////background-color: red;
+                //border-left-style: dashed;
+                //border-left-width: 1px;
+                //border-left-color: red;
+            }
+        }
+    }
+}

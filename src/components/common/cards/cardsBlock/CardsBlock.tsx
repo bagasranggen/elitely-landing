@@ -1,36 +1,26 @@
 import React from 'react';
-import type {MainColorProps} from "@/@type/common";
 
-import {MAIN_COLOR} from "@/data/global";
-
-import {Card, Col, Row} from "react-bootstrap";
-import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";
-
-type CardBlockItemProps = {
-    color: MainColorProps
-    title: string;
-    description: string;
-}
+import {Col, Row} from "react-bootstrap";
+import Card, {CardLoveProps, CardProps} from "@/components/common/cards/card/Card";
 
 export type CardsBlockProps = {
     className?: string;
     option: {
         card: string;
     };
-    items: Array<CardBlockItemProps>
+    items: Array<Pick<CardProps, "color"> & CardLoveProps>
 };
 
 const CardsBlock = ({className, option, items}: CardsBlockProps): React.ReactElement => (
     <Row className={`cards--block${className ? ` ${className}` : ''}`}>
-        {items.map((item: CardBlockItemProps) => (
+        {items.map((item: Pick<CardProps, "color"> & CardLoveProps) => (
             <Col
                 key={item.title}
                 className={option.card}>
-                <div className={`cards__card cards__card--${item.color}`}>
-                    <LogoHeart color={MAIN_COLOR[item.color as keyof Object]} />
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
-                </div>
+                <Card
+                    color={item.color}
+                    title={item.title}
+                    description={item.description} />
             </Col>
         ))}
     </Row>

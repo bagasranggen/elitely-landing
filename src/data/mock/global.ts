@@ -12,8 +12,8 @@ export const MAIN_NAVIGATION = [
         label: 'How It Works'
     },
     {
-        uri: '/faq',
-        label: 'FAQ'
+        uri: '/faqs',
+        label: 'FAQ\'s'
     },
     {
         uri: '/terms',
@@ -43,7 +43,7 @@ export const FOOTER_NAVIGATION = [
             },
             {
                 uri: '/faqs',
-                label: 'FAQS'
+                label: 'FAQ\'s'
             },
         ]
     },

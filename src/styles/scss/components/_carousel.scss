@@ -102,10 +102,6 @@
     }
 
     &--cards {
-        @include media-breakpoint-down(lg) {
-            padding-bottom: 60px !important;
-        }
-
         h2 {
             @extend %fs-24, %ff-playfair, %mt-5;
             margin-bottom: 20px;
@@ -136,6 +132,55 @@
                     background-color: $e-tertiary !important;
                 }
             }
+        }
+    }
+}
+
+.cards {
+    &--block-list,
+    &--image {
+        .swiper {
+            &-slide {
+                height: auto;
+
+                .cards__card {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &--block-list {
+        .swiper {
+            &-slide {
+                @extend %d-flex, %flex-column;
+            }
+
+            &-pagination {
+                &-bullet-active {
+                    background-color: $e-secondary !important;
+                }
+            }
+        }
+    }
+
+    &--image {
+        .swiper {
+            &-pagination {
+                &-bullet-active {
+                    background-color: $e-tertiary !important;
+                }
+            }
+        }
+    }
+}
+
+.swiper {
+    &.carousel--cards,
+    &.cards--block-list,
+    &.cards--image {
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 60px !important;
         }
     }
 }

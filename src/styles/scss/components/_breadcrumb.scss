@@ -1,0 +1,15 @@
+.breadcrumb {
+    &-item {
+        @extend %fs-14;
+    }
+
+    a {
+        color: transparentize($e-l-dark, .5);
+
+        @include media-breakpoint-up(lg) {
+            @include hover() {
+                color: $e-l-dark;
+            }
+        }
+    }
+}
