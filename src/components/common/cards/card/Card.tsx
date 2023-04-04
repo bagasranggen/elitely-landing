@@ -8,12 +8,12 @@ import ListCheck, {ListCheckProps} from "@/components/common/list/listCheck/List
 export type CardLoveProps = {
     title: string;
     description: string;
-    // list?: never;
+    list?: never;
 }
 
 export type CardListProps = {
-    // title?: never;
-    // description?: never;
+    title?: never;
+    description?: never;
     list: ListCheckProps["items"];
 }
 
@@ -25,7 +25,7 @@ const Card = ({color, title, description, list}: CardProps): React.ReactElement 
     let content: JSX.Element = <></>;
     let type: 'list' | 'love' | undefined;
 
-    if (list?.length > 0) {
+    if (list?.length && list?.length > 0) {
         type = 'list';
         content = <ListCheck items={list} />;
     }

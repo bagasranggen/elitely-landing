@@ -6,7 +6,8 @@ import Picture from "@/components/common/picture/Picture";
 
 export type CardBlockListItemProps = {
     title: string;
-} & Pick<CardProps, "color"> & CardListProps;
+    list: CardListProps["list"]
+} & Pick<CardProps, "color">;
 
 export type CardBlockListProps = {
     className?: string;
