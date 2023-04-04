@@ -1,4 +1,8 @@
 .breadcrumb {
+    &-item {
+        @extend %fs-14;
+    }
+
     a {
         color: transparentize($e-l-dark, .5);
 
