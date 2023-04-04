@@ -1,7 +1,9 @@
 import React from 'react';
-import Accordion from "@/components/common/accordion/Accordion";
+
 import {FAQS} from "@/data/mock/faqs";
+
 import {Container} from "react-bootstrap";
+import Accordion from "@/components/common/accordion/Accordion";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 
 export type FaqsProps = {};
