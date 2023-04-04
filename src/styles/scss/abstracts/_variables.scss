@@ -6,6 +6,7 @@ $e-l-secondary: #FCF8E9;
 $e-tertiary: #32C08D;
 $e-l-tertiary: #EAF9F4;
 $e-d-light: #F5F5F5;
+$e-l-dark: #2D2D2D;
 
 $main-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
 
@@ -27,6 +28,8 @@ $accordion-padding-y: 1.5rem;
 $accordion-padding-x: $accordion-padding-y;
 $accordion-border-width: 0;
 $accordion-button-focus-box-shadow: none;
-//$accordion-icon-color:                    $body-color;
-//$accordion-icon-active-color: var(--icon-color-active);
-//$accordion-icon-active-color: red;
+
+// Breadcrumb
+$breadcrumb-divider-color: transparentize($e-l-dark, .5);
+$breadcrumb-active-color: $e-l-dark;
+$breadcrumb-divider: quote(">");

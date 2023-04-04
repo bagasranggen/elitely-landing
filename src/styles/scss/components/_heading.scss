@@ -8,6 +8,7 @@
             bottom: 0;
         }
 
+        h1.text-center ~ picture img,
         h2.text-center ~ picture img {
             @include media-breakpoint-down(md) {
                 left: 50%;
@@ -18,5 +19,11 @@
 
     &--large {
         @extend %ff-playfair, %fs-32, %fs-md-40;
+    }
+}
+
+h1 {
+    &.heading--large {
+        @extend %fs-36, %fs-lg-56;
     }
 }

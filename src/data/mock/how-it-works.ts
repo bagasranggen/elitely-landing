@@ -2,6 +2,13 @@ import {MAIN_COLOR} from "@/data/global";
 import {CardBlockListItemProps} from "@/components/common/cards/cardBlockList/CardBlockList";
 import {CarouselCardImageProps} from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
 import {BarChartProps} from "@/components/common/chart/barChart/BarChart";
+import {BreadcrumbProps} from "@/components/common/breadcrumb/Breadcrumb";
+import {ListBulletProps} from "@/components/common/list/listBullet/ListBullet";
+
+export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletProps["items"] } = {
+    breadcrumb: [{url: '/', label: 'Homepage'}, {url: '/how-it-works', label: 'How It Works'}],
+    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly']
+}
 
 export const CARDS: CardBlockListItemProps[] = [
     {
