@@ -21,3 +21,12 @@ $navbar-padding-y: 15px;
 //$nav-link-padding-x: 0;
 $navbar-dark-color: #fff;
 $navbar-dark-hover-color: transparentize($e-l-primary, .25);
+
+// Accordion
+$accordion-padding-y: 1.5rem;
+$accordion-padding-x: $accordion-padding-y;
+$accordion-border-width: 0;
+$accordion-button-focus-box-shadow: none;
+//$accordion-icon-color:                    $body-color;
+//$accordion-icon-active-color: var(--icon-color-active);
+//$accordion-icon-active-color: red;
