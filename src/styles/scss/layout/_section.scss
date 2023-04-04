@@ -65,6 +65,26 @@
         }
     }
 
+    &-faqs {
+        margin-top: 50px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 40px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 60px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 100px;
+        }
+    }
+
     &-contact {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -90,8 +110,4 @@
             width: 800px;
         }
     }
-
-    //@include media-breakpoint-down(lg) {
-    //    width: 600px;
-    //}
 }
