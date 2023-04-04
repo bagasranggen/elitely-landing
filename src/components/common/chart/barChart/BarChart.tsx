@@ -37,9 +37,14 @@ export type BarChartProps = {
 };
 
 const BarChart = ({data}: BarChartProps): React.ReactElement => (
-    <Bar
-        options={BarChartOptions}
-        data={data} />
+
+    <div className="chart-wrapper">
+        <div className="chart-area-wrapper">
+            <Bar
+                options={BarChartOptions}
+                data={data} />
+        </div>
+    </div>
 );
 
 export default BarChart;

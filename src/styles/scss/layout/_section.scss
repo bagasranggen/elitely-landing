@@ -48,3 +48,24 @@
         background-position: center;
     }
 }
+
+.chart {
+    &-wrapper {
+        @extend %position-relative;
+        overflow-x: auto;
+
+        canva {
+            @extend %mx-auto;
+        }
+    }
+
+    &-area-wrapper {
+        @include media-breakpoint-down(md) {
+            width: 800px;
+        }
+    }
+
+    //@include media-breakpoint-down(lg) {
+    //    width: 600px;
+    //}
+}
