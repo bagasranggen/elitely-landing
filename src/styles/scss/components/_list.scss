@@ -1,4 +1,26 @@
 .list {
+    &-bullet {
+        li {
+            @extend %d-flex, %align-items-baseline, %fs-18, %justify-content-center, %justify-content-md-start;
+            font-weight: 600;
+
+            &:before {
+                @extend %d-block, %me-2;
+
+                content: '';
+                min-width: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: $e-tertiary;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
     &-check {
         li {
             @extend %d-flex, %fs-18, %position-relative;
