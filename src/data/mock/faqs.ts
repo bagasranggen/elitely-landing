@@ -2,6 +2,11 @@ import {AccordionProps} from "@/components/common/accordion/Accordion";
 import {PictureItemProps} from "@/components/common/picture/Picture";
 import {HeadingOffsetProps} from "@/components/common/heading/headingOffset/HeadingOffset";
 
+export const HEADER = {
+    breadcrumb: [{url: '/', label: 'Homepage'}, {url: '/faqs', label: 'Frequently Asked Questions'}],
+    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly']
+}
+
 export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ title: HeadingOffsetProps['children'], image?: PictureItemProps[] } & AccordionProps)> = {
     GENERAL: {
         title: 'General',
