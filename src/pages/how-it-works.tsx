@@ -1,13 +1,14 @@
 import React from 'react';
 
 import {CAROUSEL} from "@/data/mock/homepage";
-import {CARDS, HOW_IT_WORKS} from "@/data/mock/how-it-works";
+import {CARDS, CHARTS, HOW_IT_WORKS} from "@/data/mock/how-it-works";
 
-import {Container} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import CarouselBanner from "@/components/common/carousel/carouselBanner/CarouselBanner";
 import CarouselCardList from "@/components/common/carousel/carouselCardList/CarouselCardList";
 import CarouselCardImage from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
+import BarChart from "@/components/common/chart/barChart/BarChart";
 
 export type HowItWorksProps = {};
 
@@ -19,7 +20,20 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             <CarouselCardList items={CARDS} />
         </Container>
 
-        <Container>
+        <section>
+            <HeadingOffset
+                className='mb-5 text-center'
+                option={{size: 'lg'}}>How payment processing works on Elitely</HeadingOffset>
+            <Container>
+                <Row className='justify-content-center'>
+                    <Col md={11}>
+                        <BarChart data={CHARTS} />
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+
+        <Container as='section'>
             <HeadingOffset className='mb-5 text-center'>How it works</HeadingOffset>
             <CarouselCardImage items={HOW_IT_WORKS} />
         </Container>

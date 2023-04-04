@@ -1,8 +1,7 @@
+import {MAIN_COLOR} from "@/data/global";
 import {CardBlockListItemProps} from "@/components/common/cards/cardBlockList/CardBlockList";
-import {
-    CarouselCardImageItemProps,
-    CarouselCardImageProps
-} from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
+import {CarouselCardImageProps} from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
+import {BarChartProps} from "@/components/common/chart/barChart/BarChart";
 
 export const CARDS: CardBlockListItemProps[] = [
     {
@@ -29,6 +28,17 @@ export const CARDS: CardBlockListItemProps[] = [
         ]
     },
 ]
+
+export const CHARTS: BarChartProps['data'] = {
+    labels: ['May', 'June', 'July', 'August', 'September', 'October'],
+    datasets: [
+        {
+            label: 'Subscribe',
+            data: [40, 35, 12, 18, 27, 38],
+            backgroundColor: MAIN_COLOR.primary,
+        }
+    ]
+}
 
 export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     {
