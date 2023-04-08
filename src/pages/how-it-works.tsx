@@ -37,6 +37,7 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                     <p>Learn more about how work is structured in our company</p>
                     <ListBullet
                         className='mt-5'
+                        options={{color: "tertiary"}}
                         items={HEADER.list} />
                 </Col>
             </Row>

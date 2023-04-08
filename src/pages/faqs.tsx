@@ -21,6 +21,7 @@ const Faqs = ({}: FaqsProps): React.ReactElement => (
                 option={{level: "h1", variant: "regular"}}>Frequently Asked Questions</HeadingOffset>
             <ListBullet
                 className='mt-5 text-center text-md-start'
+                options={{color: "tertiary"}}
                 items={HEADER.list} />
         </HeaderBanner>
 
