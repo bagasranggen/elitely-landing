@@ -25,5 +25,13 @@
                 }
             }
         }
+
+        &--regular {
+            .btn.btn--lg {
+                @extend %fs-18;
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+            }
+        }
     }
 }

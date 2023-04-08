@@ -1,4 +1,5 @@
 import React from 'react';
+import {useRouter} from "next/router";
 
 import {useMeasure} from "react-use";
 
@@ -10,11 +11,15 @@ export type LayoutProps = {
 };
 
 const Layout = ({children}: LayoutProps): React.ReactElement => {
-    const [navigationRef, {top, bottom}]: any = useMeasure()
+    const [navigationRef, {top, bottom}]: any = useMeasure();
+    const {asPath} = useRouter();
+    const pagePath = asPath.replace(/\//g, '-')
 
     return <>
         <Navigation ref={navigationRef} />
-        <main style={{'--nav-height': `${top + bottom}px`} as React.CSSProperties}>{children}</main>
+        <main
+            className={`page-${pagePath}`}
+            style={{'--nav-height': `${top + bottom}px`} as React.CSSProperties}>{children}</main>
         <Footer />
     </>;
 };

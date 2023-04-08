@@ -6,6 +6,7 @@ $e-l-secondary: #FCF8E9;
 $e-tertiary: #32C08D;
 $e-l-tertiary: #EAF9F4;
 $e-d-light: #F5F5F5;
+$e-dark: #334155;
 $e-l-dark: #2D2D2D;
 
 $main-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
@@ -16,6 +17,10 @@ $main-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, 
 // Font Sizes
 $font-sizes-set: (12, 18px), (14, 21px), (16, 24px), (18, 27px), (20, 30px), (22, 33px), (24, 36px), (30, 36px), (32, 38px), (36, 43px), (40, 48px), (56, 68px);
 $font-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
+
+// Border
+$border-color: $e-dark;
+$input-border-color: $e-dark;
 
 // Navbar
 $navbar-padding-y: 15px;

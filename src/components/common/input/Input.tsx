@@ -1,7 +1,21 @@
 import React from 'react';
 
 import type {MainColorProps, MainVariantProps} from "@/@type/common";
-import {MainSizeProps} from "@/@type/common";
+import type {MainSizeProps} from "@/@type/common";
+
+import InputSelect, {
+    InputSelectProps as ComponentInputSelectProps
+} from "@/components/common/input/inputSelect/InputSelect";
+
+type InputRegularProps = {
+    type?: 'text' | 'email' | 'number' | 'tel';
+    options?: never;
+}
+
+type InputSelectProps = {
+    type?: 'select';
+    options: ComponentInputSelectProps["input"]["options"];
+}
 
 export type InputProps = {
     className?: string;
@@ -13,19 +27,20 @@ export type InputProps = {
         isMultiline?: boolean | number;
         // fullWidth?: boolean;
     };
-    input: {
+    input: ({
         id: string;
-        type?: 'text' | 'email' | 'number' | 'tel';
+        // type?: 'text' | 'email' | 'number' | 'tel';
         label?: string;
         placeholder?: string;
-    }
+    } & (InputRegularProps | InputSelectProps))
 };
 
 const Input = ({className, option, input}: InputProps): React.ReactElement => {
     const formStyle = option?.variant ? `form--${option.variant}` : '';
     const formColor = option?.color ? ` form--${option.color}` : '';
     const formSize = (option?.size && option?.size !== 'md') ? ` form--${option.size}` : '';
-    const formClass = `${formStyle}${formColor}${formSize}${className ? ` ${className}` : ''}`
+    const formIsDropdown = input.type === 'select' ? ' form--dropdown' : ''
+    const formClass = `${formStyle}${formIsDropdown}${formColor}${formSize}${className ? ` ${className}` : ''}`
 
     const InputBlock = option?.isMultiline ? 'textarea' : 'input'
 
@@ -34,18 +49,12 @@ const Input = ({className, option, input}: InputProps): React.ReactElement => {
             {input.label && <label
                 htmlFor={input.id}
                 className="form-label">{input.label}</label>}
-            {/*<input*/}
-            {/*    type={input?.type ?? 'text'}*/}
-            {/*    className={`form-control${option?.align ? ` text-${option.align}` : ''}`}*/}
-            {/*    id={input.id}*/}
-            {/*    placeholder={input.placeholder} />*/}
-            <InputBlock
-                // type={input?.type ?? 'text'}
+            {input.type === 'select' ? <InputSelect input={input} /> : <InputBlock
                 {...!option?.isMultiline && {type: input?.type ?? 'text'}}
                 {...option?.isMultiline && {rows: typeof option.isMultiline === 'number' ? option.isMultiline : 5}}
                 className={`form-control${option?.align ? ` text-${option.align}` : ''}`}
                 id={input.id}
-                placeholder={input.placeholder} />
+                placeholder={input.placeholder} />}
         </div>
     )
 };

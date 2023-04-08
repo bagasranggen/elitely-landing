@@ -3,18 +3,17 @@ import React from 'react';
 import {MainColorProps} from "@/@type/common";
 
 import Breadcrumb, {BreadcrumbProps} from "@/components/common/breadcrumb/Breadcrumb";
-import {Col, Container, Row} from "react-bootstrap";
-import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
+import {Container} from "react-bootstrap";
 
 export type HeaderBannerProps = {
     breadcrumb: BreadcrumbProps['items'];
     className?: string;
-    color: MainColorProps;
+    color?: MainColorProps;
     children?: React.ReactNode;
 };
 
 const HeaderBanner = ({breadcrumb, className, color, children}: HeaderBannerProps): React.ReactElement => (
-    <section className={`header-banner header-banner--${color}${className ? ` ${className}` : ''}`}>
+    <section className={`header-banner${color ? ` header-banner--${color}` : ''}${className ? ` ${className}` : ''}`}>
         <Container>
             {/*<Row className='justify-content-center'>*/}
             {/*    <Col>*/}

@@ -19,6 +19,11 @@
 
     &--large {
         @extend %ff-playfair, %fs-32, %fs-md-40;
+
+        ~ p {
+            @extend %fs-18;
+            margin-top: 20px;
+        }
     }
 }
 

@@ -44,7 +44,7 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                             link={{href: '#', label: 'Login'}} />
                         <Button
                             option={{variant: 'block', color: 'light'}}
-                            button={{type: 'button', label: 'Contact Us'}} />
+                            link={{href: '/contact-us', label: 'Contact Us'}} />
                     </Nav>
                 </Navbar.Collapse>
             </Container>
