@@ -12,11 +12,33 @@
                 width: 10px;
                 height: 10px;
                 border-radius: 100%;
-                background-color: $e-tertiary;
+                //background-color: $e-tertiary;
             }
 
             &:not(:last-child) {
                 margin-bottom: 15px;
+            }
+        }
+
+        &--inline {
+            @extend %d-md-flex, %flex-wrap;
+
+            li {
+                &:not(:last-child) {
+                    @include media-breakpoint-up(md) {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+
+        @each $key, $color, $bg in $main-color-set {
+            &--#{$key} {
+                li {
+                    &:before {
+                        background-color: $color;
+                    }
+                }
             }
         }
     }
