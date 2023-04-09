@@ -1,10 +1,32 @@
+import {CIRCLE} from "@/data/mock/common";
+
 import {AccordionProps} from "@/components/common/accordion/Accordion";
 import {PictureItemProps} from "@/components/common/picture/Picture";
 import {HeadingOffsetProps} from "@/components/common/heading/headingOffset/HeadingOffset";
+import {BreadcrumbProps} from "@/components/common/breadcrumb/Breadcrumb";
+import {ListBulletProps} from "@/components/common/list/listBullet/ListBullet";
 
-export const HEADER = {
+export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletProps["items"], media: Record<'main' | 'bg', PictureItemProps[]> } = {
     breadcrumb: [{url: '/', label: 'Homepage'}, {url: '/faqs', label: 'Frequently Asked Questions'}],
-    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly']
+    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly'],
+    media: {
+        main: [
+            {
+                media: 768,
+                src: '/images/faqs.png',
+                width: 423,
+                height: 343,
+                alt: 'faq'
+            },
+            {
+                src: '/images/faqs-sm.png',
+                width: 318,
+                height: 258,
+                alt: 'faq'
+            },
+        ],
+        bg: CIRCLE,
+    }
 }
 
 export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ title: HeadingOffsetProps['children'], image?: PictureItemProps[] } & AccordionProps)> = {

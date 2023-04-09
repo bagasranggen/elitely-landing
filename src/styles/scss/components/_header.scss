@@ -38,6 +38,10 @@
         }
 
         &--faqs {
+            @include media-breakpoint-down(xl) {
+                overflow: hidden;
+            }
+
             h1 {
                 margin-top: 30px;
 
@@ -51,6 +55,35 @@
 
                 @include media-breakpoint-up(lg) {
                     margin-bottom: 90px;
+                }
+            }
+
+            .header-banner__image {
+                .image {
+                    &__main {
+                        @extend %position-relative;
+
+                        z-index: 5;
+                    }
+
+                    &__bg {
+                        @extend %position-absolute;
+
+                        bottom: 0;
+                        left: 50%;
+
+                        @include media-breakpoint-up(md) {
+                            left: -48%;
+                            max-width: 80%;
+                        }
+
+                        @include media-breakpoint-down(md) {
+                            transform: translateX(-50%);
+                            z-index: 0;
+                            width: 110%;
+                            max-width: 110%;
+                        }
+                    }
                 }
             }
         }
