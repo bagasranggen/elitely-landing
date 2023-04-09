@@ -1,8 +1,43 @@
 .list {
+    &-alphabetical {
+        counter-reset: numericalList;
+
+        > li {
+            counter-increment: numericalList;
+
+            &::marker {
+                content: counter(numericalList) ")  ";
+                color: $e-primary;
+            }
+
+            ol {
+                margin-top: 10px;
+                counter-reset: numericalList;
+
+                > li {
+                    counter-increment: alphabeticList;
+
+                    &::marker {
+                        content: counter(alphabeticList, lower-alpha) ")  ";
+                    }
+                }
+            }
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &::marker {
+                font-weight: 700;
+            }
+        }
+    }
+
     &-bullet {
         li {
             @extend %d-flex, %align-items-baseline, %fs-18, %justify-content-center, %justify-content-md-start;
-            font-weight: 600;
 
             &:before {
                 @extend %d-block, %me-2;
@@ -29,6 +64,12 @@
                         margin-right: 40px;
                     }
                 }
+            }
+        }
+
+        &--bold {
+            li {
+                font-weight: 600;
             }
         }
 

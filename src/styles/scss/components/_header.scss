@@ -54,5 +54,15 @@
                 }
             }
         }
+
+        &--terms {
+            ul {
+                margin-bottom: 60px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 70px;
+                }
+            }
+        }
     }
 }

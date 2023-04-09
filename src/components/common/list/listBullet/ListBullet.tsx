@@ -8,6 +8,7 @@ export type ListBulletProps = {
     className?: string;
     options?: {
         color?: MainColorProps;
+        weight?: 'normal' | 'bold';
         variant?: 'inline' | 'regular';
     };
     items: ListBulletItemProps[]
@@ -15,8 +16,9 @@ export type ListBulletProps = {
 
 const ListBullet = ({className, options, items}: ListBulletProps): React.ReactElement => {
     const listColor = options?.color ? ` list-bullet--${options.color}` : '';
-    const listVariant = options?.variant ? ` list-bullet--${options.variant}` : ''
-    const listClass = `list-unstyled list-inline list-bullet${listVariant}${listColor}${className ? ` ${className}` : ''}`
+    const listVariant = options?.variant ? ` list-bullet--${options.variant}` : '';
+    const listWeight = options?.weight ? ` list-bullet--${options.weight}` : ' list-bullet--bold';
+    const listClass = `list-unstyled list-inline list-bullet${listWeight}${listVariant}${listColor}${className ? ` ${className}` : ''}`
 
     return (
         <ul className={listClass}>
