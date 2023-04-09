@@ -36,7 +36,7 @@ const Index = ({}: IndexProps): React.ReactElement => {
                             className='text-center'
                             key={item.title}
                             md={2}>
-                            <Image {...item.image} />
+                            <Image {...item.image} alt={item.title} />
                             <h2>{item.title}</h2>
                             <p>{item.description}</p>
                         </Col>

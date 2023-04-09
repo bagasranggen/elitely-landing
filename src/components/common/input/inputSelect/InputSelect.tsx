@@ -39,7 +39,7 @@ const InputSelect = ({input, events}: InputSelectProps): React.ReactElement => {
                 type="text"
                 value={value?.value}
                 hidden />
-            <Dropdown drop='bottom'>
+            <Dropdown>
                 <Dropdown.Toggle
                     variant='outline'
                     className={value?.value === '' ? 'dropdown-toggle--is-empty' : ''}>

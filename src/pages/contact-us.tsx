@@ -6,7 +6,7 @@ import {CATEGORY} from "@/data/mock/forms";
 import {Col, Container, Row} from "react-bootstrap";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
-import Button, from "@/components/common/button/Button";
+import Button from "@/components/common/button/Button";
 import Input from "@/components/common/input/Input";
 
 export type ContactUsProps = {};

@@ -24,7 +24,7 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
             onToggle={(expanded: boolean) => {
                 const body = document.querySelector('body');
 
-                body.style.overflow = expanded ? 'hidden' : '';
+                if (body) body.style.overflow = expanded ? 'hidden' : '';
             }}>
             <Container>
                 <Col xs='auto'>
