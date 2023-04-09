@@ -1,0 +1,132 @@
+.header {
+    &-banner {
+        padding-top: 1px;
+        padding-bottom: 1px;
+
+        .breadcrumb {
+            margin-top: 20px;
+        }
+
+        @each $key, $color, $bg in $main-color-set {
+            &--#{$key} {
+                background-color: $bg;
+            }
+        }
+
+        &__image {
+            @extend %position-relative;
+        }
+
+        &--how {
+            @include media-breakpoint-down(xl) {
+                overflow: hidden;
+            }
+
+            h1 {
+                margin-top: 50px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 110px;
+                }
+
+                ~ picture img {
+                    @include media-breakpoint-down(lg) {
+                        width: 65%;
+                    }
+                }
+            }
+
+            ul {
+                margin-bottom: 40px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 180px;
+                }
+            }
+
+            .header-banner__image {
+                @extend %text-center;
+
+                .image {
+                    &__main {
+                        @extend %position-relative;
+
+                        z-index: 5;
+                    }
+
+                    &__bg {
+                        @extend %position-absolute;
+
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 0;
+                        width: 125%;
+                        max-width: 125%;
+                    }
+                }
+            }
+        }
+
+        &--faqs {
+            @include media-breakpoint-down(xl) {
+                overflow: hidden;
+            }
+
+            h1 {
+                margin-top: 30px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 40px;
+                }
+            }
+
+            ul {
+                margin-bottom: 40px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 90px;
+                }
+            }
+
+            .header-banner__image {
+                .image {
+                    &__main {
+                        @extend %position-relative;
+
+                        z-index: 5;
+                    }
+
+                    &__bg {
+                        @extend %position-absolute;
+
+                        bottom: 0;
+                        left: 50%;
+
+                        @include media-breakpoint-up(md) {
+                            left: -48%;
+                            max-width: 80%;
+                        }
+
+                        @include media-breakpoint-down(md) {
+                            transform: translateX(-50%);
+                            z-index: 0;
+                            width: 110%;
+                            max-width: 110%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--terms {
+            ul {
+                margin-bottom: 60px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+}

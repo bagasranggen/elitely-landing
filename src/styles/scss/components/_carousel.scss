@@ -12,46 +12,120 @@
         background-color: $e-d-light;
 
         .carousel {
-            &__banner {
-                height: calc(80vh - var(--nav-height));
+            &__image {
+                //@extend %position-relative;
+            }
 
-                @include media-breakpoint-up(lg) {
-                    height: calc(100vh - var(--nav-height));
+            &__banner {
+                @include media-breakpoint-down(sm) {
+                    //height: calc(80vh - var(--nav-height));
+                    height: calc(80vh - 70px);
+                    //height: 80vh;
+                }
+
+                @include media-breakpoint-down(md) {
+                    //height: calc(100vh - var(--nav-height));
+                    height: calc(100vh - 70px);
+                    //height: 100vh;
+                }
+
+                .row {
+                    @extend %position-relative;
                 }
 
                 &--connection {
-                    background-image: url('/images/banner-connect.png');
-                    background-repeat: no-repeat;
-                    background-position: center 96%;
+                    .image {
+                        &__main {
+                            @include media-breakpoint-up(md) {
+                                position: absolute;
+                                width: auto;
+                                height: 65%;
+                                //height: calc(100% - 120px);
+                                bottom: 20px;
+                            }
 
-                    @include media-breakpoint-down(md) {
-                        background-size: 40%;
+                            @include media-breakpoint-up(lg) {
+                                top: 100px;
+                                //width: auto;
+                                height: calc(100% - 120px);
+                                bottom: unset;
+                            }
+
+                        }
                     }
 
-                    @include media-breakpoint-up(md) {
-                        background-size: 300px;
-                        background-position: left 80%;
-                    }
-
-                    @include media-breakpoint-up(lg) {
-                        background-size: 340px;
-                    }
+                    //background-image: url('/images/banner-connect.png');
+                    //background-repeat: no-repeat;
+                    //background-position: center 96%;
+                    //
+                    //@include media-breakpoint-down(md) {
+                    //    background-size: 40%;
+                    //}
+                    //
+                    //@include media-breakpoint-up(md) {
+                    //    background-size: 300px;
+                    //    background-position: left 80%;
+                    //}
+                    //
+                    //@include media-breakpoint-up(lg) {
+                    //    background-size: 340px;
+                    //}
                 }
 
                 &--skip {
-                    background-image: url('/images/banner-skip.png');
-                    background-repeat: no-repeat;
-                    background-position: left bottom;
-                    //background-size: 340px;
-
-                    @include media-breakpoint-down(md) {
-                        background-size: contain;
+                    @include media-breakpoint-down(sm) {
+                        position: relative;
                     }
 
-                    @include media-breakpoint-up(md) {
-                        background-size: 70%;
-                        background-position: left bottom;
+                    .row {
+                        @include media-breakpoint-down(sm) {
+                            position: static;
+                        }
                     }
+
+                    .image {
+                        &__main {
+                            position: absolute;
+
+                            @include media-breakpoint-up(md) {
+                                width: auto;
+                                left: -4%;
+                                bottom: 0;
+                                height: 34%;
+                            }
+
+                            @include media-breakpoint-up(lg) {
+                                height: 52%;
+
+                            }
+
+                            @include media-breakpoint-up(xl) {
+                                height: 62%;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                bottom: 0;
+                                max-width: 130%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                        }
+                    }
+
+                    //background-image: url('/images/banner-skip.png');
+                    //background-repeat: no-repeat;
+                    //background-position: left bottom;
+                    ////background-size: 340px;
+                    //
+                    //@include media-breakpoint-down(md) {
+                    //    background-size: contain;
+                    //}
+                    //
+                    //@include media-breakpoint-up(md) {
+                    //    background-size: 70%;
+                    //    background-position: left bottom;
+                    //}
                 }
             }
 
@@ -89,6 +163,7 @@
             &__description {
                 @extend %text-center, %text-md-start;
                 margin-top: 40px;
+                margin-bottom: 60px;
 
                 @include media-breakpoint-up(lg) {
                     margin-top: 90px;

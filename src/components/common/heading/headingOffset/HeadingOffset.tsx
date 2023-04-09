@@ -12,6 +12,7 @@ export type HeadingOffsetProps = {
         level?: HeadingLevelProps;
         size?: MainSizeProps;
         hasLine?: PictureItemProps[];
+        subHeading?: string;
     };
     children: React.ReactNode;
 };
@@ -33,6 +34,7 @@ const HeadingOffset = ({className, option, children}: HeadingOffsetProps): React
         <Row className={`justify-content-center${className ? ` ${className}` : ''}`}>
             <Col lg={option?.size === 'lg' ? 8 : 6}>
                 <Heading className='heading--large'>{children}</Heading>
+                {option?.subHeading && <p>{option.subHeading}</p>}
             </Col>
         </Row>
     )

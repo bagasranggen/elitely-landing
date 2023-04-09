@@ -9,14 +9,48 @@ export const CAROUSEL = [
         color: 'primary',
         title: 'The fastest way to',
         titleBlock: 'Unlock Connections',
-        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>'
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>',
+        media: {
+            main: [
+                {
+                    media: 768,
+                    src: '/images/banner-connect.png',
+                    width: 355,
+                    height: 602,
+                    alt: 'man'
+                },
+                {
+                    src: '/images/banner-connect-sm.png',
+                    width: 267,
+                    height: 452,
+                    alt: 'man'
+                },
+            ]
+        },
     },
     {
         variant: 'skip',
         color: 'primary',
         title: 'Dating on Steroids',
         titleBlock: 'Skip the swipe',
-        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>'
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers. </p>',
+        media: {
+            main: [
+                {
+                    media: 768,
+                    src: '/images/banner-skip.png',
+                    width: 1013,
+                    height: 452,
+                    alt: 'man'
+                },
+                {
+                    src: '/images/banner-skip-sm.png',
+                    width: 761,
+                    height: 340,
+                    alt: 'man'
+                },
+            ]
+        },
     },
 ]
 

@@ -1,13 +1,34 @@
 import {MAIN_COLOR} from "@/data/global";
+import {CIRCLE} from "@/data/mock/common";
+
 import {CardBlockListItemProps} from "@/components/common/cards/cardBlockList/CardBlockList";
 import {CarouselCardImageProps} from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
 import {BarChartProps} from "@/components/common/chart/barChart/BarChart";
 import {BreadcrumbProps} from "@/components/common/breadcrumb/Breadcrumb";
 import {ListBulletProps} from "@/components/common/list/listBullet/ListBullet";
+import {PictureItemProps} from "@/components/common/picture/Picture";
 
-export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletProps["items"] } = {
+export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletProps["items"], media: Record<'main' | 'bg', PictureItemProps[]> } = {
     breadcrumb: [{url: '/', label: 'Homepage'}, {url: '/how-it-works', label: 'How It Works'}],
-    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly']
+    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly'],
+    media: {
+        main: [
+            {
+                media: 768,
+                src: '/images/how-man.png',
+                width: 420,
+                height: 536,
+                alt: 'man'
+            },
+            {
+                src: '/images/how-man-sm.png',
+                width: 316,
+                height: 413,
+                alt: 'man'
+            },
+        ],
+        bg: CIRCLE,
+    },
 }
 
 export const CARDS: CardBlockListItemProps[] = [
@@ -50,7 +71,7 @@ export const CHARTS: BarChartProps['data'] = {
 export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-personality.jpg',
             width: 0,
             height: 0,
             alt: ''
@@ -66,7 +87,7 @@ export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     },
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-influencer.jpg',
             width: 0,
             height: 0,
             alt: ''
@@ -82,7 +103,7 @@ export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     },
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-lurkers.jpg',
             width: 0,
             height: 0,
             alt: ''

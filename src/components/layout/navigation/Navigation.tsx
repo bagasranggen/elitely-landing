@@ -19,7 +19,13 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
             ref={ref}
             className='navbar--primary'
             variant='dark'
-            expand="lg">
+            expand="lg"
+            sticky='top'
+            onToggle={(expanded: boolean) => {
+                const body = document.querySelector('body');
+
+                if (body) body.style.overflow = expanded ? 'hidden' : '';
+            }}>
             <Container>
                 <Col xs='auto'>
                     <Navbar.Brand href="#home">
@@ -44,7 +50,7 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                             link={{href: '#', label: 'Login'}} />
                         <Button
                             option={{variant: 'block', color: 'light'}}
-                            button={{type: 'button', label: 'Contact Us'}} />
+                            link={{href: '/contact-us', label: 'Contact Us'}} />
                     </Nav>
                 </Navbar.Collapse>
             </Container>

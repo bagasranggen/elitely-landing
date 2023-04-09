@@ -1,0 +1,10 @@
+.page {
+    &--contact-us {
+        background-color: $e-l-tertiary;
+        padding-bottom: 1px;
+
+        .container-form--contact-regular {
+            margin-bottom: 100px;
+        }
+    }
+}
