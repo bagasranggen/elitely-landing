@@ -50,7 +50,7 @@ export const CHARTS: BarChartProps['data'] = {
 export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-personality.jpg',
             width: 0,
             height: 0,
             alt: ''
@@ -66,7 +66,7 @@ export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     },
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-influencer.jpg',
             width: 0,
             height: 0,
             alt: ''
@@ -82,7 +82,7 @@ export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     },
     {
         image: {
-            src: 'https://picsum.photos/id/237/387/230',
+            src: '/images/how-lurkers.jpg',
             width: 0,
             height: 0,
             alt: ''
