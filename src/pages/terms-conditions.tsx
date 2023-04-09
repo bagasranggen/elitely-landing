@@ -123,7 +123,7 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             <HeadingOffset
                 className='mt-4 mb-3 text-start'
                 option={{level: "h2", variant: "regular"}}>Disclaimers</HeadingOffset>
-            <p><strong>THE PLATFORM IS PROVIDED ON AN &quote;AS IS&quote; AND &quote;AS AVAILABLE&quote; BASIS. WE MAKE
+            <p><strong>THE PLATFORM IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS. WE MAKE
                 NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE PLATFORM OR
                 THE INFORMATION, CONTENT, MATERIALS, OR PRODUCTS INCLUDED ON THE PLATFORM. TO THE FULL EXTENT
                 PERMISSIBLE BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT
