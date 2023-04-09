@@ -42,7 +42,6 @@
             }
         }
 
-        //&:last-of-type {
         @include media-breakpoint-down(lg) {
             margin-top: 30px;
 
@@ -56,6 +55,13 @@
                 }
             }
         }
-        //}
+    }
+
+    &-collapse {
+        .navbar-nav:last-child {
+            @include media-breakpoint-down(lg) {
+                height: 100vh;
+            }
+        }
     }
 }

@@ -19,7 +19,13 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
             ref={ref}
             className='navbar--primary'
             variant='dark'
-            expand="lg">
+            expand="lg"
+            sticky='top'
+            onToggle={(expanded: boolean) => {
+                const body = document.querySelector('body');
+
+                body.style.overflow = expanded ? 'hidden' : '';
+            }}>
             <Container>
                 <Col xs='auto'>
                     <Navbar.Brand href="#home">
