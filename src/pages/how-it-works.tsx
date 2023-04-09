@@ -9,6 +9,7 @@ import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffs
 import BarChart from "@/components/common/chart/barChart/BarChart";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
+import Picture from "@/components/common/picture/Picture";
 
 export type HowItWorksProps = {};
 
@@ -39,6 +40,18 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                         className='mt-5'
                         options={{color: "tertiary"}}
                         items={HEADER.list} />
+                </Col>
+                <Col
+                    md={6}
+                    className='align-self-end'>
+                    <div className="header-banner__image">
+                        <Picture
+                            className='image__main'
+                            images={HEADER.media.main} />
+                        <Picture
+                            className='image__bg'
+                            images={HEADER.media.bg} />
+                    </div>
                 </Col>
             </Row>
         </HeaderBanner>
