@@ -10,6 +10,7 @@ import {SwiperOptions, Autoplay} from "swiper";
 import {Col, Container, Row} from "react-bootstrap";
 import Button, {ButtonContainer} from "@/components/common/button/Button";
 import LogoHeartLine from "@/components/common/logo/logoHeartLine/LogoHeartLine";
+import Picture from "@/components/common/picture/Picture";
 
 const CarouselSettings: SwiperOptions = {
     modules: [Autoplay],
@@ -17,6 +18,7 @@ const CarouselSettings: SwiperOptions = {
     slidesPerGroup: 1,
     autoplay: {
         delay: 5000,
+        disableOnInteraction: false,
     }
 }
 
@@ -46,6 +48,11 @@ const CarouselBanner = ({className, items}: CarouselBannerProps): React.ReactEle
                                     link={{href: '#', label: 'How It Works'}} />
                             </ButtonContainer>
                         </Col>
+                        <div className="carousel__image text-center text-md-start">
+                            <Picture
+                                className='image__main'
+                                images={item.media?.main} />
+                        </div>
                     </Row>
                 </Container>
             </SwiperSlide>
