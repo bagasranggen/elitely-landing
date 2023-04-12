@@ -28,7 +28,10 @@ const Index = ({}: IndexProps): React.ReactElement => {
             <CarouselCard items={CARDS} />
         </Container>
 
-        <section className="section-highlight">
+        <section
+            className="section-highlight"
+            data-animation='fade-in'
+            data-animation-direction='up'>
             <Container>
                 <Row className='gy-5 justify-content-between'>
                     {HIGHLIGHT.map((item: any) => (
@@ -51,7 +54,10 @@ const Index = ({}: IndexProps): React.ReactElement => {
             <CardsAlternate items={ALTERNATE} />
         </Container>
 
-        <section className="section-contact">
+        <section
+            className="section-contact"
+            data-animation='fade-in'
+            data-animation-direction='up'>
             <Container>
                 <Row className='justify-content-center'>
                     <Col

@@ -12,7 +12,9 @@ import Input from "@/components/common/input/Input";
 export type FooterProps = {};
 
 const Footer = ({}: FooterProps): React.ReactElement => (
-    <footer>
+    <footer
+        data-animation='fade-in'
+        data-animation-direction='up'>
         <Container>
             <Row className='gy-4 justify-content-between'>
                 <Col md={3}>

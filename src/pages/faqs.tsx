@@ -23,10 +23,11 @@ const Faqs = ({}: FaqsProps): React.ReactElement => (
                     xl={8}>
                     <HeadingOffset
                         className='mb-4 text-center text-md-start'
-                        option={{level: "h1", variant: "regular"}}>Frequently Asked Questions</HeadingOffset>
+                        option={{level: "h1", variant: "regular", animation: {position: "top"}}}>Frequently Asked
+                        Questions</HeadingOffset>
                     <ListBullet
                         className='mt-5 text-center text-md-start'
-                        options={{color: "tertiary"}}
+                        options={{color: "tertiary", animation: {type: 'fade-in', direction: 'up', position: "top"}}}
                         items={HEADER.list} />
                 </Col>
                 <Col

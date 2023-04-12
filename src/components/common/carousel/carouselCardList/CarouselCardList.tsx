@@ -39,8 +39,11 @@ export type CarouselCardListProps = {
 
 const CarouselCardList = ({className, items}: CarouselCardListProps): React.ReactElement => (
     <Swiper className={`cards--block-list${className ? ` ${className}` : ''}`} {...SwiperOptions}>
-        {items.map((item: CarouselCardListItemProps) => (
-            <SwiperSlide key={item.title}>
+        {items.map((item: CarouselCardListItemProps, i: number) => (
+            <SwiperSlide
+                key={item.title}
+                data-animation='fade-in'
+                data-animation-direction={i % 2 === 0 ? 'left' : 'right'}>
                 <h2>
                     <Picture images={[{src: '/images/star.svg', width: 36, height: 34, alt: ''}]} />
                     {item.title}

@@ -33,12 +33,15 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                                 width: 321,
                                 height: 7,
                                 alt: 'general line'
-                            }]
+                            }],
+                            animation: {position: "top"}
                         }}>How it works</HeadingOffset>
-                    <p>Learn more about how work is structured in our company</p>
+                    <p
+                        data-animation='fade-in'
+                        data-animation-direction='up'>Learn more about how work is structured in our company</p>
                     <ListBullet
                         className='mt-5'
-                        options={{color: "tertiary"}}
+                        options={{color: "tertiary", animation: {type: 'fade-in', direction: 'up', position: 'top'}}}
                         items={HEADER.list} />
                 </Col>
                 <Col

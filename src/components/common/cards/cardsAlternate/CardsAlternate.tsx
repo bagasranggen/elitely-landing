@@ -23,7 +23,9 @@ const CardsAlternate = ({className, items}: CardsAlternateProps): React.ReactEle
         {items.map((item: any, i: number) => (
             <Row
                 className={`${i % 2 === 0 ? '' : 'flex-md-row-reverse '}justify-content-between align-items-center gy-5 cards--alternate${className ? ` ${className}` : ''}`}
-                key={item.title}>
+                key={item.title}
+                data-animation='fade-in'
+                data-animation-direction={i % 2 === 0 ? 'left' : 'right'}>
                 <Col
                     md={5}
                     lg={6}>
@@ -43,6 +45,6 @@ const CardsAlternate = ({className, items}: CardsAlternateProps): React.ReactEle
             </Row>
         ))}
     </>
-);
+)
 
 export default CardsAlternate;

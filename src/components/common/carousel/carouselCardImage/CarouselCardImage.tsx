@@ -4,10 +4,10 @@ import {Card} from "react-bootstrap";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, SwiperOptions} from "swiper";
 
-
 import 'swiper/css';
 import "swiper/css/pagination";
-import {ImageProps, MainColorProps} from "@/@type/common";
+
+import type {ImageProps, MainColorProps} from "@/@type/common";
 import ListDashed, {ListDashedProps} from "@/components/common/list/listDashed/ListDashed";
 
 const SwiperOptions: SwiperOptions = {
@@ -48,8 +48,12 @@ export type CarouselCardImageProps = {
 
 const CarouselCardImage = ({className, items}: CarouselCardImageProps): React.ReactElement => (
     <Swiper className={`cards--image${className ? ` ${className}` : ''}`} {...SwiperOptions}>
-        {items.map((item: any) => (
-            <SwiperSlide key={item.title}>
+        {items.map((item: CarouselCardImageItemProps, i: number) => (
+            <SwiperSlide
+                key={item.title}
+                data-animation='fade-in'
+                data-animation-direction='up'
+                data-animation-delay={i * .15}>
                 <Card className={`cards__card cards__card--${item.color}`}>
                     <Card.Img
                         variant="top"

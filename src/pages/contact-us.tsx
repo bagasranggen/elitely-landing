@@ -24,7 +24,8 @@ const ContactUs = ({}: ContactUsProps): React.ReactElement => (
                 option={{
                     level: "h1",
                     variant: "offset",
-                    subHeading: 'Got a question? We’d love to hear from you. Send us a message and we’ll respond as soon as possible'
+                    subHeading: 'Got a question? We’d love to hear from you. Send us a message and we’ll respond as soon as possible',
+                    animation: {position: "top"}
                 }}>Contact Us</HeadingOffset>
 
             <Row className='justify-content-center'>

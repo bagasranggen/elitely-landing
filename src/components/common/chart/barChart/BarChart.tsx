@@ -37,8 +37,10 @@ export type BarChartProps = {
 };
 
 const BarChart = ({data}: BarChartProps): React.ReactElement => (
-
-    <div className="chart-wrapper">
+    <div
+        className="chart-wrapper"
+        data-animation='fade-in'
+        data-animation-direction='up'>
         <div className="chart-area-wrapper">
             <Bar
                 options={BarChartOptions}

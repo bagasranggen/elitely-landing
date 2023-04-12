@@ -48,8 +48,12 @@ export type CarouselCardProps = {
 
 const CarouselCard = ({className, items}: CarouselCardProps): React.ReactElement => (
     <Swiper className={`carousel--cards${className ? ` ${className}` : ''}`} {...SwiperOptions}>
-        {items.map((item: CarouselCardItemProps) => (
-            <SwiperSlide key={item.title}>
+        {items.map((item: CarouselCardItemProps, i: number) => (
+            <SwiperSlide
+                key={item.title}
+                data-animation='fade-in'
+                data-animation-direction='up'
+                data-animation-delay={i * .15}>
                 <div className={`carousel__card carousel__card--${item.color}`}>
                     <LogoHeart color={MAIN_COLOR[item.color as keyof Object]} />
                     <h2>{item.title}</h2>

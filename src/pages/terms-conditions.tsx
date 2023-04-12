@@ -17,10 +17,15 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             breadcrumb={HEADER.breadcrumb}>
             <HeadingOffset
                 className='mb-4 text-center text-md-start'
-                option={{level: "h1", variant: "regular"}}>Terms and conditions</HeadingOffset>
+                option={{level: "h1", variant: "regular", animation: {position: 'top'}}}>Terms and
+                conditions</HeadingOffset>
             <ListBullet
                 className='mt-5 text-center text-md-start'
-                options={{color: "secondary", variant: 'inline'}}
+                options={{
+                    color: "secondary",
+                    variant: 'inline',
+                    animation: {type: 'fade-in', direction: 'right', position: "top"}
+                }}
                 items={HEADER.list} />
         </HeaderBanner>
 

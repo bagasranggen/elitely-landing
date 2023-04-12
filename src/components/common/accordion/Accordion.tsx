@@ -28,7 +28,9 @@ const Accordion = ({color, items}: AccordionProps): React.ReactElement => {
             {items.map((item: AccordionItemType, i: number) => (
                 <BSAccordion.Item
                     key={i}
-                    eventKey={i.toString()}>
+                    eventKey={i.toString()}
+                    data-animation='fade-in'
+                    data-animation-direction='up'>
                     <BSAccordion.Header>
                         {item.title}
                         <LogoChevronDown {...active === i.toString() && {color: MAIN_COLOR[color]}} />
