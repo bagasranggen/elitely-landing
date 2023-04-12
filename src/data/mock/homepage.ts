@@ -62,13 +62,13 @@ export const CARDS = [
     },
     {
         color: 'secondary',
-        title: 'Inclusivity & Diversity',
-        description: 'All our Personalities and Influencers have been verified, so you can be sure you are speaking to or meeting a real person. Schedule meets easily and on-demand with our easy Meet Scheduler.',
+        title: 'Meet & Chat',
+        description: 'We also facilitate meet ups and chats between Influencers and their most genuine fans. There are many platforms used by Influencers but none that are meant for close-range interaction.',
     },
     {
         color: 'tertiary',
-        title: 'Inclusivity & Diversity',
-        description: 'All our Personalities and Influencers have been verified, so you can be sure you are speaking to or meeting a real person. Schedule meets easily and on-demand with our easy Meet Scheduler.',
+        title: 'Anti Catfish Policy',
+        description: 'As a platform that rejects social norms (for the sake of them) and classism, we welcome people who identify with all genders, who have been qualified as interesting Personalities or Influencers.',
     },
 ]
 
