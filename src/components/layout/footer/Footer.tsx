@@ -17,7 +17,7 @@ const Footer = ({}: FooterProps): React.ReactElement => (
         data-animation-direction='up'>
         <Container>
             <Row className='gy-4 justify-content-between'>
-                <Col md={3}>
+                <Col md={8}>
                     <Image
                         src={logo}
                         alt='elitely' />
@@ -26,28 +26,28 @@ const Footer = ({}: FooterProps): React.ReactElement => (
                         ups with other users on our platform, who have been qualified as interesting Personalities or
                         Influencers. </p>
                 </Col>
-                <Col
-                    md={5}
-                    lg={4}>
-                    <Row className='gy-4'>
-                        {FOOTER_NAVIGATION.map((navigation: any) => (
-                            <Col
-                                key={navigation.title}
-                                md={6}>
-                                <h2>{navigation.title}</h2>
-                                <ul className='list-unstyled'>
-                                    {navigation.navigation.map((nav: any) => (
-                                        <li key={nav.label}>
-                                            <Button
-                                                option={{variant: "unstyled", color: 'light'}}
-                                                link={{href: nav.uri, label: nav.label}} />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Col>
-                        ))}
-                    </Row>
-                </Col>
+                {/*<Col*/}
+                {/*    md={5}*/}
+                {/*    lg={4}>*/}
+                {/*    <Row className='gy-4'>*/}
+                {/*        {FOOTER_NAVIGATION.map((navigation: any) => (*/}
+                {/*            <Col*/}
+                {/*                key={navigation.title}*/}
+                {/*                md={6}>*/}
+                {/*                <h2>{navigation.title}</h2>*/}
+                {/*                <ul className='list-unstyled'>*/}
+                {/*                    {navigation.navigation.map((nav: any) => (*/}
+                {/*                        <li key={nav.label}>*/}
+                {/*                            <Button*/}
+                {/*                                option={{variant: "unstyled", color: 'light'}}*/}
+                {/*                                link={{href: nav.uri, label: nav.label}} />*/}
+                {/*                        </li>*/}
+                {/*                    ))}*/}
+                {/*                </ul>*/}
+                {/*            </Col>*/}
+                {/*        ))}*/}
+                {/*    </Row>*/}
+                {/*</Col>*/}
                 <Col md={3}>
                     <h2>Newsletter</h2>
                     <form action="">
