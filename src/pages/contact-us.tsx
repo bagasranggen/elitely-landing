@@ -32,7 +32,10 @@ const ContactUs = ({}: ContactUsProps): React.ReactElement => (
                 <Col lg={7}>
                     <form
                         className='form-contact--regular'
-                        action="">
+                        action=""
+                        data-animation='fade-in'
+                        data-animation-direction='up'
+                        data-animation-delay='.25'>
                         <Input
                             className='mb-3'
                             option={{variant: 'regular'}}
