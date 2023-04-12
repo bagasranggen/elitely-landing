@@ -4,3 +4,7 @@ export const MAIN_COLOR = {
     tertiary: '#32C08D',
     light: '#F5F5F5',
 }
+
+export const ANIMATIONS = {
+    fadeIn: 'fade-in'
+}
