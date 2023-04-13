@@ -10,6 +10,7 @@ import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 import Button from "@/components/common/button/Button";
 import Input from "@/components/common/input/Input";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 
 export type ContactUsProps = {};
 
@@ -19,6 +20,19 @@ const ContactUs = ({}: ContactUsProps): React.ReactElement => (
             className='header-banner--faqs'
             breadcrumb={HEADER.breadcrumb}>
         </HeaderBanner>
+
+        <LogoHeartLineDiagonal
+            className='decorative--bent-right'
+            color='secondary'
+            options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
+        <LogoHeartLineDiagonal
+            className='decorative--bent-left'
+            color='tertiary'
+            options={{variant: 'bent-left', animation: {type: 'fade-in', direction: 'left'}}} />
+        <LogoHeartLineDiagonal
+            className='decorative--angled'
+            color='tertiary'
+            options={{variant: 'angled', animation: {type: 'fade-in', direction: 'left'}}} />
 
         <Container className='container-form--contact-regular'>
             <HeadingOffset

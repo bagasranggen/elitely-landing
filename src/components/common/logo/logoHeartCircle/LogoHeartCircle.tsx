@@ -1,5 +1,6 @@
 import React from 'react';
-import {MainColorProps} from "@/@type/common";
+
+import type {MainColorProps} from "@/@type/common";
 import {MAIN_COLOR} from "@/data/global";
 
 export type LogoHeartCircleProps = {

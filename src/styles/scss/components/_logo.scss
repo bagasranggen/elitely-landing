@@ -44,6 +44,30 @@
         }
     }
 
+    &--bent-right {
+        .heart-wrapper {
+            transform: rotate(55deg);
+            top: -42%;
+            left: 25%;
+
+            svg {
+                width: 50px;
+            }
+        }
+    }
+
+    &--bent-left {
+        .heart-wrapper {
+            transform: rotate(-50deg);
+            top: -35%;
+            left: -3%;
+
+            svg {
+                width: 65px;
+            }
+        }
+    }
+
     &--angled {
         .heart-wrapper {
             bottom: 0;
