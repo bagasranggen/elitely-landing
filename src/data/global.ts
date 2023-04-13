@@ -6,5 +6,15 @@ export const MAIN_COLOR = {
 }
 
 export const ANIMATIONS = {
-    fadeIn: 'fade-in'
+    fadeIn: {
+        type: 'fade-in',
+        direction: {left: 'left', right: 'right', up: 'up', down: 'down'}
+    }
+}
+
+export const ANIMATION_ATTRIBUTE = {
+    TYPE: 'data-animation',
+    DIRECTION: 'data-animation-direction',
+    DELAY: 'data-animation-delay',
+    POSITION: 'data-animation-position',
 }

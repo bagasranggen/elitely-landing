@@ -5,13 +5,14 @@ import {FADE_IN_DIRECTION} from "@/components/animation/fade/direction";
 
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import {createAnimation} from "@/components/animation/helper";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export type FadeInProps = {
     className?: string;
     options?: {
-        type: 'fade-in',
+        type?: 'fade-in',
         direction?: FadeInDirectionProps;
         position?: FadeInPositionProps;
         delay?: FadeInDelayProps;
@@ -22,10 +23,7 @@ export type FadeInProps = {
 export const FadeIn = ({className, options, children}: FadeInProps): React.ReactElement => (
     <div
         className={className}
-        {...options?.type && {'data-animation': options.type}}
-        {...options?.direction && {'data-animation-direction': options.direction}}
-        {...options?.position && {'data-animation-position': options.position}}
-        {...options?.delay && {'data-animation-delay': options.delay}}    >
+        {...createAnimation(options)}>
         {children}
     </div>
 )
