@@ -54,11 +54,20 @@
     }
 
     &-cards-list {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
         @include media-breakpoint-up(lg) {
             margin-bottom: 100px;
+        }
+
+        .decorative {
+            @extend %position-absolute;
+
+            right: -30px;
+            bottom: 0;
         }
     }
 

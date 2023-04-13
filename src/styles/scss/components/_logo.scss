@@ -1,3 +1,7 @@
+.decorative {
+    pointer-events: none;
+}
+
 .heart-wrapper {
     @extend %d-inline-block;
 
