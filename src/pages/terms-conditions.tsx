@@ -31,7 +31,10 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
 
         <Container
             as='section'
-            className='section-terms'>
+            className='section-terms'
+            data-animation='fade-in'
+            data-animation-direction='up'
+            data-animation-delay='.5'>
             <p><strong>Elitely</strong> (henceforth referred to as “Platform” or “We” or “Us” or “We”) is a dating
                 website with the browsing
                 experience of social media, which offers pay-to-unlock chat and pay-to-unlock-meet options. It also
