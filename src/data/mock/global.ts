@@ -16,7 +16,7 @@ export const MAIN_NAVIGATION = [
         label: 'FAQ\'s'
     },
     {
-        uri: '/terms',
+        uri: '/terms-conditions',
         label: 'Terms'
     },
 ];
