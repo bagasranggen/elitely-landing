@@ -7,14 +7,12 @@ import {ALTERNATE, CARDS, CAROUSEL, HIGHLIGHT} from "@/data/mock/homepage";
 
 import {Col, Container, Row} from "react-bootstrap";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
-import Button, {ButtonContainer} from "@/components/common/button/Button";
 import CarouselCard from "@/components/common/carousel/carouselCard/CarouselCard";
 import CardsAlternate from "@/components/common/cards/cardsAlternate/CardsAlternate";
 import CarouselBanner from "@/components/common/carousel/carouselBanner/CarouselBanner";
-import Input from "@/components/common/input/Input";
-import LogoHeartCircle from "@/components/common/logo/logoHeartCircle/LogoHeartCircle";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 import LogoCircle from "@/components/common/logo/logoCircle/LogoCircle";
+import ContactUsForm from "@/components/layout/forms/contactUsForm/ContactUsForm";
 
 export type IndexProps = {};
 
@@ -78,32 +76,9 @@ const Index = ({}: IndexProps): React.ReactElement => {
                     <Col
                         md={8}
                         xl={6}>
-                        <form
-                            action=""
-                            className='form-contact form-contact--simplified'>
-                            <h2>Send us Message</h2>
-                            <Input
-                                className='mb-3'
-                                option={{variant: 'regular'}}
-                                input={{type: 'text', id: 'name', placeholder: 'Name'}} />
-                            <Input
-                                className='mb-3'
-                                option={{variant: 'regular'}}
-                                input={{type: 'email', id: 'name', placeholder: 'Email'}} />
-                            <Input
-                                className='mb-3'
-                                option={{variant: 'regular'}}
-                                input={{type: 'tel', id: 'name', placeholder: 'Mobile Number'}} />
-                            <Input
-                                className='mb-3'
-                                option={{variant: 'regular', isMultiline: true}}
-                                input={{type: 'text', id: 'name', placeholder: 'Message'}} />
-                            <ButtonContainer className="text-center">
-                                <Button
-                                    option={{variant: 'block', color: 'primary', size: 'lg'}}
-                                    button={{type: 'submit', label: 'Send'}} />
-                            </ButtonContainer>
-                        </form>
+                        <ContactUsForm
+                            className='form-contact form-contact--simplified'
+                            heading='Send us Message' />
                     </Col>
                 </Row>
             </Container>
