@@ -44,7 +44,7 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                             <Nav.Link
                                 key={nav.uri}
                                 as={Link}
-                                className={nav.uri === asPath ? 'active' : ''}
+                                className={`${nav?.options?.isBold ? 'fw-bold' : ''}${nav.uri === asPath ? ' active' : ''}`}
                                 href={nav.uri}>{nav.label}</Nav.Link>
                         ))}
                     </Nav>
