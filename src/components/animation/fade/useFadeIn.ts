@@ -41,7 +41,8 @@ const useFadeIn = () => {
                 ...dir ? {[FADE_IN_DIRECTION[dir].direction]: FADE_IN_DIRECTION[dir][FADE_IN_DIRECTION[dir].direction]} : {}
             }, {
                 opacity: 1,
-                ...dir ? {[FADE_IN_DIRECTION[dir].direction]: 0} : {}
+                ...dir ? {[FADE_IN_DIRECTION[dir].direction]: 0} : {},
+                duration: .85
             })
         })
     }
