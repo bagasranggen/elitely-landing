@@ -1,11 +1,15 @@
 import React from 'react';
+
+import {createAnimation} from "@/components/animation/helper";
+
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions, Pagination} from "swiper";
 
-import 'swiper/css';
-import "swiper/css/pagination";
 import Card, {CardListProps, CardProps} from "@/components/common/cards/card/Card";
 import Picture from "@/components/common/picture/Picture";
+
+import 'swiper/css';
+import "swiper/css/pagination";
 
 const SwiperOptions: SwiperOptions = {
     modules: [Pagination],
@@ -42,8 +46,7 @@ const CarouselCardList = ({className, items}: CarouselCardListProps): React.Reac
         {items.map((item: CarouselCardListItemProps, i: number) => (
             <SwiperSlide
                 key={item.title}
-                data-animation='fade-in'
-                data-animation-direction={i % 2 === 0 ? 'left' : 'right'}>
+                {...createAnimation({type: "fade-in", direction: i % 2 === 0 ? 'left' : 'right'})}>
                 <h2>
                     <Picture images={[{src: '/images/star.svg', width: 36, height: 34, alt: ''}]} />
                     {item.title}

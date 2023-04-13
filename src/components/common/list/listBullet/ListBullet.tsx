@@ -3,6 +3,8 @@ import React from 'react';
 import type {MainColorProps} from "@/@type/common";
 import type {FadeInDirectionProps, FadeInPositionProps} from "@/components/animation/fade/useFadeIn";
 
+import {createAnimation} from "@/components/animation/helper";
+
 export type ListBulletItemProps = string;
 
 export type ListBulletProps = {
@@ -25,16 +27,12 @@ const ListBullet = ({className, options, items}: ListBulletProps): React.ReactEl
     const listVariant = options?.variant ? ` list-bullet--${options.variant}` : '';
     const listWeight = options?.weight ? ` list-bullet--${options.weight}` : ' list-bullet--bold';
     const listClass = `list-unstyled list-inline list-bullet${listWeight}${listVariant}${listColor}${className ? ` ${className}` : ''}`;
-    const listAnimation = {
-        ...options?.animation?.type ? {'data-animation': options.animation.type} : {},
-        ...options?.animation?.direction ? {'data-animation-direction': options.animation.direction} : {},
-        ...options?.animation?.position ? {'data-animation-position': options.animation.position} : {},
-    }
+    const listAnimation = options?.animation ? createAnimation(options.animation) : {}
 
     return (
         <ul className={listClass}>
             {items.map((item: ListBulletItemProps, i: number) => (
-                <li key={item} {...listAnimation} {...options?.animation?.type && {'data-animation-delay': i === 0 ? '.15' : ((i + 1) * .15)}}>{item}</li>
+                <li key={item} {...listAnimation} {...options?.animation?.type && createAnimation({delay: i === 0 ? .15 : ((i + 1) * .15)})}>{item}</li>
             ))}
         </ul>
     )

@@ -3,6 +3,8 @@ import React from 'react';
 import {HEADER} from "@/data/mock/contact-us";
 import {CATEGORY} from "@/data/mock/forms";
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {Col, Container, Row} from "react-bootstrap";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
@@ -32,10 +34,7 @@ const ContactUs = ({}: ContactUsProps): React.ReactElement => (
                 <Col lg={7}>
                     <form
                         className='form-contact--regular'
-                        action=""
-                        data-animation='fade-in'
-                        data-animation-direction='up'
-                        data-animation-delay='.25'>
+                        {...createAnimation({type: "fade-in", direction: 'up', delay: .25})}>
                         <Input
                             className='mb-3'
                             option={{variant: 'regular'}}

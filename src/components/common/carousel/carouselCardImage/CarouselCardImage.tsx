@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {Card} from "react-bootstrap";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, SwiperOptions} from "swiper";
@@ -51,9 +53,7 @@ const CarouselCardImage = ({className, items}: CarouselCardImageProps): React.Re
         {items.map((item: CarouselCardImageItemProps, i: number) => (
             <SwiperSlide
                 key={item.title}
-                data-animation='fade-in'
-                data-animation-direction='up'
-                data-animation-delay={i * .15}>
+                {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
                 <Card className={`cards__card cards__card--${item.color}`}>
                     <Card.Img
                         variant="top"

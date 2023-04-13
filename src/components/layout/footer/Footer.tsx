@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import {FOOTER_NAVIGATION} from "@/data/mock/global";
 
+import {createAnimation} from "@/components/animation/helper";
+
 import logo from "@/assets/images/logo.svg";
 
 import {Col, Container, Row} from "react-bootstrap";
@@ -12,9 +14,7 @@ import Input from "@/components/common/input/Input";
 export type FooterProps = {};
 
 const Footer = ({}: FooterProps): React.ReactElement => (
-    <footer
-        data-animation='fade-in'
-        data-animation-direction='up'>
+    <footer {...createAnimation({type: 'fade-in', direction: "up"})}>
         <Container>
             <Row className='gy-4 justify-content-between'>
                 <Col md={8}>

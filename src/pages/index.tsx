@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {ALTERNATE, CARDS, CAROUSEL, HIGHLIGHT} from "@/data/mock/homepage";
 
 import {Col, Container, Row} from "react-bootstrap";
@@ -38,8 +40,7 @@ const Index = ({}: IndexProps): React.ReactElement => {
 
         <section
             className="section-highlight"
-            data-animation='fade-in'
-            data-animation-direction='up'>
+            {...createAnimation({type: "fade-in", direction: "up"})}>
             <Container>
                 <Row className='gy-5 justify-content-between'>
                     {HIGHLIGHT.map((item: any) => (
@@ -71,8 +72,7 @@ const Index = ({}: IndexProps): React.ReactElement => {
 
         <section
             className="section-contact"
-            data-animation='fade-in'
-            data-animation-direction='up'>
+            {...createAnimation({type: "fade-in", direction: "up"})}>
             <Container>
                 <Row className='justify-content-center'>
                     <Col

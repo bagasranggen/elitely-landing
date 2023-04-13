@@ -2,6 +2,8 @@ import React from 'react';
 
 import {CARDS, CHARTS, HEADER, HOW_IT_WORKS} from "@/data/mock/how-it-works";
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {Col, Container, Row} from "react-bootstrap";
 import CarouselCardList from "@/components/common/carousel/carouselCardList/CarouselCardList";
 import CarouselCardImage from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
@@ -10,6 +12,7 @@ import BarChart from "@/components/common/chart/barChart/BarChart";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import Picture from "@/components/common/picture/Picture";
+import LogoCircle from "@/components/common/logo/logoCircle/LogoCircle";
 
 export type HowItWorksProps = {};
 
@@ -36,9 +39,8 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                             }],
                             animation: {position: "top"}
                         }}>How it works</HeadingOffset>
-                    <p
-                        data-animation='fade-in'
-                        data-animation-direction='up'>Learn more about how work is structured in our company</p>
+                    <p {...createAnimation({type: "fade-in", direction: "up"})}>Learn more about how work is structured
+                        in our company</p>
                     <ListBullet
                         className='mt-5'
                         options={{color: "tertiary", animation: {type: 'fade-in', direction: 'up', position: 'top'}}}
@@ -59,11 +61,12 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             </Row>
         </HeaderBanner>
 
-        <Container
-            as='section'
-            className='section-cards-list'>
-            <CarouselCardList items={CARDS} />
-        </Container>
+        <section className="section-cards-list">
+            <Container>
+                <LogoCircle options={{animation: {type: 'fade-in', direction: 'right'}}} />
+                <CarouselCardList items={CARDS} />
+            </Container>
+        </section>
 
         <section className='section-charts'>
             <Container>
