@@ -6,6 +6,7 @@ import {Container} from "react-bootstrap";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
+import {FadeIn} from "@/components/animation";
 
 export type TermsConditionsProps = {};
 

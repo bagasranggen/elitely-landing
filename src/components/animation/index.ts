@@ -1,5 +1,6 @@
-import useFadeIn from "@/components/animation/fade/useFadeIn";
+import useFadeIn, {FadeIn} from "@/components/animation/fade/useFadeIn";
 
 export {
     useFadeIn,
+    FadeIn,
 }

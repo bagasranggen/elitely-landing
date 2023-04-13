@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 
 import type {HeadingLevelProps, MainSizeProps} from "@/@type/common";
-import type {FadeInPositionProps} from "@/components/animation/fade/useFadeIn";
+import type {FadeInPositionProps, FadeInDelayProps} from "@/components/animation/fade/useFadeIn";
 
 import {Col, Row} from "react-bootstrap";
 import Picture, {PictureItemProps} from "@/components/common/picture/Picture";
@@ -16,6 +16,7 @@ export type HeadingOffsetProps = {
         subHeading?: string;
         animation?: {
             position?: FadeInPositionProps;
+            delay?: FadeInDelayProps;
         }
     };
     children: React.ReactNode;
@@ -28,7 +29,8 @@ const HeadingOffset = ({className, option, children}: HeadingOffsetProps): React
     const fadeAnimationProps = {
         'data-animation': 'fade-in',
         'data-animation-direction': 'up',
-        ...option?.animation?.position ? {'data-animation-position': option.animation.position} : {}
+        ...option?.animation?.position ? {'data-animation-position': option.animation.position} : {},
+        ...option?.animation?.delay ? {'data-animation-delay': option.animation.delay} : {},
     }
 
     if (option?.variant === 'regular') {

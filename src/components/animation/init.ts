@@ -1,4 +1,4 @@
-import {useFadeIn} from "@/components/animation/index";
+import {useFadeIn} from "@/components/animation";
 
 const Init = () => {
     useFadeIn();

@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect} from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import {useRouter} from "next/router";
 
 import {FADE_IN_DIRECTION} from "@/components/animation/fade/direction";
@@ -8,6 +8,28 @@ import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+export type FadeInProps = {
+    className?: string;
+    options?: {
+        type: 'fade-in',
+        direction?: FadeInDirectionProps;
+        position?: FadeInPositionProps;
+        delay?: FadeInDelayProps;
+    }
+    children?: React.ReactNode;
+}
+
+export const FadeIn = ({className, options, children}: FadeInProps): React.ReactElement => (
+    <div
+        className={className}
+        {...options?.type && {'data-animation': options.type}}
+        {...options?.direction && {'data-animation-direction': options.direction}}
+        {...options?.position && {'data-animation-position': options.position}}
+        {...options?.delay && {'data-animation-delay': options.delay}}    >
+        {children}
+    </div>
+)
+
 export type FadeInDirectionProps = 'left' | 'right' | 'up' | 'down';
 export type FadeInDirectionItemProps = {
     direction: 'x' | 'y';
@@ -15,6 +37,7 @@ export type FadeInDirectionItemProps = {
     y?: number;
 }
 export type FadeInPositionProps = 'top' | 'center';
+export type FadeInDelayProps = number;
 
 const useFadeIn = () => {
     const router = useRouter();
@@ -22,7 +45,7 @@ const useFadeIn = () => {
     const createFadeIn: any = () => {
         return gsap.utils.toArray('[data-animation="fade-in"]').forEach((fade: any) => {
             const dir: FadeInDirectionProps = fade?.getAttribute('data-animation-direction');
-            const delay: number | undefined = fade?.getAttribute('data-animation-delay') ? parseFloat(fade?.getAttribute('data-animation-delay')) : undefined;
+            const delay: FadeInDelayProps | undefined = fade?.getAttribute('data-animation-delay') ? parseFloat(fade?.getAttribute('data-animation-delay')) : undefined;
             const isOnTop = fade?.getAttribute('data-animation-position') === 'top';
 
             gsap.timeline({
@@ -30,7 +53,7 @@ const useFadeIn = () => {
                     trigger: fade,
                     start: `top ${isOnTop ? 'bottom' : '80%'}`,
                     // markers: true
-                    markers: process.env.NEXT_PUBLIC_GSAP_MARKER === '1'
+                    markers: process.env.NEXT_PUBLIC_GSAP_MARKER === '1' && process.env.NODE_ENVIRONMENT === 'development'
                 },
                 // duration: .5,
                 // ease: 'power2'
