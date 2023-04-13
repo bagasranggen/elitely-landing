@@ -10,6 +10,9 @@ import CarouselCard from "@/components/common/carousel/carouselCard/CarouselCard
 import CardsAlternate from "@/components/common/cards/cardsAlternate/CardsAlternate";
 import CarouselBanner from "@/components/common/carousel/carouselBanner/CarouselBanner";
 import Input from "@/components/common/input/Input";
+import LogoHeartCircle from "@/components/common/logo/logoHeartCircle/LogoHeartCircle";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
+import LogoCircle from "@/components/common/logo/logoCircle/LogoCircle";
 
 export type IndexProps = {};
 
@@ -17,16 +20,21 @@ const Index = ({}: IndexProps): React.ReactElement => {
     return <>
         <CarouselBanner items={CAROUSEL} />
 
-        <Container
-            as='section'
-            className='section-cards'>
-            <HeadingOffset className='mb-5 text-center'>Meeting <span className="fc--tertiary">new people</span>,
-                having <span className='fc--secondary'>new experiences</span>, connecting
-                with each other — that’s what <span className="fc--primary">dating</span> should be
-                about!</HeadingOffset>
+        <section className='section-cards'>
+            <Container>
+                <LogoHeartLineDiagonal
+                    color='primary'
+                    options={{animation: {type: 'fade-in', direction: 'left'}}} />
+                <LogoCircle options={{animation: {type: 'fade-in', direction: 'right'}}} />
 
-            <CarouselCard items={CARDS} />
-        </Container>
+                <HeadingOffset className='mb-5 text-center'>Meeting <span className="fc--tertiary">new people</span>,
+                    having <span className='fc--secondary'>new experiences</span>, connecting
+                    with each other — that’s what <span className="fc--primary">dating</span> should be
+                    about!</HeadingOffset>
+
+                <CarouselCard items={CARDS} />
+            </Container>
+        </section>
 
         <section
             className="section-highlight"
@@ -48,11 +56,18 @@ const Index = ({}: IndexProps): React.ReactElement => {
             </Container>
         </section>
 
-        <Container
-            as='section'
-            className='section-alternate'>
-            <CardsAlternate items={ALTERNATE} />
-        </Container>
+        <section className='section-alternate'>
+            <Container>
+                <LogoHeartLineDiagonal
+                    color='secondary'
+                    options={{variant: 'right', animation: {type: 'fade-in', direction: 'right'}}} />
+                <LogoHeartLineDiagonal
+                    className='decorative-second'
+                    color='tertiary'
+                    options={{variant: 'angled', animation: {type: 'fade-in', direction: 'left'}}} />
+                <CardsAlternate items={ALTERNATE} />
+            </Container>
+        </section>
 
         <section
             className="section-contact"

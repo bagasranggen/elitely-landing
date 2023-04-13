@@ -13,8 +13,13 @@
 //
 body {
     @extend %base-typography;
+    //overflow-x: hidden;
     //box-sizing: border-box;
     //background-color: $sso-light;
+
+    main {
+        overflow-x: hidden;
+    }
 }
 
 //

@@ -1,5 +1,7 @@
 .section {
     &-alternate {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
@@ -7,15 +9,47 @@
             margin-top: 130px;
             margin-bottom: 130px;
         }
+
+        .decorative {
+            @extend %position-absolute;
+        }
+
+        .heart-line-wrapper {
+            &:not(.decorative-second) {
+                top: -130px;
+                right: 0;
+            }
+
+            &.decorative-second {
+                top: 64%;
+                left: 0;
+            }
+        }
     }
 
     &-cards {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
         @include media-breakpoint-up(lg) {
             margin-top: 40px;
             margin-bottom: 100px;
+        }
+
+        .decorative {
+            @extend %position-absolute;
+        }
+
+        .heart-line-wrapper {
+            top: 0;
+            left: 0;
+        }
+
+        .circle-line {
+            right: 0;
+            top: 10%;
         }
     }
 

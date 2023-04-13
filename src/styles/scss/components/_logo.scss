@@ -1,0 +1,50 @@
+.heart-wrapper {
+    @extend %d-inline-block;
+
+    border-radius: 100%;
+    padding: 15px;
+
+    @each $key, $color, $bg in $main-color-set {
+        &--#{$key} {
+            background-color: $bg;
+        }
+    }
+}
+
+.heart-line {
+    @extend %position-relative, %d-inline-block;
+
+    .heart-wrapper {
+        @extend %position-absolute;
+
+        animation-name: scale-beat;
+        animation-duration: .75s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &--left {
+        .heart-wrapper {
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+            transform-origin: revert;
+        }
+    }
+
+    &--right {
+        .heart-wrapper {
+            bottom: 20%;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--angled {
+        .heart-wrapper {
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+        }
+    }
+}
