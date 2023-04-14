@@ -12,8 +12,8 @@
         background-color: $e-d-light;
 
         .swiper {
-            @include media-breakpoint-down(lg) {
-                &-slide {
+            &-slide {
+                @include media-breakpoint-down(lg) {
                     height: auto;
 
                     .carousel__banner,
@@ -31,6 +31,17 @@
                             justify-content: center;
                             align-items: flex-end;
                         }
+                    }
+                }
+
+                .decorative {
+                    @include make-transition(opacity);
+                }
+
+                &:not(.swiper-slide-active) {
+                    .decorative {
+                        //display: none;
+                        opacity: 0 !important;
                     }
                 }
             }
@@ -71,6 +82,97 @@
                 &--influencer,
                 &--personalities {
                     @extend %d-lg-flex, %align-items-lg-center;
+
+                    .decorative {
+                        @extend %position-absolute;
+                    }
+                }
+
+                &--connection,
+                &--skip,
+                &--influencer {
+                    .decorative {
+                        &--bent {
+                            &-left {
+                                top: 10%;
+                            }
+
+                            &-right {
+                                right: 0;
+                                bottom: -8%;
+                            }
+                        }
+                    }
+                }
+
+                &--connection {
+                    .decorative {
+                        &--doubled-heart {
+                            top: 60%;
+                            left: 40%;
+
+                            @include media-breakpoint-up(xl) {
+                                left: 50%;
+
+                            }
+                        }
+                    }
+                }
+
+                &--skip {
+                    .decorative {
+                        &--doubled-heart {
+                            top: 35%;
+                            left: 32%;
+
+                            @media (min-width: 1200px) and (max-width: 1399.98px) {
+                                left: 23%;
+                            }
+                        }
+                    }
+                }
+
+                &--influencer {
+                    .decorative {
+                        &--doubled-heart {
+                            bottom: 0;
+                            left: 40%;
+                            //top: 60%;
+
+                            @include media-breakpoint-up(xl) {
+                                bottom: 5%;
+                                left: 55%;
+                                //left: 50%;
+
+                            }
+                        }
+                    }
+                }
+
+                &--personalities {
+                    .decorative {
+                        &--bent {
+                            &-left {
+                                bottom: -5%;
+                                left: 30%;
+                                //transform: translateX(-50%);
+                            }
+
+                            &-right {
+                                right: 0;
+                                top: 5%;
+                                //bottom: -8%;
+
+                                .heart-line {
+                                    transform: rotate(-100deg);
+                                }
+                            }
+                        }
+
+                        &--doubled-heart {
+                            display: none;
+                        }
+                    }
                 }
 
                 &--connection {
@@ -80,12 +182,10 @@
                                 position: absolute;
                                 width: auto;
                                 height: 65%;
-                                //bottom: 20px;
                             }
 
                             @include media-breakpoint-up(lg) {
                                 top: 100px;
-                                //width: auto;
                                 height: calc(100% - 120px);
                                 bottom: unset;
                             }

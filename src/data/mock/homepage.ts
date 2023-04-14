@@ -30,14 +30,14 @@ export const CAROUSEL = [
         options: {
             columns: {
                 first: 'offset-lg-4',
-                second: 'offset-md-1 offset-lg-6 offset-xl-6'
+                second: 'offset-md-1 offset-lg-6 offset-xl-8'
             },
             columnsSize: {
                 first: {},
                 second: {
                     md: 10,
                     lg: 5,
-                    xl: 5,
+                    xl: 4,
                 }
             }
         }

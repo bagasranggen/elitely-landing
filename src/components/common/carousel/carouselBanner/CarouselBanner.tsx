@@ -3,6 +3,7 @@ import React from 'react';
 import {MAIN_COLOR} from "@/data/global";
 
 import parse from "html-react-parser";
+import {createAnimation} from "@/components/animation/helper";
 import 'swiper/css';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions, Autoplay} from "swiper";
@@ -11,6 +12,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import Button, {ButtonContainer} from "@/components/common/button/Button";
 import LogoHeartLine from "@/components/common/logo/logoHeartLine/LogoHeartLine";
 import Picture from "@/components/common/picture/Picture";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
+import LogoHeart from "@/components/common/logo/logoHeart/LogoHeart";
 
 const CarouselSettings: SwiperOptions = {
     modules: [Autoplay],
@@ -32,6 +35,30 @@ const CarouselBanner = ({className, items}: CarouselBannerProps): React.ReactEle
         {items.map((item: any) => (
             <SwiperSlide key={item.title}>
                 <div className={`carousel__banner carousel__banner--${item.variant}`}>
+
+                    <LogoHeartLineDiagonal
+                        className='decorative--bent-left'
+                        color='tertiary'
+                        options={{
+                            variant: 'bent-left',
+                            animation: {type: 'fade-in', direction: 'left', position: "top"}
+                        }} />
+                    <LogoHeartLineDiagonal
+                        className='decorative--bent-right'
+                        color='secondary'
+                        options={{
+                            variant: 'bent-right',
+                            animation: {type: 'fade-in', direction: 'right', position: "top"}
+                        }} />
+                    <div
+                        className="decorative decorative--doubled-heart"
+                        {...createAnimation({type: "fade-in", position: "top"})}>
+                        <div className="heart-doubled-wrapper">
+                            <LogoHeart color='primary' />
+                            <LogoHeart color='primary' />
+                        </div>
+                    </div>
+
                     <Container>
                         <Row>
                             <Col
