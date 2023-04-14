@@ -1,0 +1,115 @@
+.decorative {
+    pointer-events: none;
+
+    &--flip {
+        .heart-line {
+            transform: scaleY(-1);
+        }
+    }
+}
+
+.heart-wrapper {
+    @extend %d-inline-block;
+
+    border-radius: 100%;
+    padding: 15px;
+
+    @each $key, $color, $bg in $main-color-set {
+        &--#{$key} {
+            background-color: $bg;
+        }
+    }
+}
+
+.heart-line {
+    @extend %position-relative, %d-inline-block;
+
+    .heart-wrapper {
+        @extend %position-absolute;
+
+        animation-name: scale-beat;
+        animation-duration: .75s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &--left {
+        .heart-wrapper {
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+            transform-origin: revert;
+        }
+    }
+
+    &--right {
+        .heart-wrapper {
+            bottom: 20%;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--bent-right {
+        .heart-wrapper {
+            transform: rotate(55deg);
+            top: -42%;
+            left: 25%;
+
+            svg {
+                width: 50px;
+            }
+        }
+    }
+
+    &--bent-left {
+        .heart-wrapper {
+            transform: rotate(-50deg);
+            top: -35%;
+            left: -3%;
+
+            svg {
+                width: 65px;
+            }
+        }
+    }
+
+    &--angled {
+        .heart-wrapper {
+            bottom: 0;
+            right: 0;
+            transform: translate(50%, 50%);
+        }
+    }
+}
+
+.heart-doubled-wrapper {
+    @extend %position-relative;
+
+    .heart-wrapper {
+        animation-name: scale-beat;
+        animation-duration: .75s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        &:first-child {
+
+            svg {
+                width: 50px;
+            }
+        }
+
+        &:last-child {
+            @extend %position-absolute;
+
+            animation-delay: .25s;
+
+            bottom: -25px;
+            right: -15px;
+
+            svg {
+                width: 20px;
+            }
+        }
+    }
+}

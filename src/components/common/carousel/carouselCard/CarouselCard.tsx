@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MAIN_COLOR} from "@/data/global";
+import {createAnimation} from "@/components/animation/helper";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import {SwiperOptions, Pagination} from "swiper";
@@ -48,10 +48,12 @@ export type CarouselCardProps = {
 
 const CarouselCard = ({className, items}: CarouselCardProps): React.ReactElement => (
     <Swiper className={`carousel--cards${className ? ` ${className}` : ''}`} {...SwiperOptions}>
-        {items.map((item: CarouselCardItemProps) => (
-            <SwiperSlide key={item.title}>
+        {items.map((item: CarouselCardItemProps, i: number) => (
+            <SwiperSlide
+                key={item.title}
+                {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
                 <div className={`carousel__card carousel__card--${item.color}`}>
-                    <LogoHeart color={MAIN_COLOR[item.color as keyof Object]} />
+                    <LogoHeart color={item.color} />
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
                 </div>

@@ -23,7 +23,7 @@ const Picture = ({className, images}: PictureProps): React.ReactElement => (
                 alt: image.alt,
                 className: `img-fluid${className ? ` ${className}` : ''}`
             } : {
-                srcset: image.src,
+                srcSet: image.src,
                 width: image.width,
                 height: image.height,
                 media: `(min-width:${image.media}px)`,

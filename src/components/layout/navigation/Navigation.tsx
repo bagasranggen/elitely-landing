@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react';
 import Image from "next/image";
+import Link from "next/link";
 import {useRouter} from "next/router";
 
 import {MAIN_NAVIGATION} from "@/data/mock/global";
@@ -28,7 +29,9 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
             }}>
             <Container>
                 <Col xs='auto'>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand
+                        href="/"
+                        as={Link}>
                         <Image
                             src={logo}
                             alt='elitely' />
@@ -40,7 +43,8 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                         {MAIN_NAVIGATION.map((nav: any) => (
                             <Nav.Link
                                 key={nav.uri}
-                                className={nav.uri === asPath ? 'active' : ''}
+                                as={Link}
+                                className={`${nav?.options?.isBold ? 'fw-bold' : ''}${nav.uri === asPath ? ' active' : ''}`}
                                 href={nav.uri}>{nav.label}</Nav.Link>
                         ))}
                     </Nav>

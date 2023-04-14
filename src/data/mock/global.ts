@@ -1,7 +1,10 @@
 export const MAIN_NAVIGATION = [
     {
         uri: '/',
-        label: 'Home'
+        label: 'Sign up',
+        options: {
+            isBold: true,
+        }
     },
     {
         uri: '/about-us',
@@ -16,7 +19,7 @@ export const MAIN_NAVIGATION = [
         label: 'FAQ\'s'
     },
     {
-        uri: '/terms',
+        uri: '/terms-conditions',
         label: 'Terms'
     },
 ];

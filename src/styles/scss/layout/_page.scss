@@ -1,10 +1,35 @@
 .page {
     &--contact-us {
+        @extend %position-relative;
+
         background-color: $e-l-tertiary;
         padding-bottom: 1px;
 
         .container-form--contact-regular {
             margin-bottom: 100px;
+        }
+
+        .decorative {
+            @extend %position-absolute;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+
+            &--bent {
+                &-left {
+                    top: 15%;
+                }
+
+                &-right {
+                    right: 0;
+                    top: 50%;
+                }
+            }
+
+            &--angled {
+                bottom: 18%;
+            }
         }
     }
 }

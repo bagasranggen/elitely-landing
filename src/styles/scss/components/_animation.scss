@@ -1,0 +1,12 @@
+[data-animation='fade-in'] {
+    opacity: 0;
+}
+
+@keyframes scale-beat {
+    from {
+        scale: 0.9;
+    }
+    to {
+        scale: 1.05;
+    }
+}

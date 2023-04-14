@@ -1,5 +1,7 @@
 .section {
     &-alternate {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
@@ -7,9 +9,31 @@
             margin-top: 130px;
             margin-bottom: 130px;
         }
+
+        .decorative {
+            @extend %position-absolute;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        .heart-line-wrapper {
+            &:not(.decorative-second) {
+                top: -130px;
+                right: 0;
+            }
+
+            &.decorative-second {
+                top: 64%;
+                left: 0;
+            }
+        }
     }
 
     &-cards {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
@@ -17,14 +41,45 @@
             margin-top: 40px;
             margin-bottom: 100px;
         }
+
+        .decorative {
+            @extend %position-absolute;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        .heart-line-wrapper {
+            top: 0;
+            left: 0;
+        }
+
+        .circle-line {
+            right: 0;
+            top: 10%;
+        }
     }
 
     &-cards-list {
+        @extend %position-relative;
+
         margin-top: 80px;
         margin-bottom: 80px;
 
         @include media-breakpoint-up(lg) {
             margin-bottom: 100px;
+        }
+
+        .decorative {
+            @extend %position-absolute;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+
+            right: -30px;
+            bottom: 0;
         }
     }
 

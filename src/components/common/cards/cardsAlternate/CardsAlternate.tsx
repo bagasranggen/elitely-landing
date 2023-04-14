@@ -1,6 +1,7 @@
 import React from 'react';
 
 import parse from 'html-react-parser'
+import {createAnimation} from "@/components/animation/helper";
 
 import {Col, Row} from "react-bootstrap";
 import Button, {ButtonContainer, ButtonProps} from "@/components/common/button/Button";
@@ -22,8 +23,9 @@ const CardsAlternate = ({className, items}: CardsAlternateProps): React.ReactEle
     <>
         {items.map((item: any, i: number) => (
             <Row
+                key={item.title}
                 className={`${i % 2 === 0 ? '' : 'flex-md-row-reverse '}justify-content-between align-items-center gy-5 cards--alternate${className ? ` ${className}` : ''}`}
-                key={item.title}>
+                {...createAnimation({type: "fade-in", direction: i % 2 === 0 ? 'left' : 'right'})}>
                 <Col
                     md={5}
                     lg={6}>
@@ -43,6 +45,6 @@ const CardsAlternate = ({className, items}: CardsAlternateProps): React.ReactEle
             </Row>
         ))}
     </>
-);
+)
 
 export default CardsAlternate;

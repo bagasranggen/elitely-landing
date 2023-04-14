@@ -2,6 +2,8 @@ import React from 'react';
 
 import {CARDS, CHARTS, HEADER, HOW_IT_WORKS} from "@/data/mock/how-it-works";
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {Col, Container, Row} from "react-bootstrap";
 import CarouselCardList from "@/components/common/carousel/carouselCardList/CarouselCardList";
 import CarouselCardImage from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
@@ -10,6 +12,8 @@ import BarChart from "@/components/common/chart/barChart/BarChart";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import Picture from "@/components/common/picture/Picture";
+import LogoCircle from "@/components/common/logo/logoCircle/LogoCircle";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 
 export type HowItWorksProps = {};
 
@@ -19,6 +23,16 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             className='header-banner--how'
             color='tertiary'
             breadcrumb={HEADER.breadcrumb}>
+
+            <LogoHeartLineDiagonal
+                className='decorative--bent-left'
+                color='tertiary'
+                options={{variant: 'bent-left', animation: {type: 'fade-in', direction: 'left'}}} />
+            <LogoHeartLineDiagonal
+                className='decorative--bent-right'
+                color='secondary'
+                options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
+            
             <Row>
                 <Col
                     md={6}
@@ -33,12 +47,14 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                                 width: 321,
                                 height: 7,
                                 alt: 'general line'
-                            }]
+                            }],
+                            animation: {position: "top"}
                         }}>How it works</HeadingOffset>
-                    <p>Learn more about how work is structured in our company</p>
+                    <p {...createAnimation({type: "fade-in", direction: "up"})}>Learn more about how work is structured
+                        in our company</p>
                     <ListBullet
                         className='mt-5'
-                        options={{color: "tertiary"}}
+                        options={{color: "tertiary", animation: {type: 'fade-in', direction: 'up', position: 'top'}}}
                         items={HEADER.list} />
                 </Col>
                 <Col
@@ -56,11 +72,12 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             </Row>
         </HeaderBanner>
 
-        <Container
-            as='section'
-            className='section-cards-list'>
-            <CarouselCardList items={CARDS} />
-        </Container>
+        <section className="section-cards-list">
+            <Container>
+                <LogoCircle options={{animation: {type: 'fade-in', direction: 'right'}}} />
+                <CarouselCardList items={CARDS} />
+            </Container>
+        </section>
 
         <section className='section-charts'>
             <Container>

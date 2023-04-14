@@ -27,6 +27,20 @@ export const CAROUSEL = [
                 },
             ]
         },
+        options: {
+            columns: {
+                first: 'offset-lg-4',
+                second: 'offset-md-1 offset-lg-6 offset-xl-8'
+            },
+            columnsSize: {
+                first: {},
+                second: {
+                    md: 10,
+                    lg: 5,
+                    xl: 4,
+                }
+            }
+        }
     },
     {
         variant: 'skip',
@@ -51,6 +65,95 @@ export const CAROUSEL = [
                 },
             ]
         },
+        options: {
+            columns: {
+                first: 'offset-lg-4',
+                second: 'offset-md-1 offset-lg-8 offset-xl-7'
+            },
+            columnsSize: {
+                first: {},
+                second: {
+                    md: 10,
+                    lg: 4,
+                }
+            }
+        }
+    },
+    {
+        variant: 'influencer',
+        color: 'secondary',
+        title: 'Meet and Chat with',
+        titleBlock: 'Influencers',
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers.</p>',
+        media: {
+            main: [
+                {
+                    media: 768,
+                    src: '/images/banner-influencer.png',
+                    width: 779,
+                    height: 648,
+                    alt: 'man'
+                },
+                {
+                    src: '/images/banner-influencer-sm.png',
+                    width: 585,
+                    height: 486,
+                    alt: 'man'
+                },
+            ]
+        },
+        options: {
+            columns: {
+                first: 'offset-lg-6 offset-xxl-7',
+                second: 'offset-md-1 offset-lg-6 offset-xxl-7'
+            },
+            columnsSize: {
+                first: {},
+                second: {
+                    md: 10,
+                    lg: 5,
+                }
+            }
+        }
+    },
+    {
+        variant: 'personalities',
+        color: 'tertiary',
+        title: 'Personalities',
+        titleBlock: 'Influencers',
+        description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers.</p>',
+        media: {
+            main: [
+                {
+                    media: 768,
+                    src: '/images/banner-personalities.png',
+                    width: 810,
+                    height: 577,
+                    alt: 'man'
+                },
+                {
+                    src: '/images/banner-personalities-sm.png',
+                    width: 608,
+                    height: 433,
+                    alt: 'man'
+                },
+            ]
+        },
+        options: {
+            columns: {
+                first: '',
+                second: 'offset-md-1 ms-lg-0'
+            },
+            columnsSize: {
+                first: {
+                    lg: 8
+                },
+                second: {
+                    md: 10,
+                    lg: 5,
+                }
+            }
+        }
     },
 ]
 
@@ -62,13 +165,13 @@ export const CARDS = [
     },
     {
         color: 'secondary',
-        title: 'Inclusivity & Diversity',
-        description: 'All our Personalities and Influencers have been verified, so you can be sure you are speaking to or meeting a real person. Schedule meets easily and on-demand with our easy Meet Scheduler.',
+        title: 'Meet & Chat',
+        description: 'We also facilitate meet ups and chats between Influencers and their most genuine fans. There are many platforms used by Influencers but none that are meant for close-range interaction.',
     },
     {
         color: 'tertiary',
-        title: 'Inclusivity & Diversity',
-        description: 'All our Personalities and Influencers have been verified, so you can be sure you are speaking to or meeting a real person. Schedule meets easily and on-demand with our easy Meet Scheduler.',
+        title: 'Anti Catfish Policy',
+        description: 'As a platform that rejects social norms (for the sake of them) and classism, we welcome people who identify with all genders, who have been qualified as interesting Personalities or Influencers.',
     },
 ]
 

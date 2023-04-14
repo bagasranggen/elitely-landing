@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {createAnimation} from "@/components/animation/helper";
+
 import {Chart as ChartJS, ChartData, ChartOptions, CategoryScale, LinearScale, BarElement, Legend} from "chart.js";
 import {Bar} from "react-chartjs-2";
 
@@ -37,8 +39,9 @@ export type BarChartProps = {
 };
 
 const BarChart = ({data}: BarChartProps): React.ReactElement => (
-
-    <div className="chart-wrapper">
+    <div
+        className="chart-wrapper"
+        {...createAnimation({type: "fade-in", direction: "up"})}>
         <div className="chart-area-wrapper">
             <Bar
                 options={BarChartOptions}

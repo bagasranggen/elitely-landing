@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 
-import {MainColorProps} from "@/@type/common";
+import {MAIN_COLOR} from "@/data/global";
+
+import type {MainColorProps} from "@/@type/common";
+import type {AccordionEventKey} from "react-bootstrap/AccordionContext";
+import type {FadeInProps} from "@/components/animation/fade/useFadeIn";
+
+import {createAnimation} from "@/components/animation/helper";
+import parse from "html-react-parser";
 
 import {Accordion as BSAccordion} from "react-bootstrap";
-import parse from "html-react-parser";
 import LogoChevronDown from "@/components/common/logo/logoChevronDown/LogoChevronDown";
-import {AccordionEventKey} from "react-bootstrap/AccordionContext";
-import {MAIN_COLOR} from "@/data/global";
 
 export type AccordionItemType = {
     title: string;
@@ -20,6 +24,7 @@ export type AccordionProps = {
 
 const Accordion = ({color, items}: AccordionProps): React.ReactElement => {
     const [active, isActive] = useState<AccordionEventKey | undefined>();
+    const animation: FadeInProps = createAnimation({type: 'fade-in', direction: 'up'});
 
     return (
         <BSAccordion
@@ -28,7 +33,8 @@ const Accordion = ({color, items}: AccordionProps): React.ReactElement => {
             {items.map((item: AccordionItemType, i: number) => (
                 <BSAccordion.Item
                     key={i}
-                    eventKey={i.toString()}>
+                    eventKey={i.toString()}
+                    {...animation}>
                     <BSAccordion.Header>
                         {item.title}
                         <LogoChevronDown {...active === i.toString() && {color: MAIN_COLOR[color]}} />
