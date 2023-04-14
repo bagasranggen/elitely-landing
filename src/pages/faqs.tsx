@@ -8,6 +8,7 @@ import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffs
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import Picture from "@/components/common/picture/Picture";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 
 export type FaqsProps = {};
 
@@ -17,6 +18,12 @@ const Faqs = ({}: FaqsProps): React.ReactElement => (
             className='header-banner--faqs'
             color='tertiary'
             breadcrumb={HEADER.breadcrumb}>
+
+            <LogoHeartLineDiagonal
+                className='decorative--bent-left'
+                color='tertiary'
+                options={{variant: 'bent-left', animation: {type: 'fade-in', direction: 'left'}}} />
+
             <Row>
                 <Col
                     md={7}

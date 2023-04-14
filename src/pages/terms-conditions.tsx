@@ -9,6 +9,7 @@ import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffs
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import {FadeIn} from "@/components/animation";
+import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 
 export type TermsConditionsProps = {};
 
@@ -18,6 +19,16 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             className='header-banner--terms'
             color='secondary'
             breadcrumb={HEADER.breadcrumb}>
+
+            <LogoHeartLineDiagonal
+                className='decorative--flip decorative--bent-left'
+                color='tertiary'
+                options={{variant: 'bent-left', animation: {type: 'fade-in', direction: 'left'}}} />
+            <LogoHeartLineDiagonal
+                className='decorative--bent-right'
+                color='secondary'
+                options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
+
             <HeadingOffset
                 className='mb-4 text-center text-md-start'
                 option={{level: "h1", variant: "regular", animation: {position: 'top'}}}>Terms and

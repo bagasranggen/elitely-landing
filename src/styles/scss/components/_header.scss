@@ -18,6 +18,24 @@
         }
 
         &--how {
+            @extend %position-relative;
+
+            .decorative {
+                @extend %position-absolute, %d-none, %d-xl-block;
+
+                &--bent {
+                    &-left {
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    &-right {
+                        right: 0;
+                        top: 15%;
+                    }
+                }
+            }
+
             @include media-breakpoint-down(xl) {
                 overflow: hidden;
             }
@@ -69,8 +87,26 @@
         }
 
         &--faqs {
+            @extend %position-relative;
+
             @include media-breakpoint-down(xl) {
                 overflow: hidden;
+            }
+
+            .decorative {
+                @extend %position-absolute, %d-none, %d-xl-block;
+
+                &--bent {
+                    &-left {
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    //&-right {
+                    //    right: 0;
+                    //    top: 15%;
+                    //}
+                }
             }
 
             h1 {
@@ -120,6 +156,24 @@
         }
 
         &--terms {
+            @extend %position-relative;
+
+            .decorative {
+                @extend %position-absolute, %d-none, %d-xl-block;
+
+                &--bent {
+                    &-left {
+                        bottom: 30%;
+                        left: 0;
+                    }
+
+                    &-right {
+                        right: 0;
+                        bottom: 15%;
+                    }
+                }
+            }
+
             ul {
                 margin-bottom: 60px;
 

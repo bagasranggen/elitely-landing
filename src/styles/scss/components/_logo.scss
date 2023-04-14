@@ -1,5 +1,11 @@
 .decorative {
     pointer-events: none;
+
+    &--flip {
+        .heart-line {
+            transform: scaleY(-1);
+        }
+    }
 }
 
 .heart-wrapper {
