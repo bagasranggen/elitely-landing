@@ -1,7 +1,9 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useState} from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
+
+import {useIsMobile} from "@/libs/hooks";
 
 import {MAIN_NAVIGATION} from "@/data/mock/global";
 
@@ -14,6 +16,18 @@ export type NavigationProps = {};
 
 const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
     const {asPath} = useRouter();
+    const isMobile = useIsMobile('lg');
+
+    const [expanded, setExpanded] = useState<boolean>(false);
+
+    const navbarToggleHandler = (open: boolean) => {
+        setExpanded(open);
+        if (!open) {
+            const body = document.querySelector('body');
+
+            if (body) body.style.overflow = '';
+        }
+    }
 
     return (
         <Navbar
@@ -22,6 +36,8 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
             variant='dark'
             expand="lg"
             sticky='top'
+            expanded={expanded}
+            // collapseOnSelect={true}
             onToggle={(expanded: boolean) => {
                 const body = document.querySelector('body');
 
@@ -37,7 +53,9 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                             alt='elitely' />
                     </Navbar.Brand>
                 </Col>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    onClick={() => navbarToggleHandler(!expanded)} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
                         {MAIN_NAVIGATION.map((nav: any) => (
@@ -45,16 +63,19 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
                                 key={nav.uri}
                                 as={Link}
                                 className={`${nav?.options?.isBold ? 'fw-bold' : ''}${nav.uri === asPath ? ' active' : ''}`}
-                                href={nav.uri}>{nav.label}</Nav.Link>
+                                href={nav.uri}
+                                onClick={() => isMobile && navbarToggleHandler(false)}>{nav.label}</Nav.Link>
                         ))}
                     </Nav>
                     <Nav className='align-items-center'>
                         <Button
                             option={{variant: 'outline', color: 'primary'}}
-                            link={{href: '#', label: 'Login'}} />
+                            link={{href: '#', label: 'Login'}}
+                            event={{onClick: () => isMobile && navbarToggleHandler(false)}} />
                         <Button
                             option={{variant: 'block', color: 'light'}}
-                            link={{href: '/contact-us', label: 'Contact Us'}} />
+                            link={{href: '/contact-us', label: 'Contact Us'}}
+                            event={{onClick: () => isMobile && navbarToggleHandler(false)}} />
                     </Nav>
                 </Navbar.Collapse>
             </Container>
