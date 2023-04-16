@@ -6,7 +6,7 @@
     }
 
     &-button {
-        @extend %fs-18;
+        @extend %fs-18, %align-items-baseline;
         font-weight: 600;
 
         border-top-left-radius: 8px;
@@ -15,13 +15,15 @@
         svg {
             @extend %d-block, %ms-auto;
             @include make-transition(transform);
+
+            min-width: 16px;
         }
 
         &[aria-expanded='false'] {
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
-        
+
         &[aria-expanded='true'] {
             svg {
                 transform: rotate(180deg);
