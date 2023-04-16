@@ -9,32 +9,32 @@
 
 .carousel {
     &--banner {
-        background-color: $e-d-light;
-
         .swiper {
             &-slide {
-                @include media-breakpoint-down(lg) {
-                    height: auto;
-
-                    .carousel__banner,
-                    .carousel__banner .container,
-                    .carousel__banner .container > .row {
-                        height: 100%;
-                    }
-
-                    .carousel__banner .container > .row {
-                        flex-direction: column;
-
-                        > [class*=col]:last-child {
-                            flex-grow: 6;
-                            display: flex;
-                            justify-content: center;
-                            align-items: flex-end;
-                        }
-                    }
-                }
+                //@include media-breakpoint-down(lg) {
+                //    height: auto;
+                //
+                //    .carousel__banner,
+                //    .carousel__banner .container,
+                //    .carousel__banner .container > .row {
+                //        height: 100%;
+                //    }
+                //
+                //    .carousel__banner .container > .row {
+                //        flex-direction: column;
+                //
+                //        > [class*=col]:last-child {
+                //            flex-grow: 6;
+                //            display: flex;
+                //            justify-content: center;
+                //            align-items: flex-end;
+                //        }
+                //    }
+                //}
 
                 .decorative {
+                    @extend %d-none, %d-lg-block;
+
                     @include make-transition(opacity);
                 }
 
@@ -53,6 +53,8 @@
             }
 
             &__banner {
+                background-color: $e-d-light;
+
                 @include media-breakpoint-down(sm) {
                     //height: calc(80vh - var(--nav-height));
                     //height: calc(80vh - 70px);
