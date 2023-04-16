@@ -108,7 +108,7 @@
         //background-color: $e-primary;
         background-image: url("/images/bg-highlight.jpg");
         background-size: cover;
-        background-position-x: 30%;
+        background-position-x: 45%;
         background-repeat: no-repeat;
         //background: url("/images/bg-highlight.jpg"), $e-primary;
         color: $white;
@@ -116,6 +116,7 @@
         @include media-breakpoint-up(lg) {
             padding-top: 82px;
             padding-bottom: 82px;
+            background-position-x: 30%;
         }
 
         &:after {

@@ -50,13 +50,13 @@ const useFadeIn = () => {
                 scrollTrigger: {
                     trigger: fade,
                     start: `top ${isOnTop ? 'bottom' : '80%'}`,
-                    // markers: true
-                    markers: process.env.NEXT_PUBLIC_GSAP_MARKER === '1' && process.env.NODE_ENVIRONMENT === 'development'
+                    markers: process.env.NEXT_PUBLIC_GSAP_MARKER === '1' && process.env.NODE_ENV === 'development'
                 },
-                // duration: .5,
-                // ease: 'power2'
                 ease: 'Power1.easeIn',
-                ...delay ? {duration: delay} : {}
+                ...delay ? {duration: delay} : {},
+                onComplete: () => {
+                    gsap.set(fade, {clearProps: true})
+                }
             }).fromTo(fade, {
                 opacity: 0,
                 ...dir ? {[FADE_IN_DIRECTION[dir].direction]: FADE_IN_DIRECTION[dir][FADE_IN_DIRECTION[dir].direction]} : {}
@@ -75,8 +75,13 @@ const useFadeIn = () => {
     }, [])
 
     useLayoutEffect(() => {
-        const handleStart = () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-        const handleEnd = () => createFadeIn()
+        const handleStart = () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+        }
+        const handleEnd = () => {
+            ScrollTrigger.refresh(true);
+            createFadeIn()
+        }
 
         router.events.on("routeChangeStart", handleStart);
         router.events.on("routeChangeComplete", handleEnd);

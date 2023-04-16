@@ -78,7 +78,7 @@ const AboutUs = ({}: AboutUsProps): React.ReactElement => {
                         xl={6}>
                         <ContactUsForm
                             className='form-contact form-contact--simplified'
-                            heading='Send us Message' />
+                            heading='Send us message' />
                     </Col>
                 </Row>
             </Container>
