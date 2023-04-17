@@ -51,8 +51,11 @@ const CarouselCard = ({className, items}: CarouselCardProps): React.ReactElement
         {items.map((item: CarouselCardItemProps, i: number) => (
             <SwiperSlide
                 key={item.title}
-                {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
-                <div className={`carousel__card carousel__card--${item.color}`}>
+                //{...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}
+            >
+                <div
+                    className={`carousel__card carousel__card--${item.color}`}
+                    {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
                     <LogoHeart color={item.color} />
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>

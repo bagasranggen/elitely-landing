@@ -24,7 +24,7 @@ const LogoCircle = ({options}: LogoCircleProps): React.ReactElement => {
                     cy="76.5"
                     r="69.5"
                     stroke="#B2294B"
-                    stroke-width="14" />
+                    strokeWidth="14" />
             </svg>
         </div>
     )

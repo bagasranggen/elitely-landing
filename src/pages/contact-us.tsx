@@ -7,11 +7,14 @@ import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 import ContactUsForm from "@/components/layout/forms/contactUsForm/ContactUsForm";
+import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 
 export type ContactUsProps = {};
 
 const ContactUs = ({}: ContactUsProps): React.ReactElement => (
     <>
+        <HeaderHead title='Contact Us' />
+
         <HeaderBanner
             className='header-banner--faqs'
             breadcrumb={HEADER.breadcrumb}>

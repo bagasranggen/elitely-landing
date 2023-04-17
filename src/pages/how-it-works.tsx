@@ -14,11 +14,14 @@ import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import Picture from "@/components/common/picture/Picture";
 import LogoCircle from "@/components/common/logo/logoCircle/LogoCircle";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
+import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 
 export type HowItWorksProps = {};
 
 const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
     <>
+        <HeaderHead title='How It Works' />
+
         <HeaderBanner
             className='header-banner--how'
             color='tertiary'
@@ -32,7 +35,7 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                 className='decorative--bent-right'
                 color='secondary'
                 options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
-            
+
             <Row>
                 <Col
                     md={6}
