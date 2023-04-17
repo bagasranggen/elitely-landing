@@ -50,8 +50,8 @@ const LogoHeartLineDiagonal = ({className, color, options}: LogoHeartLineDiagona
                 <path
                     d="M140.09 163.319C97.4232 161.319 10.0898 144.919 2.08984 95.3193C-5.91016 45.7193 32.0898 11.986 52.0898 1.31934"
                     stroke="#2D2D2D"
-                    stroke-width="2"
-                    stroke-dasharray="6 6" />
+                    strokeWidth="2"
+                    strokeDasharray="6 6" />
             </svg>
             break;
 
@@ -65,8 +65,8 @@ const LogoHeartLineDiagonal = ({className, color, options}: LogoHeartLineDiagona
                 <path
                     d="M-44 163.245C-1.33333 161.245 86 144.845 94 95.2446C102 45.6446 64 11.9113 44 1.24463"
                     stroke="#2D2D2D"
-                    stroke-width="2"
-                    stroke-dasharray="6 6" />
+                    strokeWidth="2"
+                    strokeDasharray="6 6" />
             </svg>
             break;
 
