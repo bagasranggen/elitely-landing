@@ -1,4 +1,4 @@
-import React, {forwardRef, useState} from 'react';
+import React, {forwardRef, useEffect, useState} from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
@@ -16,6 +16,7 @@ export type NavigationProps = {};
 
 const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
     const {asPath} = useRouter();
+    const router = useRouter();
     const isMobile = useIsMobile('lg');
 
     const [expanded, setExpanded] = useState<boolean>(false);

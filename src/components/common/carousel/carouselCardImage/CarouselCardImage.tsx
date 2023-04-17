@@ -52,9 +52,10 @@ const CarouselCardImage = ({className, items}: CarouselCardImageProps): React.Re
     <Swiper className={`cards--image${className ? ` ${className}` : ''}`} {...SwiperOptions}>
         {items.map((item: CarouselCardImageItemProps, i: number) => (
             <SwiperSlide
-                key={item.title}
-                {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
-                <Card className={`cards__card cards__card--${item.color}`}>
+                key={item.title}>
+                <Card
+                    className={`cards__card cards__card--${item.color}`}
+                    {...createAnimation({type: "fade-in", direction: "up", delay: i * .15})}>
                     <Card.Img
                         variant="top"
                         src={item.image.src} />

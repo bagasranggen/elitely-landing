@@ -373,6 +373,8 @@
     }
 
     &--cards {
+        padding-bottom: 5px;
+
         h2 {
             @extend %fs-24, %ff-playfair, %mt-5;
             margin-bottom: 20px;
@@ -381,6 +383,7 @@
         .carousel__card {
             @extend %text-center;
 
+            height: 100%;
             border: 0.5px solid #A6A6A6;
             border-radius: 8px;
             box-shadow: 0px 1px 3px rgba(2, 1, 1, 0.1), 0px 2px 1px rgba(2, 1, 1, 0.06), 0px 1px 1px rgba(2, 1, 1, 0.08);
@@ -398,6 +401,10 @@
         }
 
         .swiper {
+            &-slide {
+                height: auto;
+            }
+
             &-pagination {
                 &-bullet-active {
                     background-color: $e-tertiary !important;
@@ -414,8 +421,13 @@
             &-slide {
                 height: auto;
 
-                .cards__card {
+                .cards__card,
+                [data-animation] {
                     height: 100%;
+                }
+
+                [data-animation] {
+                    @extend %d-flex, %flex-column;
                 }
             }
         }
