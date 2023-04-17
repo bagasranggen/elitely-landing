@@ -119,7 +119,7 @@ export const CAROUSEL = [
     {
         variant: 'personalities',
         color: 'tertiary',
-        title: 'Personalities',
+        title: 'Meet and Chat with',
         titleBlock: 'Influencers',
         description: '<p>The world’s first social media platform where users can pay a small fee to unlock chats and meets ups with other users on our platform, who have been qualified as interesting Personalities or Influencers.</p>',
         media: {
