@@ -10,11 +10,14 @@ import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import {FadeIn} from "@/components/animation";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
+import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 
 export type TermsConditionsProps = {};
 
 const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
     <>
+        <HeaderHead title='Terms And Conditions' />
+
         <HeaderBanner
             className='header-banner--terms'
             color='secondary'

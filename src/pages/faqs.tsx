@@ -9,11 +9,13 @@ import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import Picture from "@/components/common/picture/Picture";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
+import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 
 export type FaqsProps = {};
 
 const Faqs = ({}: FaqsProps): React.ReactElement => (
     <>
+        <HeaderHead title="FAQ's" />
         <HeaderBanner
             className='header-banner--faqs'
             color='tertiary'
