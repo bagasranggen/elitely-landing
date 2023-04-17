@@ -1,4 +1,8 @@
 .navbar {
+    @include media-breakpoint-down(lg) {
+        max-height: 100vh;
+    }
+
     &--primary {
         background-color: $e-primary;
         color: $white;

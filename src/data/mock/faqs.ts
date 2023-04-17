@@ -107,7 +107,7 @@ export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({ titl
         ]
     },
     INFLUENCER: {
-        title: 'For Personalities/Influencers',
+        title: 'For Personalities / Influencers',
         color: 'secondary',
         image: [{
             src: '/images/heading-line-influencers.svg',
