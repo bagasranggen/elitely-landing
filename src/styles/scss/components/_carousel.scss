@@ -322,7 +322,7 @@
                 }
 
                 h2 {
-                    @extend %ff-playfair, %fs-36, %fs-lg-56, %text-center, %text-lg-start;
+                    @extend %ff-playfair, %fs-32, %fs-lg-56, %text-center, %text-lg-start;
 
                     line-height: 52px;
                     @include media-breakpoint-up(lg) {

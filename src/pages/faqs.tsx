@@ -35,7 +35,7 @@ const Faqs = ({}: FaqsProps): React.ReactElement => (
                         option={{level: "h1", variant: "regular", animation: {position: "top"}}}>Frequently Asked
                         Questions</HeadingOffset>
                     <ListBullet
-                        className='mt-5 text-center text-md-start'
+                        className='mt-5'
                         options={{color: "tertiary", animation: {type: 'fade-in', direction: 'up', position: "top"}}}
                         items={HEADER.list} />
                 </Col>

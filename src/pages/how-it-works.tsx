@@ -37,9 +37,7 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                 options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
 
             <Row>
-                <Col
-                    md={6}
-                    className='text-center text-md-start'>
+                <Col md={6}>
                     <HeadingOffset
                         className='mb-4 text-center text-md-start'
                         option={{
@@ -53,7 +51,11 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
                             }],
                             animation: {position: "top"}
                         }}>How it works</HeadingOffset>
-                    <p {...createAnimation({type: "fade-in", direction: "up"})}>Learn more about how work is structured
+                    <p
+                        className='text-center text-md-start' {...createAnimation({
+                        type: "fade-in",
+                        direction: "up"
+                    })}>Learn more about how work is structured
                         in our company</p>
                     <ListBullet
                         className='mt-5'

@@ -7,11 +7,14 @@ export type PictureItemProps = {
 
 export type PictureProps = {
     className?: string;
+    options?: {
+        style?: React.CSSProperties;
+    }
     images: Array<PictureItemProps>;
 };
 
-const Picture = ({className, images}: PictureProps): React.ReactElement => (
-    <picture>
+const Picture = ({className, options, images}: PictureProps): React.ReactElement => (
+    <picture style={options?.style}>
         {images?.map((image: PictureItemProps, i: number) => {
             const isLast = i === images.length - 1;
             const ImageBlock = isLast ? 'img' : 'source';

@@ -6,6 +6,12 @@
         svg {
             @extend %position-absolute;
             bottom: 0;
+
+            &.img--two-lines {
+                @include media-breakpoint-down(md) {
+                    bottom: var(--line-bottom-offset);
+                }
+            }
         }
 
         h1.text-center ~ picture img,
