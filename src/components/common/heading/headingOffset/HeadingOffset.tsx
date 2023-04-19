@@ -37,7 +37,9 @@ const HeadingOffset = ({className, option, children}: HeadingOffsetProps): React
     }
 
     if (option?.variant === 'regular') {
-        const isTwoLines = height > 40;
+        const isTwoLines = height > 50;
+
+        console.log(height)
 
         return (
             <HeadingWrapper {...option?.hasLine && {...{className: 'heading-wrapper'}, ...fadeAnimationProps}}>
