@@ -37,7 +37,7 @@
 
     &-bullet {
         li {
-            @extend %d-flex, %align-items-baseline, %fs-18, %justify-content-center, %justify-content-md-start;
+            @extend %d-flex, %align-items-baseline, %fs-18;
 
             &:before {
                 @extend %d-block, %me-2;

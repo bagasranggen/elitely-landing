@@ -37,7 +37,7 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
                 option={{level: "h1", variant: "regular", animation: {position: 'top'}}}>Terms and
                 conditions</HeadingOffset>
             <ListBullet
-                className='mt-5 text-center text-md-start'
+                className='mt-5'
                 options={{
                     color: "secondary",
                     variant: 'inline',
