@@ -5,7 +5,6 @@ import '../styles/scss/main.scss';
 import "@fontsource/inter";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
-// import "@fontsource/playfair-display";
 import "@fontsource/playfair-display/600.css";
 
 import Layout from "@/components/layout/Layout";

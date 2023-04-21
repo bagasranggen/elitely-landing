@@ -25,11 +25,9 @@ export type InputProps = {
         size?: MainSizeProps;
         align?: 'start' | 'center' | 'end';
         isMultiline?: boolean | number;
-        // fullWidth?: boolean;
     };
     input: ({
         id: string;
-        // type?: 'text' | 'email' | 'number' | 'tel';
         label?: string;
         placeholder?: string;
     } & (InputRegularProps | InputSelectProps))

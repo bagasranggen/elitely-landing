@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-import {useIsMobile} from "@/libs/hooks";
-
 import {MAIN_NAVIGATION} from "@/data/mock/global";
 
 import logo from '@/assets/images/logo.svg'
@@ -17,7 +15,6 @@ export type NavigationProps = {};
 const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
     const {asPath} = useRouter();
     const router = useRouter();
-    const isMobile = useIsMobile('lg');
 
     const [expanded, setExpanded] = useState<boolean>(false);
 
@@ -31,12 +28,10 @@ const Navigation = forwardRef<HTMLElement, NavigationProps>((props, ref) => {
     useEffect(() => {
         const handleEnd = () => navbarToggleHandler(false);
 
-        // router.events.on("routeChangeStart", handleStart);
         router.events.on("routeChangeComplete", handleEnd);
         router.events.on("routeChangeError", handleEnd);
 
         return () => {
-            // router.events.off("routeChangeStart", handleStart);
             router.events.off("routeChangeComplete", handleEnd);
             router.events.off("routeChangeError", handleEnd);
         };

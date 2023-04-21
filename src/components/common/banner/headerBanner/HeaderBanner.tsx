@@ -15,12 +15,8 @@ export type HeaderBannerProps = {
 const HeaderBanner = ({breadcrumb, className, color, children}: HeaderBannerProps): React.ReactElement => (
     <section className={`header-banner${color ? ` header-banner--${color}` : ''}${className ? ` ${className}` : ''}`}>
         <Container>
-            {/*<Row className='justify-content-center'>*/}
-            {/*    <Col>*/}
             <Breadcrumb items={breadcrumb} />
             {children}
-            {/*</Col>*/}
-            {/*</Row>*/}
         </Container>
     </section>
 );

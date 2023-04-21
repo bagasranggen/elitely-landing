@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {MAIN_COLOR} from "@/data/global";
 import type {MainColorProps} from "@/@type/common";
 
 import ListCheck, {ListCheckProps} from "@/components/common/list/listCheck/ListCheck";
