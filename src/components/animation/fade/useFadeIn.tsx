@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect} from "react";
+import React, {useEffect} from "react";
 import {useRouter} from "next/router";
 
 import {FADE_IN_DIRECTION} from "@/components/animation/fade/direction";
@@ -68,13 +68,13 @@ const useFadeIn = () => {
         })
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const context = gsap.context(() => createFadeIn);
 
         return () => context.revert();
     }, [])
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const handleStart = () => {
             ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
         }

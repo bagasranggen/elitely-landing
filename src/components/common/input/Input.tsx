@@ -1,11 +1,12 @@
 import React from 'react';
+import dynamic from "next/dynamic";
 
 import type {MainColorProps, MainVariantProps} from "@/@type/common";
 import type {MainSizeProps} from "@/@type/common";
 
-import InputSelect, {
-    InputSelectProps as ComponentInputSelectProps
-} from "@/components/common/input/inputSelect/InputSelect";
+import {InputSelectProps as ComponentInputSelectProps} from "@/components/common/input/inputSelect/InputSelect";
+
+const InputSelect = dynamic(import('@/components/common/input/inputSelect/InputSelect'), {ssr: false})
 
 type InputRegularProps = {
     type?: 'text' | 'email' | 'number' | 'tel';

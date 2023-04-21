@@ -36,7 +36,7 @@ const InputSelect = ({input, events}: InputSelectProps): React.ReactElement => {
                 id={input.id}
                 title={input.id}
                 type="text"
-                value={value?.value}
+                defaultValue={value?.value}
                 hidden />
             <Dropdown>
                 <Dropdown.Toggle
