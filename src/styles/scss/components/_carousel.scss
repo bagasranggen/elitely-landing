@@ -29,18 +29,6 @@
             &__banner {
                 background-color: $e-d-light;
 
-                @include media-breakpoint-down(sm) {
-                    //height: calc(80vh - var(--nav-height));
-                    //height: calc(80vh - 70px);
-                    //height: 80vh;
-                }
-
-                @include media-breakpoint-down(md) {
-                    //height: calc(100vh - var(--nav-height));
-                    //height: calc(100vh - 70px);
-                    //height: 100vh;
-                }
-
                 @include media-breakpoint-up(lg) {
                     height: calc(100vh - 70px);
                 }
@@ -131,13 +119,11 @@
                             &-left {
                                 bottom: -5%;
                                 left: 30%;
-                                //transform: translateX(-50%);
                             }
 
                             &-right {
                                 right: 0;
                                 top: 5%;
-                                //bottom: -8%;
 
                                 .heart-line {
                                     transform: rotate(-100deg);

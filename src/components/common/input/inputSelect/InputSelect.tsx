@@ -28,7 +28,6 @@ const InputSelect = ({input, events}: InputSelectProps): React.ReactElement => {
         if (!value) return;
 
         events?.onChange && events.onChange(value.value)
-        // console.log(value.value)
     }, [value, events])
 
     return (
@@ -48,7 +47,6 @@ const InputSelect = ({input, events}: InputSelectProps): React.ReactElement => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    {/*<Dropdown.Item disabled>{input?.placeholder ?? 'Please select one..'}</Dropdown.Item>*/}
                     {input.options?.map((option: InputSelectItemProps) => (
                         <Dropdown.Item
                             key={option.value}

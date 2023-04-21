@@ -1,8 +1,6 @@
 @import "abstracts/functions";
 @import "abstracts/variables";
 
-// @import "../../node_modules/bootstrap/scss/bootstrap";
-
 // Import needed components only
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
@@ -11,8 +9,6 @@
 @import "utils/utilities";
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 @import "../../../node_modules/bootstrap/scss/containers";
-
-//@import "vendor/slick";
 
 @import "mixins/hover";
 @import "mixins/spacing";
