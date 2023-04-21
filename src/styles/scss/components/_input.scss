@@ -94,10 +94,11 @@
                         color: $e-primary;
                     }
 
-                    @include focus-active() {
-                        background-color: $e-l-primary;
-                        color: $e-primary;
-                    }
+                }
+                
+                @include focus-active() {
+                    background-color: $e-l-primary;
+                    color: $e-primary;
                 }
             }
         }
