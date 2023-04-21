@@ -342,10 +342,10 @@
                     background-color: $white;
                 }
 
-                @each $key, $color, $bg in $main-color-set {
+                @each $key, $value in $main-color-set {
                     &--#{$key} {
                         span {
-                            color: $color;
+                            color: map-get($value, regular);
                         }
                     }
                 }
@@ -393,9 +393,9 @@
                 padding: 48px 36px 36px;
             }
 
-            @each $key, $color, $bg in $main-color-set {
+            @each $key, $value in $main-color-set {
                 &--#{$key} {
-                    background-color: $bg;
+                    background-color: map-get($value, light);
                 }
             }
         }

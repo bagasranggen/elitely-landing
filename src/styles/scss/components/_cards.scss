@@ -3,9 +3,9 @@
         border: 0.5px solid #A6A6A6;
         border-radius: 8px;
 
-        @each $key, $color, $bg in $main-color-set {
+        @each $key, $value in $main-color-set {
             &--#{$key} {
-                background-color: $bg;
+                background-color: map-get($value, light);
             }
         }
 
@@ -98,13 +98,13 @@
                 }
             }
 
-            @each $key, $color, $bg in $main-color-set {
+            @each $key, $value in $main-color-set {
                 &--#{$key} {
                     background-color: $white;
-                    border-color: $color;
+                    border-color: map-get($value, regular);
 
                     .card-title {
-                        color: $color;
+                        color: map-get($value, regular);
                     }
 
                     .list-dashed {
@@ -112,16 +112,14 @@
 
                         li {
                             &:before {
-                                background-color: $color;
+                                background-color: map-get($value, regular);
                             }
 
                             &:after {
-                                border-left-color: $color;
+                                border-left-color: map-get($value, regular);
                             }
                         }
                     }
-
-                    //background-color: $bg;
                 }
             }
         }

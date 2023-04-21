@@ -12,19 +12,14 @@
 }
 
 @mixin make-font-sizes($breakpoints: $grid-breakpoints) {
-    @each $size, $line-height in $font-sizes-set {
+    @each $key, $value in $font-sizes-set {
         @each $breakpoint in map-keys($breakpoints) {
             $infix: breakpoint-infix($breakpoint, $breakpoints);
-            //.fs-#{$size},
-            //%fs-#{$size} {
-            //    font-size: #{$size}px;
-            //    line-height: $line-height;
-            //}
 
-            %fs#{$infix}-#{$size} {
+            %fs#{$infix}-#{$key} {
                 @include media-breakpoint-up($breakpoint) {
-                    font-size: #{$size}px !important;
-                    line-height: $line-height !important;
+                    font-size: map-get($value, size) !important;
+                    line-height: map-get($value, line-height) !important;
                 }
             }
         }
@@ -32,10 +27,10 @@
 }
 
 @mixin make-font-color() {
-    @each $key, $color in $font-color-set {
+    @each $key, $value in $font-color-set {
         %fc-#{$key},
         .fc--#{$key} {
-            color: $color;
+            color: map-get($value, regular);
         }
     }
 }

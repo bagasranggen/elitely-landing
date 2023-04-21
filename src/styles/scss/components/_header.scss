@@ -7,9 +7,9 @@
             margin-top: 20px;
         }
 
-        @each $key, $color, $bg in $main-color-set {
+        @each $key, $value in $main-color-set {
             &--#{$key} {
-                background-color: $bg;
+                background-color: map-get($value, light);
             }
         }
 
