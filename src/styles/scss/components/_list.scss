@@ -73,11 +73,11 @@
             }
         }
 
-        @each $key, $color, $bg in $main-color-set {
+        @each $key, $value in $main-color-set {
             &--#{$key} {
                 li {
                     &:before {
-                        background-color: $color;
+                        background-color: map-get($value, regular);
                     }
                 }
             }

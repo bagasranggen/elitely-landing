@@ -39,19 +39,19 @@ const HeadingOffset = ({className, option, children}: HeadingOffsetProps): React
     if (option?.variant === 'regular') {
         const isTwoLines = height > 50;
 
-        console.log(height)
-
         return (
             <HeadingWrapper {...option?.hasLine && {...{className: 'heading-wrapper'}, ...fadeAnimationProps}}>
                 <Heading
                     ref={headingRef}
                     className={`heading--large${className ? ` ${className}` : ''}`}
                     {...!option?.hasLine && fadeAnimationProps} >{children}</Heading>
-                {option?.hasLine &&
-                    <Picture
-                        className={isTwoLines ? 'img--two-lines' : ''}
+                {option?.hasLine && Array.from(Array(isTwoLines ? 2 : 1), (_: any, i: number) => {
+                    if (option?.hasLine) return <Picture
+                        key={i}
+                        className={(isTwoLines && i === 0) ? 'img--two-lines' : ''}
                         images={option.hasLine}
-                        {...isTwoLines ? {options: {style: {'--line-bottom-offset': `${height / 2}px`} as React.CSSProperties}} : {}} />}
+                        {...(isTwoLines && i === 0) ? {options: {style: {'--line-bottom-offset': `${height / 2}px`} as React.CSSProperties}} : {}} />
+                })}
             </HeadingWrapper>
         )
     }

@@ -41,19 +41,17 @@
         border-bottom-right-radius: 8px;
     }
 
-    @each $key, $color, $bg in $main-color-set {
+    @each $key, $value in $main-color-set {
         &--#{$key} {
-            //--icon-color-active: #{$color};
-
             .accordion {
                 &-button,
                 &-body {
-                    background-color: $bg;
+                    background-color: map-get($value, light);
                 }
 
                 &-button {
                     &[aria-expanded='true'] {
-                        color: $color;
+                        color: map-get($value, regular);
                     }
                 }
             }

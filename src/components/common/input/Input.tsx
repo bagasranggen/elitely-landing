@@ -1,11 +1,12 @@
 import React from 'react';
+import dynamic from "next/dynamic";
 
 import type {MainColorProps, MainVariantProps} from "@/@type/common";
 import type {MainSizeProps} from "@/@type/common";
 
-import InputSelect, {
-    InputSelectProps as ComponentInputSelectProps
-} from "@/components/common/input/inputSelect/InputSelect";
+import {InputSelectProps as ComponentInputSelectProps} from "@/components/common/input/inputSelect/InputSelect";
+
+const InputSelect = dynamic(import('@/components/common/input/inputSelect/InputSelect'), {ssr: false})
 
 type InputRegularProps = {
     type?: 'text' | 'email' | 'number' | 'tel';
@@ -25,11 +26,9 @@ export type InputProps = {
         size?: MainSizeProps;
         align?: 'start' | 'center' | 'end';
         isMultiline?: boolean | number;
-        // fullWidth?: boolean;
     };
     input: ({
         id: string;
-        // type?: 'text' | 'email' | 'number' | 'tel';
         label?: string;
         placeholder?: string;
     } & (InputRegularProps | InputSelectProps))

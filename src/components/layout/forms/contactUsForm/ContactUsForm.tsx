@@ -27,14 +27,14 @@ const ContactUsForm = ({className, heading}: ContactUsProps): React.ReactElement
         <Input
             className='mb-3'
             option={{variant: 'regular'}}
-            input={{type: 'tel', id: 'name', placeholder: 'Phone Number'}} />
+            input={{type: 'tel', id: 'phone', placeholder: 'Phone Number'}} />
         <Input
             className='mb-3'
             input={{type: 'select', id: 'category', placeholder: 'Category', options: CATEGORY}} />
         <Input
             className='mb-3'
             option={{variant: 'regular', isMultiline: true}}
-            input={{type: 'text', id: 'name', placeholder: 'Message'}} />
+            input={{type: 'text', id: 'message', placeholder: 'Message'}} />
 
         <Row className='mt-5 justify-content-center'>
             <Col md={5}>

@@ -9,14 +9,32 @@ $e-d-light: #F5F5F5;
 $e-dark: #334155;
 $e-l-dark: #2D2D2D;
 
-$main-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
-
-// Reset
-//$font-size-base: 1.6rem;
+$main-color-set: (
+        primary: (regular: $e-primary, light: $e-l-primary),
+        secondary: (regular: $e-secondary, light: $e-l-secondary),
+        tertiary: (regular: $e-tertiary, light: $e-l-tertiary)
+);
 
 // Font Sizes
-$font-sizes-set: (12, 18px), (14, 21px), (16, 24px), (18, 27px), (20, 30px), (22, 33px), (24, 36px), (30, 36px), (32, 38px), (36, 43px), (40, 48px), (56, 68px);
-$font-color-set: (primary, $e-primary, $e-l-primary), (secondary, $e-secondary, $e-l-secondary), (tertiary, $e-tertiary, $e-l-tertiary);
+$font-sizes-set: (
+        12: (size: 12px, line-height: 18px),
+        14: (size: 14px, line-height: 21px),
+        16: (size: 16px, line-height: 24px),
+        18: (size: 18px, line-height: 27px),
+        20: (size: 20px, line-height: 30px),
+        22: (size: 22px, line-height: 33px),
+        24: (size: 24px, line-height: 36px),
+        30: (size: 30px, line-height: 36px),
+        32: (size: 32px, line-height: 38px),
+        36: (size: 36px, line-height: 43px),
+        40: (size: 40px, line-height: 48px),
+        56: (size: 56px, line-height: 68px),
+);
+$font-color-set: (
+        primary: (regular: $e-primary, light: $e-l-primary),
+        secondary: (regular: $e-secondary, light: $e-l-secondary),
+        tertiary: (regular: $e-tertiary, light: $e-l-tertiary),
+);
 
 // Border
 $border-color: $e-dark;
@@ -25,7 +43,6 @@ $dropdown-border-color: $e-dark;
 
 // Navbar
 $navbar-padding-y: 15px;
-//$nav-link-padding-x: 0;
 $navbar-dark-color: #fff;
 $navbar-dark-hover-color: transparentize($e-l-primary, .25);
 

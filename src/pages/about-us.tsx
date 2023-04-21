@@ -46,7 +46,7 @@ const AboutUs = ({}: AboutUsProps): React.ReactElement => <>
                 {HIGHLIGHT.map((item: any) => (
                     <Col
                         className='text-center'
-                        key={item.title}
+                        key={item.title + item.description}
                         md={2}>
                         <Image {...item.image} alt={item.title} />
                         <h2>{item.title}</h2>

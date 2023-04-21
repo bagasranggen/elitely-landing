@@ -69,16 +69,6 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
                     agree to be bound by these Terms. </p>
             </FadeIn>
 
-            {/*<HeadingOffset*/}
-            {/*    className='mt-4 mb-3 text-start'*/}
-            {/*    option={{level: "h2", variant: "regular"}}>Acceptance of Terms and Conditions</HeadingOffset>*/}
-            {/*<FadeIn options={{type: "fade-in", direction: 'up'}}>*/}
-            {/*    <p>By using the Platform, you agree to be bound by these terms and conditions, our privacy policy,*/}
-            {/*        and*/}
-            {/*        any*/}
-            {/*        additional terms and conditions that may apply to specific areas of the Platform.</p>*/}
-            {/*</FadeIn>*/}
-
             <HeadingOffset
                 className='mt-4 mb-3 text-start'
                 option={{level: "h2", variant: "regular"}}>Acceptance of Terms and Conditions</HeadingOffset>

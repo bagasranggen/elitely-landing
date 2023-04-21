@@ -11,27 +11,6 @@
     &--banner {
         .swiper {
             &-slide {
-                //@include media-breakpoint-down(lg) {
-                //    height: auto;
-                //
-                //    .carousel__banner,
-                //    .carousel__banner .container,
-                //    .carousel__banner .container > .row {
-                //        height: 100%;
-                //    }
-                //
-                //    .carousel__banner .container > .row {
-                //        flex-direction: column;
-                //
-                //        > [class*=col]:last-child {
-                //            flex-grow: 6;
-                //            display: flex;
-                //            justify-content: center;
-                //            align-items: flex-end;
-                //        }
-                //    }
-                //}
-
                 .decorative {
                     @extend %d-none, %d-lg-block;
 
@@ -40,7 +19,6 @@
 
                 &:not(.swiper-slide-active) {
                     .decorative {
-                        //display: none;
                         opacity: 0 !important;
                     }
                 }
@@ -48,24 +26,8 @@
         }
 
         .carousel {
-            &__image {
-                //@extend %position-relative;
-            }
-
             &__banner {
                 background-color: $e-d-light;
-
-                @include media-breakpoint-down(sm) {
-                    //height: calc(80vh - var(--nav-height));
-                    //height: calc(80vh - 70px);
-                    //height: 80vh;
-                }
-
-                @include media-breakpoint-down(md) {
-                    //height: calc(100vh - var(--nav-height));
-                    //height: calc(100vh - 70px);
-                    //height: 100vh;
-                }
 
                 @include media-breakpoint-up(lg) {
                     height: calc(100vh - 70px);
@@ -157,13 +119,11 @@
                             &-left {
                                 bottom: -5%;
                                 left: 30%;
-                                //transform: translateX(-50%);
                             }
 
                             &-right {
                                 right: 0;
                                 top: 5%;
-                                //bottom: -8%;
 
                                 .heart-line {
                                     transform: rotate(-100deg);
@@ -322,7 +282,7 @@
                 }
 
                 h2 {
-                    @extend %ff-playfair, %fs-32, %fs-lg-56, %text-center, %text-lg-start;
+                    @extend %ff-playfair, %fs-32, %fs-lg-56, %text-center, %text-lg-start !optional;
 
                     line-height: 52px;
                     @include media-breakpoint-up(lg) {
@@ -342,18 +302,13 @@
                     background-color: $white;
                 }
 
-                @each $key, $color, $bg in $main-color-set {
+                @each $key, $value in $main-color-set {
                     &--#{$key} {
                         span {
-                            color: $color;
+                            color: map-get($value, regular);
                         }
                     }
                 }
-                //&--primary {
-                //    span {
-                //        color: $e-primary;
-                //    }
-                //}
             }
 
             &__description {
@@ -393,9 +348,9 @@
                 padding: 48px 36px 36px;
             }
 
-            @each $key, $color, $bg in $main-color-set {
+            @each $key, $value in $main-color-set {
                 &--#{$key} {
-                    background-color: $bg;
+                    background-color: map-get($value, light);
                 }
             }
         }

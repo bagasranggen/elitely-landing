@@ -33,7 +33,7 @@ export type CarouselBannerProps = {
 const CarouselBanner = ({className, items}: CarouselBannerProps): React.ReactElement => (
     <Swiper className='carousel--banner' {...CarouselSettings}>
         {items.map((item: any) => (
-            <SwiperSlide key={item.title}>
+            <SwiperSlide key={item.title + item.titleBlock}>
                 <div className={`carousel__banner carousel__banner--${item.variant}`}>
 
                     <LogoHeartLineDiagonal

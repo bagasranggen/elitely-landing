@@ -9,7 +9,6 @@ const useIsMobile = (size: BreakpointsProps) => {
     const screen = useScreenResize();
 
     useEffect(() => {
-        // setIsMobile(BREAKPOINTS.MAX[size] < screen);
         setIsMobile(screen >= BREAKPOINTS.MIN[size]);
     }, [screen, size])
 
