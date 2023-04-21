@@ -14,20 +14,28 @@
             }
         }
 
-        h1.text-center ~ picture img,
-        h2.text-center ~ picture img {
-            @include media-breakpoint-down(md) {
-                left: 50%;
-                transform: translateX(-50%);
+        h1.text-center,
+        h2.text-center {
+            ~ picture {
+                img {
+                    @include media-breakpoint-down(md) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &:last-of-type img {
+                    max-width: 75%;
+                }
             }
         }
     }
 
     &--large {
-        @extend %ff-playfair, %fs-32, %fs-md-40;
+        @extend %ff-playfair, %fs-32, %fs-md-40 !optional;
 
         ~ p {
-            @extend %fs-18;
+            @extend %fs-18 !optional;
             margin-top: 20px;
         }
     }
@@ -35,6 +43,6 @@
 
 h1 {
     &.heading--large {
-        @extend %fs-36, %fs-lg-56;
+        @extend %fs-36, %fs-lg-56 !optional;
     }
 }
