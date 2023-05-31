@@ -43,8 +43,10 @@
         }
 
         &__greetings {
-            a {
-                color: $e-body-color;
+            @include media-breakpoint-up(lg) {
+                a:not(:hover) {
+                    color: $e-body-color;
+                }
             }
         }
     }

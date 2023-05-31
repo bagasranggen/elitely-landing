@@ -18,9 +18,9 @@ const Index = ({}: IndexProps): React.ReactElement => (
                 <Col
                     md={6}
                     xl={4}>
-                    <h1>Welcome to Elitely</h1>
+                    <h1 className="mb-3">Welcome to Elitely</h1>
 
-                    <Row className="form-sign__greetings">
+                    <Row className="mb-3 form-sign__greetings">
                         <Col><p>Join our Pre-Launch Campaign!</p></Col>
                         <Col xs="auto"><a
                             href="#"
