@@ -1,9 +1,10 @@
 @mixin input-block() {
+    @extend %position-relative;
+
     input,
     .PhoneInput {
         border-radius: 3px;
     }
-
 
     input {
         @extend %fs-14;
@@ -11,7 +12,6 @@
         padding: 8px 15px;
         border-radius: 3px;
     }
-
 
     .PhoneInput {
         .PhoneInputCountry {
@@ -25,6 +25,16 @@
             outline: none;
             border-width: 0;
         }
+    }
+
+    [data-hidden] {
+        @extend %position-absolute;
+
+        height: 0;
+        padding: 0;
+        opacity: 0;
+        bottom: 0;
+        left: 10%;
     }
 }
 

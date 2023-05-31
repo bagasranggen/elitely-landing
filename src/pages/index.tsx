@@ -15,7 +15,9 @@ const Index = ({}: IndexProps): React.ReactElement => (
         <Container className="my-5">
 
             <Row className="justify-content-end form-sign__wrapper">
-                <Col md={4}>
+                <Col
+                    md={6}
+                    xl={4}>
                     <h1>Welcome to Elitely</h1>
 
                     <Row className="form-sign__greetings">
@@ -29,6 +31,7 @@ const Index = ({}: IndexProps): React.ReactElement => (
                         action=""
                         onSubmit={(e: any) => {
                             e.preventDefault();
+                            console.log(e);
                         }}>
 
                         <Input
@@ -69,7 +72,7 @@ const Index = ({}: IndexProps): React.ReactElement => (
                                 value: 'newsOpt'
                             }} />
 
-                        <ButtonContainer className="mt-2 text-center">
+                        <ButtonContainer className="mt-3 text-center">
                             <Button
                                 option={{ variant: 'regular', color: 'primary', size: 'lg' }}
                                 button={{ type: "submit", label: 'Sign Up' }} />

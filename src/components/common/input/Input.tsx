@@ -64,7 +64,8 @@ const Input = ({ className, option, input }: InputProps): React.ReactElement => 
                     type="text"
                     defaultValue={value}
                     {...input?.required && { required: input?.required }}
-                    hidden />
+                    data-hidden
+                />
                 <PhoneInput
                     placeholder={input.placeholder}
                     defaultCountry="SG"
