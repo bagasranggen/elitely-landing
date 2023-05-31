@@ -25,7 +25,6 @@ const Checkbox = ({ className, checkbox, option }: CheckboxProps): React.ReactEl
                 type="checkbox"
                 value={checkbox.value}
                 id={checkbox.id}
-                defaultChecked
                 hidden />
             <label
                 className="form-check-label"
