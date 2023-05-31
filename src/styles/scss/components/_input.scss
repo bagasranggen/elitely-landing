@@ -1,4 +1,12 @@
 .form {
+    &--block {
+        @include input-block();
+
+        &.form--primary {
+            @include input-block-color($e-m-primary);
+        }
+    }
+
     &--outline {
         &.form {
             &--light {
@@ -95,7 +103,7 @@
                     }
 
                 }
-                
+
                 @include focus-active() {
                     background-color: $e-l-primary;
                     color: $e-primary;
@@ -103,5 +111,71 @@
             }
         }
 
+    }
+}
+
+.form-check {
+    &--regular {
+        @extend %position-relative;
+
+        padding-left: 0;
+
+        &:before {
+            @extend %position-absolute;
+
+            top: 0;
+            left: 0;
+
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-radius: 8px;
+            background-color: $black;
+            pointer-events: none;
+        }
+
+        label {
+            @extend %fs-10;
+
+            cursor: pointer;
+            padding-left: 40px;
+
+            &:before,
+            &:after {
+                @extend %position-absolute;
+
+                content: '';
+                height: 2px;
+                background-color: #fff;
+                opacity: 0;
+                pointer-events: none;
+
+                @include make-transition(opacity);
+            }
+
+            &:before {
+                width: 8px;
+                left: 4px;
+                top: 14px;
+                transform: rotate(50deg);
+            }
+
+            &:after {
+                width: 15px;
+                left: 8px;
+                top: 12px;
+                transform: rotate(-40deg);
+            }
+        }
+
+        input:checked {
+            ~ label {
+                &:before,
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

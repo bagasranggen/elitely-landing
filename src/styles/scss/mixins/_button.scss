@@ -74,3 +74,31 @@
         }
     }
 }
+
+@mixin btn-regular() {
+    @extend %fs-12;
+    padding: 6px 40px;
+    border-radius: 3px;
+}
+
+@mixin btn-regular-color($bg,$color) {
+    background-color: $bg;
+    border-color: $bg;
+    color: $color;
+
+    @include media-breakpoint-down(lg) {
+        background-color: $bg !important;
+        border-color: $bg !important;
+        color: $color !important;
+    }
+}
+
+@mixin btn-regular-hover-color($bg, $color) {
+    @include media-breakpoint-up(lg) {
+        @include hover-focus-active() {
+            background-color: $bg;
+            border-color: $bg;
+            color: $color;
+        }
+    }
+}

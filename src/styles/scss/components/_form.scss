@@ -34,4 +34,18 @@
             }
         }
     }
+
+    &-sign {
+        &__wrapper {
+            h1 {
+                @extend %fs-30;
+            }
+        }
+
+        &__greetings {
+            a {
+                color: $e-body-color;
+            }
+        }
+    }
 }

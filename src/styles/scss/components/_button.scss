@@ -42,4 +42,14 @@
         }
     }
 
+    &--regular {
+        @include btn-regular();
+
+        &.btn {
+            &--primary {
+                @include btn-regular-color($e-primary, $white);
+                @include btn-regular-hover-color($e-l-primary, $e-primary)
+            }
+        }
+    }
 }

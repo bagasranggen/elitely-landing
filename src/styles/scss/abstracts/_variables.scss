@@ -1,5 +1,6 @@
 // Color
 $e-primary: #B2294B;
+$e-m-primary: #EBC0C9;
 $e-l-primary: #F7EAED;
 $e-secondary: #E4BC28;
 $e-l-secondary: #FCF8E9;
@@ -8,6 +9,7 @@ $e-l-tertiary: #EAF9F4;
 $e-d-light: #F5F5F5;
 $e-dark: #334155;
 $e-l-dark: #2D2D2D;
+$e-body-color: var(--bs-body-color);
 
 $main-color-set: (
         primary: (regular: $e-primary, light: $e-l-primary),
@@ -17,6 +19,7 @@ $main-color-set: (
 
 // Font Sizes
 $font-sizes-set: (
+        10: (size: 10px, line-height: 13px),
         12: (size: 12px, line-height: 18px),
         14: (size: 14px, line-height: 21px),
         16: (size: 16px, line-height: 24px),
