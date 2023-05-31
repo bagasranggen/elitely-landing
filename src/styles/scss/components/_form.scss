@@ -34,4 +34,20 @@
             }
         }
     }
+
+    &-sign {
+        &__wrapper {
+            h1 {
+                @extend %fs-30;
+            }
+        }
+
+        &__greetings {
+            @include media-breakpoint-up(lg) {
+                a:not(:hover) {
+                    color: $e-body-color;
+                }
+            }
+        }
+    }
 }

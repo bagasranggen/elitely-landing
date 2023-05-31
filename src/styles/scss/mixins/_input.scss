@@ -1,3 +1,70 @@
+@mixin input-block() {
+    @extend %position-relative;
+
+    input,
+    .PhoneInput {
+        border-radius: 3px;
+    }
+
+    input {
+        @extend %fs-14;
+
+        padding: 8px 15px;
+        border-radius: 3px;
+    }
+
+    .PhoneInput {
+        .PhoneInputCountry {
+            padding-left: 15px;
+        }
+
+        .PhoneInputInput {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 9px;
+            outline: none;
+            border-width: 0;
+        }
+    }
+
+    [data-hidden] {
+        @extend %position-absolute;
+
+        height: 0;
+        padding: 0;
+        opacity: 0;
+        bottom: 0;
+        left: 10%;
+    }
+}
+
+@mixin input-block-color($color) {
+    input,
+    .PhoneInput {
+        background-color: $color;
+        border-color: $color;
+    }
+
+    input,
+    .PhoneInput {
+        @include focus-active() {
+            box-shadow: 0 0 0 0.25rem transparentize($color, .75);
+        }
+    }
+
+    .PhoneInput {
+        @include make-transition(box-shadow);
+
+        &:focus-within {
+            box-shadow: 0 0 0 0.25rem transparentize($color, .75)
+        }
+
+        input {
+            box-shadow: none;
+        }
+    }
+}
+
 @mixin input-outline() {
     @include theme-border-radius();
     @include theme-border-spacing();
