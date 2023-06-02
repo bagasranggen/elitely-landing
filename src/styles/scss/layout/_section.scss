@@ -103,8 +103,8 @@
     &-highlight {
         @extend %position-relative;
 
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         //background-color: $e-primary;
         background-image: url("/images/bg-highlight.jpg");
         background-size: cover;
@@ -114,8 +114,8 @@
         color: $white;
 
         @include media-breakpoint-up(lg) {
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
             background-position-x: 30%;
         }
 
@@ -141,7 +141,7 @@
         }
 
         h2 {
-            @extend %ff-playfair, %fs-24, %mt-3, %mb-2;
+            @extend %ff-playfair, %fs-24, %mt-md-3, %mb-0, %mb-md-2;
         }
 
         p {
@@ -149,6 +149,14 @@
 
             &:last-child {
                 @extend %mb-0;
+            }
+        }
+
+        &__items {
+            img {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
             }
         }
     }

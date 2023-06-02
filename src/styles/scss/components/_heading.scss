@@ -33,14 +33,24 @@
         }
     }
 
-    &--large {
-        @extend %ff-playfair, %fs-32, %fs-md-40 !optional;
+    &--lg,
+    &--md {
+        @extend %ff-playfair;
+    }
+
+    &--lg {
+        @extend %fs-32, %fs-md-40 !optional;
 
         ~ p {
             @extend %fs-18 !optional;
             margin-top: 20px;
         }
     }
+
+    &--md {
+        @extend %fs-32, %fs-md-36;
+    }
+
 }
 
 h1 {

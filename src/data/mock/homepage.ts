@@ -1,7 +1,7 @@
 import hMember from '../../assets/images/highlight-member.svg';
-import hUser from '../../assets/images/highlight-user.svg'
-import hMan from '../../assets/images/highlight-man.svg'
-import hWoman from '../../assets/images/highlight-woman.svg'
+import hUser from '../../assets/images/highlight-user.svg';
+import hMan from '../../assets/images/highlight-man.svg';
+import hWoman from '../../assets/images/highlight-woman.svg';
 
 export const CAROUSEL = [
     {
@@ -155,12 +155,12 @@ export const CAROUSEL = [
             }
         }
     },
-]
+];
 
 export const CARDS = [
     {
         color: 'primary',
-        title: 'Inclusivity & Diversity',
+        title: 'Anti Catfish Policy',
         description: 'All our Personalities and Influencers have been verified, so you can be sure you are speaking to or meeting a real person. Schedule meets easily and on-demand with our easy Meet Scheduler.',
     },
     {
@@ -170,10 +170,10 @@ export const CARDS = [
     },
     {
         color: 'tertiary',
-        title: 'Anti Catfish Policy',
+        title: 'Inclusivity & Diversity',
         description: 'As a platform that rejects social norms (for the sake of them) and classism, we welcome people who identify with all genders, who have been qualified as interesting Personalities or Influencers.',
     },
-]
+];
 
 export const HIGHLIGHT = [
     {
@@ -208,7 +208,7 @@ export const HIGHLIGHT = [
         title: '100K+',
         description: 'Woman online'
     },
-]
+];
 
 export const ALTERNATE: any = [
     {
@@ -283,4 +283,4 @@ export const ALTERNATE: any = [
             label: 'Know More'
         }
     },
-]
+];

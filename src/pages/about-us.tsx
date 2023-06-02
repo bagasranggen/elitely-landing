@@ -42,7 +42,7 @@ const AboutUs = ({}: AboutUsProps): React.ReactElement => <>
         className="section-highlight"
         {...createAnimation({ type: "fade-in", direction: "up" })}>
         <Container>
-            <Row className="gy-4 gy-md-5 justify-content-between">
+            <Row className="gy-2 gy-md-5 justify-content-between section-highlight__items">
                 {HIGHLIGHT.map((item: any) => (
                     <Col
                         className="text-center"

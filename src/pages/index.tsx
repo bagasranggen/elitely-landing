@@ -1,10 +1,13 @@
 import React from 'react';
 
+import { createAnimation } from "@/components/animation/helper";
+
 import { Col, Container, Row } from "react-bootstrap";
 import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 import Input from "@/components/common/input/Input";
 import Button, { ButtonContainer } from "@/components/common/button/Button";
 import Checkbox from "@/components/common/checkbox/Checkbox";
+import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 
 export type IndexProps = {};
 
@@ -18,13 +21,24 @@ const Index = ({}: IndexProps): React.ReactElement => (
                 <Col
                     md={6}
                     xl={4}>
-                    <h1 className="mb-3">Welcome to Elitely</h1>
 
-                    <Row className="mb-3 form-sign__greetings">
+                    <HeadingOffset
+                        className="mb-3"
+                        option={{
+                            level: "h1",
+                            variant: "regular",
+                            size: 'md',
+                            animation: { position: "top" }
+                        }}>Welcome to Elitely</HeadingOffset>
+
+                    <Row
+                        className="mb-3 form-sign__greetings" {...createAnimation({
+                        type: 'fade-in',
+                        position: 'top',
+                        direction: 'up',
+                        delay: .15,
+                    })}>
                         <Col><p>Join our Pre-Launch Campaign!</p></Col>
-                        <Col xs="auto"><a
-                            href="#"
-                            className="text-decoration-underline">Sign In</a></Col>
                     </Row>
 
                     <form
@@ -32,7 +46,8 @@ const Index = ({}: IndexProps): React.ReactElement => (
                         onSubmit={(e: any) => {
                             e.preventDefault();
                             console.log(e);
-                        }}>
+                        }}
+                        {...createAnimation({ type: 'fade-in', direction: 'up', delay: .3 })}>
 
                         <Input
                             className="mb-3"
