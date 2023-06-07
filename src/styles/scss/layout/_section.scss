@@ -209,7 +209,7 @@
         }
 
         h2 {
-            @extend %ff-playfair, %fs-24, %mt-md-3, %mb-0, %mb-md-2;
+            @extend %ff-playfair, %fs-24, %mb-0, %mb-md-2;
         }
 
         p {
@@ -222,9 +222,10 @@
 
         &__items {
             img {
-                @include media-breakpoint-down(md) {
-                    display: none;
-                }
+                @extend %d-none;
+                //@include media-breakpoint-down(md) {
+                //    display: none;
+                //}
             }
         }
     }
