@@ -1,5 +1,7 @@
 import React from 'react';
-import {ImageProps} from "@/@type/common";
+import { ImageProps } from "@/@type/common";
+import { FadeInProps } from "@/components/animation/fade/useFadeIn";
+import { createAnimation } from "@/components/animation/helper";
 
 export type PictureItemProps = {
     media?: number;
@@ -9,11 +11,12 @@ export type PictureProps = {
     className?: string;
     options?: {
         style?: React.CSSProperties;
+        animation?: FadeInProps["options"];
     }
     images: Array<PictureItemProps>;
 };
 
-const Picture = ({className, options, images}: PictureProps): React.ReactElement => (
+const Picture = ({ className, options, images }: PictureProps): React.ReactElement => (
     <picture style={options?.style}>
         {images?.map((image: PictureItemProps, i: number) => {
             const isLast = i === images.length - 1;
@@ -30,9 +33,9 @@ const Picture = ({className, options, images}: PictureProps): React.ReactElement
                 width: image.width,
                 height: image.height,
                 media: `(min-width:${image.media}px)`,
-            }
+            };
 
-            return <ImageBlock key={i} {...ImageProps} />
+            return <ImageBlock key={i} {...ImageProps} {...options?.animation && createAnimation(options.animation)} />;
         })}
     </picture>
 );

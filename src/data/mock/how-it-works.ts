@@ -1,16 +1,20 @@
-import {MAIN_COLOR} from "@/data/global";
-import {CIRCLE} from "@/data/mock/common";
+import { MAIN_COLOR } from "@/data/global";
+import { CIRCLE } from "@/data/mock/common";
 
-import {CardBlockListItemProps} from "@/components/common/cards/cardBlockList/CardBlockList";
-import {CarouselCardImageProps} from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
-import {BarChartProps} from "@/components/common/chart/barChart/BarChart";
-import {BreadcrumbProps} from "@/components/common/breadcrumb/Breadcrumb";
-import {ListBulletProps} from "@/components/common/list/listBullet/ListBullet";
-import {PictureItemProps} from "@/components/common/picture/Picture";
+import { CardBlockListItemProps } from "@/components/common/cards/cardBlockList/CardBlockList";
+import { CarouselCardImageProps } from "@/components/common/carousel/carouselCardImage/CarouselCardImage";
+import { BarChartProps } from "@/components/common/chart/barChart/BarChart";
+import { BreadcrumbProps } from "@/components/common/breadcrumb/Breadcrumb";
+import { ListBulletProps } from "@/components/common/list/listBullet/ListBullet";
+import { PictureItemProps } from "@/components/common/picture/Picture";
 
-export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletProps["items"], media: Record<'main' | 'bg', PictureItemProps[]> } = {
-    breadcrumb: [{url: '/', label: 'Homepage'}, {url: '/how-it-works', label: 'How It Works'}],
-    list: ['Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly'],
+export const HEADER: {
+    breadcrumb: BreadcrumbProps['items'],
+    list: ListBulletProps["items"],
+    media: Record<'main' | 'bg', PictureItemProps[]>
+} = {
+    breadcrumb: [ { url: '/', label: 'Homepage' }, { url: '/how-it-works', label: 'How It Works' } ],
+    list: [ 'Unlocking connections', 'Dating on steroids ', 'Connect with your favourite Influencers instantly' ],
     media: {
         main: [
             {
@@ -29,7 +33,7 @@ export const HEADER: { breadcrumb: BreadcrumbProps['items'], list: ListBulletPro
         ],
         bg: CIRCLE,
     },
-}
+};
 
 export const CARDS: CardBlockListItemProps[] = [
     {
@@ -55,18 +59,81 @@ export const CARDS: CardBlockListItemProps[] = [
             'Read reviews from other users before unlocking chat',
         ]
     },
-]
+];
 
 export const CHARTS: BarChartProps['data'] = {
-    labels: ['May', 'June', 'July', 'August', 'September', 'October'],
+    labels: [ 'May', 'June', 'July', 'August', 'September', 'October' ],
     datasets: [
         {
             label: 'Subscribe',
-            data: [40, 35, 12, 18, 27, 38],
+            data: [ 40, 35, 12, 18, 27, 38 ],
             backgroundColor: MAIN_COLOR.primary,
         }
     ]
-}
+};
+
+export const PAYMENT = [
+    {
+        media: [
+            {
+                media: 0,
+                src: '/images/how/payment-unlock.svg',
+                width: 176,
+                height: 159,
+            }
+        ],
+        description: `<p>Unlock services with our Influencers or Personalities on our site.</p>`,
+        image: [
+            {
+                media: 0,
+                src: '/images/how/payment-method.svg',
+                width: 328,
+                height: 15,
+            }
+        ],
+        detail: {
+            title: `<span class="fc--primary">Lurkers</span>`,
+            subTitle: `<p>You are the client who commence the payment events by linking a payment method and unlocking a service with us</p>`
+        }
+    },
+    {
+        media: [
+            {
+                media: 0,
+                src: '/images/how/payment-earning.svg',
+                width: 176,
+                height: 159,
+            }
+        ],
+        description: `<p>Earning will be credited into Earning Balance 7-10 days after service is completed.</p><p>Service commission – 25%</p>`,
+        detail: {
+            title: `<span class="fc--secondary">Influencers</span><br/><span class="fc--tertiary">Personalities</span>`,
+            subTitle: `<p>You pay a commission to Elitely, taken as a percentage of the service fee</p>`
+        }
+    },
+    {
+        media: [
+            {
+                media: 0,
+                src: '/images/how/payment-withdraw.svg',
+                width: 176,
+                height: 159,
+            }
+        ],
+        description: `<p>Earnings will then be reflected on your Wise Account which is linked to your personal bank accounts for withdrawals.</p>`,
+        detail: {
+            title: [
+                {
+                    media: 0,
+                    src: '/images/how/logo-primary.svg',
+                    width: 241,
+                    height: 92,
+                }
+            ],
+            subTitle: `<p>We are the intermediary handling the exchange of services and payments, making us the merchant</p>`
+        }
+    },
+];
 
 export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
     {
@@ -117,4 +184,4 @@ export const HOW_IT_WORKS: CarouselCardImageProps["items"] = [
             'Browse profiles of Personalities and Influencers'
         ]
     },
-]
+];

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import {createAnimation} from "@/components/animation/helper";
+import { createAnimation } from "@/components/animation/helper";
 
-import {HEADER, LIST_BULLET} from "@/data/mock/terms-conditions";
+import { HEADER, LIST_BULLET } from "@/data/mock/terms-conditions";
 
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import HeadingOffset from "@/components/common/heading/headingOffset/HeadingOffset";
 import ListBullet from "@/components/common/list/listBullet/ListBullet";
 import HeaderBanner from "@/components/common/banner/headerBanner/HeaderBanner";
-import {FadeIn} from "@/components/animation";
+import { FadeIn } from "@/components/animation";
 import LogoHeartLineDiagonal from "@/components/common/logo/logoHeartLineDiagonal/LogoHeartLineDiagonal";
 import HeaderHead from "@/components/layout/header/headerHead/HeaderHead";
 
@@ -16,42 +16,42 @@ export type TermsConditionsProps = {};
 
 const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
     <>
-        <HeaderHead title='Terms And Conditions' />
+        <HeaderHead title="Terms And Conditions" />
 
         <HeaderBanner
-            className='header-banner--terms'
-            color='secondary'
+            className="header-banner--terms"
+            color="secondary"
             breadcrumb={HEADER.breadcrumb}>
 
             <LogoHeartLineDiagonal
-                className='decorative--flip decorative--bent-left'
-                color='tertiary'
-                options={{variant: 'bent-left', animation: {type: 'fade-in', direction: 'left'}}} />
+                className="decorative--flip decorative--bent-left"
+                color="tertiary"
+                options={{ variant: 'bent-left', animation: { type: 'fade-in', direction: 'left' } }} />
             <LogoHeartLineDiagonal
-                className='decorative--bent-right'
-                color='secondary'
-                options={{variant: 'bent-right', animation: {type: 'fade-in', direction: 'right'}}} />
+                className="decorative--bent-right"
+                color="secondary"
+                options={{ variant: 'bent-right', animation: { type: 'fade-in', direction: 'right' } }} />
 
             <HeadingOffset
-                className='mb-4 text-center text-md-start'
-                option={{level: "h1", variant: "regular", animation: {position: 'top'}}}>Terms and
+                className="mb-4 text-center text-md-start"
+                option={{ level: "h1", variant: "regular", animation: { position: 'top' } }}>Terms and
                 conditions</HeadingOffset>
             <ListBullet
-                className='mt-5'
+                className="mt-5"
                 options={{
                     color: "secondary",
                     variant: 'inline',
-                    animation: {type: 'fade-in', direction: 'right', position: "top"}
+                    animation: { type: 'fade-in', direction: 'right', position: "top" }
                 }}
                 items={HEADER.list} />
         </HeaderBanner>
 
         <Container
-            as='section'
-            className='section-terms'
-            {...createAnimation({type: "fade-in", direction: "up", delay: .5})} >
+            as="section"
+            className="section-terms"
+            {...createAnimation({ type: "fade-in", direction: "up", delay: .5 })} >
 
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p><strong>Elitely</strong> (henceforth referred to as “the Platform” or “We” or “Us”) is a dating
                     website with the
                     browsing experience of social media, which offers pay-to-unlock chat and pay-to-unlock meet options.
@@ -70,9 +70,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Acceptance of Terms and Conditions</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Acceptance of Terms and Conditions</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>By using the Platform, you agree to be bound by these terms and conditions, our privacy policy, and
                     any additional terms and conditions that may apply to specific areas of the Platform (“the
                     Agreement”). If you do not accept and agree to be bound by all of the terms of this Agreement,
@@ -92,9 +92,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Eligibility</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Eligibility</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>To use the Platform, you must be at least <strong>eighteen (18) years old</strong>. By using the
                     Platform, you represent and warrant that you are at least 18 years old and that you have the legal
                     capacity to enter into this agreement.</p>
@@ -110,10 +110,10 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Roles</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
-                <ol className='list-alphabetical'>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Roles</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
+                <ol className="list-alphabetical">
                     <li>When a Service Provider makes or accepts a booking, they are entering into a contract directly
                         with the User. The Platform is not and does not become a party to or participant in any
                         contractual relationship between the User and the Service Provider.
@@ -156,9 +156,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
 
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Content</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Content</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <ol className="list-alphabetical">
                     <li>You are solely responsible for any content, including without limitation, text, graphics,
                         photos, videos, or other materials, that you post on or through the Platform (collectively,
@@ -212,20 +212,20 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Conduct</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Conduct</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>In your use of the Platform, you agree to act responsibly in a manner demonstrating the exercise of
                     good judgment. You agree and warrant that you will not:</p>
                 <ListBullet
-                    options={{color: 'primary', weight: 'normal'}}
+                    options={{ color: 'primary', weight: 'normal' }}
                     items={LIST_BULLET} />
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Credits and Payments</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Credits and Payments</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <ol className="list-alphabetical">
                     <li>The Platform utilizes a credit system for you to access certain features and content. You may
                         purchase credits through the Platform using our designated payment methods, which include but
@@ -251,9 +251,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
 
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Refunds</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Refunds</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>We will evaluate such requests on a case-by-case basis, and we reserve the right to make a decision
                     at our sole discretion. <strong>If a refund is granted, it will be in the form of credits on the
                         Platform,
@@ -263,10 +263,11 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
                     facilitated by the Platform, <strong>the following refund policy may apply at our
                         discretion</strong>:</p>
                 <ListBullet
-                    options={{color: 'primary', weight: 'normal'}}
+                    options={{ color: 'primary', weight: 'normal' }}
                     items={[
-                        'A 100% refund is given if the User cancelled the meetup within 7 days from the original date of payment (inclusive of both the 1st and 7th day). A 100% refund is applicable if the Service Provider did not turn up or when the Service Provider cancelled the meetup.',
-                        'If the cancellation is made less than 12 hours to the scheduled meet-up time, only 50% of the payment made will be refunded to the User. In an event where the Service Provider is late, for instance, 15 minutes, he/she will stay 15 minutes more to compensate for the time gone, however no refund is applicable for this event.'
+                        'A 30% credit refund is given if you cancelled the meetup more than 24 hours before the scheduled meet-up time. A 100% credit refund is applicable if the Service Provider did not turn up or when the Service Provider cancelled the meetup.',
+                        'If the cancellation is made less than 24 hours to the scheduled meet-up time, no refunds of credits will be made.',
+                        'In an event where the Service Provider is late, for instance, 15 minutes, he/she will stay 15 minutes more to compensate for the time gone, however no refund is applicable for this event.'
                     ]} />
                 <p>By using the Platform, you agree to the above refund policy for meetups facilitated by the Platform.
                     We reserve the right to modify the refund policy at any time, without prior notice. Any changes to
@@ -276,9 +277,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Disputes</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Disputes</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>In the event of a dispute between a User and a Service Provider, both agree to first attempt to
                     resolve the dispute through good faith discussion. If the parties are unable to reach a resolution
                     through discussion, the dispute may be referred to the Platform for resolution. The Platform will
@@ -287,9 +288,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Termination</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Termination</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>We reserve the right to terminate or suspend your account or access to the Platform at any time, with
                     or without cause, and without prior notice or liability without any liability or further obligation
                     of any kind whatsoever to you or any other party. Upon termination, your right to use the Platform
@@ -297,27 +298,27 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Severability</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Severability</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>If any provision of these terms and conditions is held to be invalid or unenforceable, such provision
                     shall be struck and the remaining provisions shall be enforced to the fullest extent under the
                     law.</p>
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Waiver</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Waiver</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>Our failure to enforce any right or provision in these Terms shall not constitute a waiver of such
                     right or provision unless acknowledged and agreed to by us in writing.</p>
             </FadeIn>
 
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Disclaimers</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Disclaimers</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p><strong>THE PLATFORM IS PROVIDED ON AN “AS IS“ AND “AS AVAILABLE“ BASIS. WE MAKE NO REPRESENTATIONS
                     OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE PLATFORM OR THE
                     INFORMATION, CONTENT, MATERIALS, OR PRODUCTS INCLUDED ON THE PLATFORM. TO THE FULL EXTENT
@@ -333,9 +334,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Limitations of Liability</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Limitations of Liability</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>You acknowledge and agree that the Platform shall not be liable for any direct, indirect damages or
                     losses, arising from the use of the service. To the fullest extent permitted by applicable law, in
                     no event will the Platform, its affiliates, employees, licensors or You be liable for any indirect,
@@ -360,9 +361,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Indemnification</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Indemnification</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>You agree to indemnify, defend, and hold harmless us, our affiliates, and our respective officers,
                     directors, employees, agents, licensors, and service providers from and against any claims,
                     liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable
@@ -375,9 +376,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Intellectual Property</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Intellectual Property</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>All content on the Platform, including without limitation the text, graphics, photos, sounds, music,
                     videos, interactive features and the like (“Content“) and the trademarks, service marks and logos
                     contained therein (“Marks“), are owned by or licensed to us, subject to copyright and other
@@ -392,9 +393,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Third-Party Links</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Third-Party Links</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>The Platform may contain links to third-party websites or resources. We are not responsible for the
                     availability of these websites or resources or their content, and we do not endorse and are not
                     responsible or liable for any content, advertising, products, or other materials on or available
@@ -405,9 +406,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Governing Law and Jurisdiction</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Governing Law and Jurisdiction</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>These terms and conditions shall be governed by and construed in accordance with the laws of
                     Singapore. Any dispute arising out of or in connection with these terms and conditions shall be
                     resolved, first, by means of arbitration. If parties are unable to reach an agreement by means of
@@ -415,9 +416,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Miscellaneous</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Miscellaneous</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>If any provisions of these Terms are held by any Court of competent
                     jurisdiction to be invalid or unenforceable in part, the remaining provisions of this contract of
                     services shall continue in full force and effect.</p>
@@ -436,9 +437,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Entire Agreement</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Entire Agreement</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>These terms and conditions, together with our privacy policy below, constitute the entire agreement
                     between you and us with respect to the use of the Platform and supersede all prior or
                     contemporaneous
@@ -448,9 +449,9 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
             </FadeIn>
 
             <HeadingOffset
-                className='mt-4 mb-3 text-start'
-                option={{level: "h2", variant: "regular"}}>Privacy Policies</HeadingOffset>
-            <FadeIn options={{type: "fade-in", direction: 'up'}}>
+                className="mt-4 mb-3 text-start"
+                option={{ level: "h2", variant: "regular" }}>Privacy Policies</HeadingOffset>
+            <FadeIn options={{ type: "fade-in", direction: 'up' }}>
                 <p>We require all users to provide accurate and up-to-date personal information, including their name,
                     contact information, and age. We collect this information to verify the identity and eligibility of
                     our
@@ -472,6 +473,6 @@ const TermsConditions = ({}: TermsConditionsProps): React.ReactElement => (
 
         </Container>
     </>
-)
+);
 
 export default TermsConditions;
