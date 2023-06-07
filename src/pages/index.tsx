@@ -24,7 +24,7 @@ const Index = ({}: IndexProps): React.ReactElement => (
                         md={6}
                         xl={6}>
 
-                        <div className="form-sign__media">
+                        <div className="form-sign__media" {...createAnimation({ type: 'fade-in', position: 'top' })}>
                             <Picture
                                 images={[
                                     {

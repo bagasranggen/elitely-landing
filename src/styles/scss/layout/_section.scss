@@ -84,6 +84,7 @@
     }
 
     &-charts,
+    &-payment,
     &-cards-image {
         margin-top: 80px;
         margin-bottom: 80px;
@@ -94,10 +95,77 @@
         }
     }
 
-    &-charts {
+    &-charts,
+    &-payment {
         padding-top: 40px;
         padding-bottom: 60px;
         background-color: $e-l-primary;
+
+        &__cards,
+        &__cards-detail {
+            @include media-breakpoint-down(lg) {
+                overflow-x: auto;
+            }
+        }
+
+        &__columns {
+            @include media-breakpoint-down(lg) {
+                min-width: 50%;
+            }
+        }
+
+        &__card {
+            @extend %d-flex, %flex-column;
+            height: 100%;
+
+            .card {
+                &__image {
+                    @extend %d-block, %mx-auto, %position-relative;
+                    z-index: 1;
+                }
+
+                &__description {
+                    @extend %text-center;
+
+                    flex-grow: 1;
+                    background-color: $e-d-light;
+                    border-radius: 30px;
+                    margin-top: -70px;
+                    padding: 100px 20px 10px;
+                }
+
+            }
+        }
+
+        &__cards-detail {
+            border-radius: 30px;
+            background-color: lighten($e-m-primary, 8);
+            background-image: url("/images/how/bg-detail.png");
+            background-repeat: repeat;
+            background-size: 55%;
+            background-blend-mode: color-burn;
+            padding: 30px 10px;
+        }
+
+        &__card-detail {
+            h2 {
+                @extend %text-center;
+            }
+
+            img {
+                @extend %d-block, %mx-auto;
+            }
+
+            .card-detail {
+                &__detail {
+                    @extend %text-center;
+
+                    p:last-child {
+                        @extend %mb-0;
+                    }
+                }
+            }
+        }
     }
 
     &-highlight {

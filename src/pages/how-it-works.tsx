@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { CARDS, CHARTS, HEADER, HOW_IT_WORKS } from "@/data/mock/how-it-works";
+import { CARDS, CHARTS, HEADER, HOW_IT_WORKS, PAYMENT } from "@/data/mock/how-it-works";
 
+import parse from "html-react-parser";
 import { createAnimation } from "@/components/animation/helper";
 
 import { Col, Container, Row } from "react-bootstrap";
@@ -87,15 +88,92 @@ const HowItWorks = ({}: HowItWorksProps): React.ReactElement => (
             </Container>
         </section>
 
-        <section className="section-charts">
+        <section className="section-payment">
             <Container>
                 <HeadingOffset
                     className="mb-5 text-center"
                     option={{ size: 'lg' }}>How payment processing works on Elitely</HeadingOffset>
 
                 <Row className="justify-content-center">
-                    <Col md={11}>
-                        <BarChart data={CHARTS} />
+                    <Col xl={11}>
+                        <Row
+                            className="mb-5 gx-xl-5 flex-nowrap justify-content-between section-payment__cards"
+                            {...createAnimation({
+                                type: "fade-in",
+                                direction: 'up'
+                            })}>
+                            {PAYMENT.map((pay: any, i: number) => (
+                                <React.Fragment key={i}>
+                                    <Col
+                                        className="section-payment__columns"
+                                        xs={10}
+                                        md={3}>
+                                        <div className="section-payment__card">
+                                            <Picture
+                                                images={pay.media}
+                                                className="card__image" />
+                                            <div className="card__description">
+                                                {parse(pay.description)}
+                                                {pay?.image && <Picture images={pay.image} />}
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    {i !== PAYMENT.length - 1 && (
+                                        <Col
+                                            className="align-self-center"
+                                            xs={3}
+                                            md={2}
+                                            lg={1}>
+                                            <Picture
+                                                images={[ {
+                                                    src: '/images/how/payment-arrow.png',
+                                                    width: 86,
+                                                    height: 45,
+                                                    alt: ''
+                                                } ]} />
+                                        </Col>
+                                    )}
+                                </React.Fragment>
+                            ))}
+                        </Row>
+                        <Row
+                            className="mb-5 gx-5 flex-nowrap justify-content-between section-payment__cards-detail" {...createAnimation({
+                            type: "fade-in",
+                            direction: 'up'
+                        })}>
+                            {PAYMENT.map((pay: any, i: number) => (
+                                <Col
+                                    key={i}
+                                    className="section-payment__columns"
+                                    xs={10}
+                                    md={3}>
+                                    <div className="section-payment__card-detail">
+                                        {typeof pay?.detail?.title === 'string' && <HeadingOffset
+                                            className="mb-4"
+                                            option={{
+                                                variant: 'regular',
+                                                level: "h2",
+                                                animation: { position: "top" }
+                                            }}>{parse(pay.detail?.title)}</HeadingOffset>}
+
+                                        {typeof pay?.detail?.title === 'object' &&
+                                            <Picture
+                                                className="mb-4"
+                                                images={pay?.detail?.title}
+                                                options={{
+                                                    animation: {
+                                                        type: "fade-in",
+                                                        direction: 'up',
+                                                        position: "top"
+                                                    }
+                                                }} />}
+
+                                        <div className="card-detail__detail">{parse(pay?.detail?.subTitle ?? '')}</div>
+                                    </div>
+                                </Col>
+                            ))}
+                        </Row>
+                        {/*<BarChart data={CHARTS} />*/}
                     </Col>
                 </Row>
             </Container>
