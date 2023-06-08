@@ -57,6 +57,7 @@
                 content: "";
                 background-color: $e-primary;
                 pointer-events: none;
+                z-index: -1;
             }
 
             &:before {
@@ -71,20 +72,19 @@
             }
 
             &:after {
-                --size: 100vh;
+                --size: 120vh;
 
                 top: 0;
-                right: calc(50vw - 17rem);
+                right: calc(50vw - 18rem);
                 //right: translateY(calc(var(--size) / 4 * -1));
                 //transform: translateY(-15%);
-                transform: translateY(calc(100vh / 4 * -1));
+                transform: translateY(calc(100vh / 3 * -1));
                 width: var(--size);
                 height: var(--size);
                 clip-path: circle();
-                z-index: -1;
 
                 @include media-breakpoint-up(md) {
-                    --size: 130vh;
+                    --size: 140vh;
                     right: calc(50vw - 10rem);
                     //right: translateY(calc(var(--size) / 4 * -1));
                 }

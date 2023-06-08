@@ -17,7 +17,7 @@ const Index = ({}: IndexProps): React.ReactElement => (
         <HeaderHead />
 
         <section className="form-sign__section">
-            <Container className="">
+            <Container className="my-5">
 
                 <Row className="gy-5 justify-content-between align-items-center form-sign__wrapper">
                     <Col
@@ -39,7 +39,6 @@ const Index = ({}: IndexProps): React.ReactElement => (
                     </Col>
 
                     <Col
-                        className=""
                         md={6}
                         xl={4}>
 
