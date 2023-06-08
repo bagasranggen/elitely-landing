@@ -137,9 +137,10 @@ export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({
         items: [
             {
                 title: 'I am a Personality/Influencer, can I cancel a meet-up?',
-                description: `<p>You are allowed to cancel a meet-up more than 24 hours before the scheduled meet-up time. You can choose to reschedule the date with a Lurker with our rescheduling feature on the platform up to 24 hours before the meetup.</p>
-<p>If you really cannot make it for a meet up less than 24 hours before the scheduled meet-up time, you must inform through the chat function 6 hours before the date, to avoid the Client being present for the date. Please state the reason for cancellation.</p>
-<p><em><strong>Personalities/Influencers who does not turn up for a date or do not inform the client will incur a SGD 100 fine</strong>, to be deducted from any outstanding payments to them, or any future payments (if there are no outstanding payments). You may also be removed from our platform with all pending payments withheld.</em></p>`
+                description: `<p>Please do not accept a meet request if you are unsure of your schedule.</p>
+<p>You are allowed to cancel a meet-up more than 6 hours before the scheduled meet-up time. You can choose to reschedule the date with a Lurker with our rescheduling feature on the platform up to 12 hours before the meet-up.</p>
+<p>If you really cannot make it for a meet-up less than 6 hours before the scheduled meet-up time, you must inform through the chat function before the date, to avoid the Luker being present for the date. Please state the reason for cancellation.</p>
+<p><em><strong>Personalities/Influencers who do not turn up for a meet-up, do not inform the Lurker about cancelling, or cancelling less than 6 hours before the meet-up twice a month will incur a SGD 50 fine</strong>, to be deducted from any outstanding payments to them, or any future payments (if there are no outstanding payments). You may also be removed from our platform with all pending payments withheld. Waivers may be approved on a case-by-case basis. The Platform’s decision is final.</em></p>`
             },
             {
                 title: 'I am a Personality/Influencer and my date is late.',
@@ -159,10 +160,6 @@ export const FAQS: Record<'GENERAL' | 'LURKERS' | 'INFLUENCER' | string, ({
                 description: `<p>For each service (meet/chats) that have been completed without disputes from the paying user, the earnings will be released within 10 working days on your dashboard.</p>
 <p>You can choose to withdraw your earnings through Wise, either by bank transfer or Paynow (for Singapore users). Do note the <strong>minimal earnings withdrawal of SGD 50</strong> (and the equivalent in other currencies) is subject to a fee of <strong>SGD 0.60 per withdrawal</strong>, in addition to a <strong>25% commission</strong>.</p>
 <p>These fees are necessary for maintaining and marketing the platform so you get to earn more!</p>`
-            },
-            {
-                title: 'How do I unlock a chat with a Personality/Influencer?',
-                description: `<p>Elitely takes privacy protection very seriously. We will not disclose your personal information to any third party, not even to your date -- without your consent. Likewise, your date is not obligated to share his/her contact details with you.</p>`
             },
         ]
     }
